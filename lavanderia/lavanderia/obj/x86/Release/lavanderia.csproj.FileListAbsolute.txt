@@ -10,5 +10,3 @@ C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.Properties.Resou
 C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.csproj.GenerateResource.Cache
 C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.exe
 C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.pdb
-C:\Development\Aida-Set\lavanderia\lavanderia\obj\x86\Release\lavanderia.exe
-C:\Development\Aida-Set\lavanderia\lavanderia\obj\x86\Release\lavanderia.pdb
