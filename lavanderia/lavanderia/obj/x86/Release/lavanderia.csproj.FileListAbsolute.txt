@@ -1,0 +1,12 @@
+C:\Development\lavanderia\lavanderia\bin\Release\lavanderia.exe
+C:\Development\lavanderia\lavanderia\bin\Release\lavanderia.pdb
+C:\Development\lavanderia\lavanderia\bin\Release\Config.dll
+C:\Development\lavanderia\lavanderia\bin\Release\Config.pdb
+C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.csprojResolveAssemblyReference.cache
+C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.frm_keypad.resources
+C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.frm_list.resources
+C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.frm_main.resources
+C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.Properties.Resources.resources
+C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.csproj.GenerateResource.Cache
+C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.exe
+C:\Development\lavanderia\lavanderia\obj\x86\Release\lavanderia.pdb

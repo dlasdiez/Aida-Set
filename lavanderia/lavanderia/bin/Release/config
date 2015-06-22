@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuracion>
+  <runtime>c:\aidaroot\lavcamps\wrun32 -b -c c:\aidaroot\lavcamps\config.acu -f</runtime>
+  <ruta_datos>c:\aidaroot\lavcamps\fich0001</ruta_datos>
+  <ruta_webservices>c:\aidaroot\lavcamps\</ruta_webservices>
+  <color>Silver</color>
+  <terminal>001</terminal>
+</configuracion>

@@ -1,0 +1,12 @@
+C:\Development\lavanderia\Configuración\bin\Debug\Configuración.exe
+C:\Development\lavanderia\Configuración\bin\Debug\Configuración.pdb
+C:\Development\lavanderia\Configuración\obj\x86\Debug\Configuración.frm_config.resources
+C:\Development\lavanderia\Configuración\obj\x86\Debug\Configuración.Properties.Resources.resources
+C:\Development\lavanderia\Configuración\obj\x86\Debug\Configuración.csproj.GenerateResource.Cache
+C:\Development\lavanderia\Configuración\obj\x86\Debug\Configuración.exe
+C:\Development\lavanderia\Configuración\obj\x86\Debug\Configuración.pdb
+C:\Development\lavanderia\Configuración\bin\Debug\Config.dll
+C:\Development\lavanderia\Configuración\bin\Debug\Config.pdb
+C:\Development\lavanderia\lavanderia\bin\Debug\Configuración.exe
+C:\Development\lavanderia\lavanderia\bin\Debug\Configuración.pdb
+C:\Development\lavanderia\Configuración\obj\x86\Debug\Configuración.csprojResolveAssemblyReference.cache
