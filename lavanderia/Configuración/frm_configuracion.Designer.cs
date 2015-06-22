@@ -112,7 +112,7 @@
             // 
             // btn_seleccionar_color
             // 
-            this.btn_seleccionar_color.Location = new System.Drawing.Point(389, 142);
+            this.btn_seleccionar_color.Location = new System.Drawing.Point(391, 142);
             this.btn_seleccionar_color.Name = "btn_seleccionar_color";
             this.btn_seleccionar_color.Size = new System.Drawing.Size(75, 23);
             this.btn_seleccionar_color.TabIndex = 12;
