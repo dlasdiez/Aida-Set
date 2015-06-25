@@ -10,3 +10,11 @@ C:\Development\lavanderia\Configuración\obj\x86\Release\Configuración.Properti
 C:\Development\lavanderia\Configuración\obj\x86\Release\Configuración.csproj.GenerateResource.Cache
 C:\Development\lavanderia\Configuración\obj\x86\Release\Configuración.exe
 C:\Development\lavanderia\Configuración\obj\x86\Release\Configuración.pdb
+C:\Development\Aida-Set\lavanderia\lavanderia\bin\Release\Configuración.exe
+C:\Development\Aida-Set\lavanderia\lavanderia\bin\Release\Configuración.pdb
+C:\Development\Aida-Set\lavanderia\Configuración\obj\x86\Release\Configuración.csprojResolveAssemblyReference.cache
+C:\Development\Aida-Set\lavanderia\Configuración\obj\x86\Release\Configuración.frm_config.resources
+C:\Development\Aida-Set\lavanderia\Configuración\obj\x86\Release\Configuración.Properties.Resources.resources
+C:\Development\Aida-Set\lavanderia\Configuración\obj\x86\Release\Configuración.csproj.GenerateResource.Cache
+C:\Development\Aida-Set\lavanderia\Configuración\obj\x86\Release\Configuración.exe
+C:\Development\Aida-Set\lavanderia\Configuración\obj\x86\Release\Configuración.pdb

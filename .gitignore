@@ -1,2 +1,5 @@
 *.suo
 lavanderia/lavanderia.suo
+*.pdb
+*.exe
+*.cache

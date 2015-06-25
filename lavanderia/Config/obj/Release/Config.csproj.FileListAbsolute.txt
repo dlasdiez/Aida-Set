@@ -3,3 +3,8 @@ C:\Development\lavanderia\Config\bin\Release\Config.pdb
 C:\Development\lavanderia\Config\obj\Release\Config.dll
 C:\Development\lavanderia\Config\obj\Release\Config.pdb
 C:\Development\lavanderia\Config\obj\Release\Config.csprojResolveAssemblyReference.cache
+C:\Development\Aida-Set\lavanderia\Config\bin\Release\Config.dll
+C:\Development\Aida-Set\lavanderia\Config\bin\Release\Config.pdb
+C:\Development\Aida-Set\lavanderia\Config\obj\Release\Config.csprojResolveAssemblyReference.cache
+C:\Development\Aida-Set\lavanderia\Config\obj\Release\Config.dll
+C:\Development\Aida-Set\lavanderia\Config\obj\Release\Config.pdb
