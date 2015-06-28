@@ -10,3 +10,15 @@ C:\Development\lavanderia\lavanderia\obj\x86\Debug\lavanderia.frm_list.resources
 C:\Development\lavanderia\lavanderia\obj\x86\Debug\lavanderia.frm_keypad.resources
 C:\Development\lavanderia\lavanderia\bin\Debug\Config.dll
 C:\Development\lavanderia\lavanderia\bin\Debug\Config.pdb
+C:\Development\Aida-Set\lavanderia\lavanderia\bin\Debug\lavanderia.exe
+C:\Development\Aida-Set\lavanderia\lavanderia\bin\Debug\lavanderia.pdb
+C:\Development\Aida-Set\lavanderia\lavanderia\bin\Debug\Config.dll
+C:\Development\Aida-Set\lavanderia\lavanderia\bin\Debug\Config.pdb
+C:\Development\Aida-Set\lavanderia\lavanderia\obj\x86\Debug\lavanderia.csprojResolveAssemblyReference.cache
+C:\Development\Aida-Set\lavanderia\lavanderia\obj\x86\Debug\lavanderia.frm_keypad.resources
+C:\Development\Aida-Set\lavanderia\lavanderia\obj\x86\Debug\lavanderia.frm_list.resources
+C:\Development\Aida-Set\lavanderia\lavanderia\obj\x86\Debug\lavanderia.frm_main.resources
+C:\Development\Aida-Set\lavanderia\lavanderia\obj\x86\Debug\lavanderia.Properties.Resources.resources
+C:\Development\Aida-Set\lavanderia\lavanderia\obj\x86\Debug\lavanderia.csproj.GenerateResource.Cache
+C:\Development\Aida-Set\lavanderia\lavanderia\obj\x86\Debug\lavanderia.exe
+C:\Development\Aida-Set\lavanderia\lavanderia\obj\x86\Debug\lavanderia.pdb
