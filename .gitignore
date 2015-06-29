@@ -8,3 +8,5 @@ lavanderia/lavanderia.suo
 lavanderia\lavanderia\bin\Debug*/
 lavanderia\lavanderia\obj\x86\Debug*/
 *.manifest
+ControlCalidad\DAL\bin\Debug*/
+ControlCalidad/DAL/obj/Debug/DAL.dll
