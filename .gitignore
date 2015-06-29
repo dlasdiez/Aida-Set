@@ -7,3 +7,4 @@ lavanderia/lavanderia.suo
 *.txt
 lavanderia\lavanderia\bin\Debug*/
 lavanderia\lavanderia\obj\x86\Debug*/
+*.manifest
