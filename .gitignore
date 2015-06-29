@@ -5,3 +5,5 @@ lavanderia/lavanderia.suo
 *.cache
 *.exe
 *.txt
+lavanderia\lavanderia\bin\Debug*/
+lavanderia\lavanderia\obj\x86\Debug*/
