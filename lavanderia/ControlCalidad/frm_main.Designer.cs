@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             this.btn_registro_qc_entrada = new System.Windows.Forms.Button();
             this.btn_registro_garantia_tramite = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -63,7 +62,7 @@
             this.Name = "frm_main";
             this.Text = "Form1";
             this.ResumeLayout(false);
-=======
+
           System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_main));
           this.btn_registro_qc_entrada = new System.Windows.Forms.Button();
           this.SuspendLayout();
@@ -90,7 +89,6 @@
           this.Name = "frm_main";
           this.Text = "Seleccione una opción";
           this.ResumeLayout(false);
->>>>>>> origin/master
 
         }
 
