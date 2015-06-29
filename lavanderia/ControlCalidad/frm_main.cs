@@ -19,9 +19,18 @@ namespace ControlCalidad
         private void btn_registro_qc_entrada_Click(object sender, EventArgs e)
         {
             frm_registro_qc_entrada _frm;
-
+            
             _frm = new frm_registro_qc_entrada();
             _frm.ShowDialog();
+        }
+
+        private void btn_registro_garantia_tramite_Click(object sender, EventArgs e)
+        {
+            frm_registro_garantias_tramite _frm;
+
+            _frm = new frm_registro_garantias_tramite();
+            _frm.ShowDialog();
+
         }
     }
 }

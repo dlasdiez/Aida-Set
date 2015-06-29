@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_registro_qc_entrada = new System.Windows.Forms.Button();
+            this.btn_registro_garantia_tramite = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_registro_qc_entrada
@@ -41,11 +42,22 @@
             this.btn_registro_qc_entrada.UseVisualStyleBackColor = true;
             this.btn_registro_qc_entrada.Click += new System.EventHandler(this.btn_registro_qc_entrada_Click);
             // 
+            // btn_registro_garantia_tramite
+            // 
+            this.btn_registro_garantia_tramite.Location = new System.Drawing.Point(36, 114);
+            this.btn_registro_garantia_tramite.Name = "btn_registro_garantia_tramite";
+            this.btn_registro_garantia_tramite.Size = new System.Drawing.Size(75, 49);
+            this.btn_registro_garantia_tramite.TabIndex = 1;
+            this.btn_registro_garantia_tramite.Text = "Registro de garantias en tramite";
+            this.btn_registro_garantia_tramite.UseVisualStyleBackColor = true;
+            this.btn_registro_garantia_tramite.Click += new System.EventHandler(this.btn_registro_garantia_tramite_Click);
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 363);
+            this.Controls.Add(this.btn_registro_garantia_tramite);
             this.Controls.Add(this.btn_registro_qc_entrada);
             this.Name = "frm_main";
             this.Text = "Form1";
@@ -56,6 +68,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_registro_qc_entrada;
+        private System.Windows.Forms.Button btn_registro_garantia_tramite;
     }
 }
 
