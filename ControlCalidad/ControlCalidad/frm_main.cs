@@ -32,5 +32,13 @@ namespace ControlCalidad
             _frm.ShowDialog();
 
         }
+
+        private void btn_expediente_Click(object sender, EventArgs e)
+        {
+          frm_expediente _frm;
+
+          _frm = new frm_expediente();
+          _frm.ShowDialog();
+        }
     }
 }
