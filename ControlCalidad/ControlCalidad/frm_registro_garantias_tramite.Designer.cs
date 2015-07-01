@@ -66,7 +66,7 @@
             this.cmb_doc_cliente = new System.Windows.Forms.ComboBox();
             this.gb_administracion = new System.Windows.Forms.GroupBox();
             this.txt_entregado_a = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_responsable = new System.Windows.Forms.Label();
             this.lbl_documentacion_entregada_a = new System.Windows.Forms.Label();
             this.txt_responsable_zona = new System.Windows.Forms.TextBox();
             this.lbl_entregado_en_fecha = new System.Windows.Forms.Label();
@@ -106,6 +106,13 @@
             this.lbl_estado = new System.Windows.Forms.Label();
             this.ch_banco_pruebas = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmb_via = new System.Windows.Forms.ComboBox();
+            this.lbl_via = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txt_documento = new System.Windows.Forms.TextBox();
+            this.lbl_documento = new System.Windows.Forms.Label();
+            this.btn_añadir_ruta_doc = new System.Windows.Forms.Button();
+            this.btn_borrar_ruta_doc = new System.Windows.Forms.Button();
             this.gb_ref_metalcaucho.SuspendLayout();
             this.tp_documentacion.SuspendLayout();
             this.gb_adjunta.SuspendLayout();
@@ -124,6 +131,7 @@
             this.gb_solicitud_cliente.SuspendLayout();
             this.gb_respuesta_mc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_num_registro
@@ -437,7 +445,7 @@
             // gb_administracion
             // 
             this.gb_administracion.Controls.Add(this.txt_entregado_a);
-            this.gb_administracion.Controls.Add(this.label1);
+            this.gb_administracion.Controls.Add(this.lbl_responsable);
             this.gb_administracion.Controls.Add(this.lbl_documentacion_entregada_a);
             this.gb_administracion.Controls.Add(this.txt_responsable_zona);
             this.gb_administracion.Controls.Add(this.lbl_entregado_en_fecha);
@@ -456,14 +464,14 @@
             this.txt_entregado_a.Size = new System.Drawing.Size(246, 20);
             this.txt_entregado_a.TabIndex = 52;
             // 
-            // label1
+            // lbl_responsable
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
-            this.label1.TabIndex = 64;
-            this.label1.Text = "Doc. entregado a";
+            this.lbl_responsable.AutoSize = true;
+            this.lbl_responsable.Location = new System.Drawing.Point(30, 73);
+            this.lbl_responsable.Name = "lbl_responsable";
+            this.lbl_responsable.Size = new System.Drawing.Size(69, 13);
+            this.lbl_responsable.TabIndex = 64;
+            this.lbl_responsable.Text = "Responsable";
             // 
             // lbl_documentacion_entregada_a
             // 
@@ -579,6 +587,7 @@
             this.tc_datos.Controls.Add(this.tp_images);
             this.tc_datos.Controls.Add(this.tp_documentacion);
             this.tc_datos.Controls.Add(this.tp_lineas);
+            this.tc_datos.Controls.Add(this.tabPage1);
             this.tc_datos.Location = new System.Drawing.Point(14, 220);
             this.tc_datos.Name = "tc_datos";
             this.tc_datos.SelectedIndex = 0;
@@ -830,12 +839,79 @@
             this.pictureBox1.TabIndex = 64;
             this.pictureBox1.TabStop = false;
             // 
+            // cmb_via
+            // 
+            this.cmb_via.FormattingEnabled = true;
+            this.cmb_via.Location = new System.Drawing.Point(467, 180);
+            this.cmb_via.Name = "cmb_via";
+            this.cmb_via.Size = new System.Drawing.Size(81, 21);
+            this.cmb_via.TabIndex = 62;
+            // 
+            // lbl_via
+            // 
+            this.lbl_via.AutoSize = true;
+            this.lbl_via.Location = new System.Drawing.Point(437, 183);
+            this.lbl_via.Name = "lbl_via";
+            this.lbl_via.Size = new System.Drawing.Size(24, 13);
+            this.lbl_via.TabIndex = 61;
+            this.lbl_via.Text = "Vía";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.tabPage1.Controls.Add(this.btn_borrar_ruta_doc);
+            this.tabPage1.Controls.Add(this.btn_añadir_ruta_doc);
+            this.tabPage1.Controls.Add(this.txt_documento);
+            this.tabPage1.Controls.Add(this.lbl_documento);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(775, 126);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "tabPage1";
+            // 
+            // txt_documento
+            // 
+            this.txt_documento.Location = new System.Drawing.Point(89, 15);
+            this.txt_documento.Name = "txt_documento";
+            this.txt_documento.Size = new System.Drawing.Size(246, 20);
+            this.txt_documento.TabIndex = 54;
+            // 
+            // lbl_documento
+            // 
+            this.lbl_documento.AutoSize = true;
+            this.lbl_documento.Location = new System.Drawing.Point(20, 18);
+            this.lbl_documento.Name = "lbl_documento";
+            this.lbl_documento.Size = new System.Drawing.Size(62, 13);
+            this.lbl_documento.TabIndex = 55;
+            this.lbl_documento.Text = "Documento";
+            // 
+            // btn_añadir_ruta_doc
+            // 
+            this.btn_añadir_ruta_doc.Location = new System.Drawing.Point(341, 15);
+            this.btn_añadir_ruta_doc.Name = "btn_añadir_ruta_doc";
+            this.btn_añadir_ruta_doc.Size = new System.Drawing.Size(75, 23);
+            this.btn_añadir_ruta_doc.TabIndex = 65;
+            this.btn_añadir_ruta_doc.Text = "Guardar";
+            this.btn_añadir_ruta_doc.UseVisualStyleBackColor = true;
+            // 
+            // btn_borrar_ruta_doc
+            // 
+            this.btn_borrar_ruta_doc.Location = new System.Drawing.Point(341, 44);
+            this.btn_borrar_ruta_doc.Name = "btn_borrar_ruta_doc";
+            this.btn_borrar_ruta_doc.Size = new System.Drawing.Size(75, 23);
+            this.btn_borrar_ruta_doc.TabIndex = 66;
+            this.btn_borrar_ruta_doc.Text = "Guardar";
+            this.btn_borrar_ruta_doc.UseVisualStyleBackColor = true;
+            // 
             // frm_registro_garantias_tramite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(916, 382);
+            this.Controls.Add(this.cmb_via);
+            this.Controls.Add(this.lbl_via);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ch_banco_pruebas);
             this.Controls.Add(this.cmb_estado);
@@ -891,6 +967,8 @@
             this.gb_respuesta_mc.ResumeLayout(false);
             this.gb_respuesta_mc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -951,7 +1029,7 @@
         private System.Windows.Forms.TextBox txt_entregado_a;
         private System.Windows.Forms.DateTimePicker dtp_entregado_en_fecha;
         private System.Windows.Forms.Label lbl_entregado_en_fecha;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_responsable;
         private System.Windows.Forms.TextBox txt_responsable_zona;
         private System.Windows.Forms.GroupBox gb_adjunta;
         private System.Windows.Forms.GroupBox gb_administracion;
@@ -975,5 +1053,12 @@
         private System.Windows.Forms.Label lbl_estado;
         private System.Windows.Forms.CheckBox ch_banco_pruebas;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cmb_via;
+        private System.Windows.Forms.Label lbl_via;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox txt_documento;
+        private System.Windows.Forms.Label lbl_documento;
+        private System.Windows.Forms.Button btn_borrar_ruta_doc;
+        private System.Windows.Forms.Button btn_añadir_ruta_doc;
     }
 }

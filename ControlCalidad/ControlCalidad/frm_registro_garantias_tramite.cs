@@ -54,6 +54,13 @@ namespace ControlCalidad
             this.cmb_informe_ot.Items.Add(new { Text = "Si", Value = 1 });
             this.cmb_informe_ot.SelectedIndex = 0;
 
+            this.cmb_via.DisplayMember = "Text";
+            this.cmb_via.ValueMember = "Value";
+            this.cmb_via.Items.Add(new { Text = "Interna", Value = 0 });
+            this.cmb_via.Items.Add(new { Text = "Externa", Value = 1 });
+            this.cmb_via.Items.Add(new { Text = "Ambas", Value = 2 });
+            this.cmb_via.SelectedIndex = 0;
+
             this.cmb_estado.DisplayMember = "Text";
             this.cmb_estado.ValueMember = "Value";
             this.cmb_estado.Items.Add(new { Text = "Pendiente", Value = 0 });
