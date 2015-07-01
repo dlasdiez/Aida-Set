@@ -26,9 +26,9 @@ namespace ControlCalidad
 
         private void btn_registro_garantia_tramite_Click(object sender, EventArgs e)
         {
-            frm_registro_garantias_tramite _frm;
+            frm_evaluacion_piezas _frm;
 
-            _frm = new frm_registro_garantias_tramite();
+            _frm = new frm_evaluacion_piezas();
             _frm.ShowDialog();
 
         }
@@ -38,6 +38,14 @@ namespace ControlCalidad
           frm_expediente _frm;
 
           _frm = new frm_expediente();
+          _frm.ShowDialog();
+        }
+
+        private void btn_evaluacion_piezas_Click(object sender, EventArgs e)
+        {
+          frm_evaluacion_piezas _frm;
+
+          _frm = new frm_evaluacion_piezas();
           _frm.ShowDialog();
         }
     }
