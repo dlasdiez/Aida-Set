@@ -92,6 +92,11 @@
             this.txt_observaciones_lineas = new System.Windows.Forms.TextBox();
             this.lbl_fecha_lineas = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tp_administracion = new System.Windows.Forms.TabPage();
+            this.btn_borrar_ruta_doc = new System.Windows.Forms.Button();
+            this.btn_añadir_ruta_doc = new System.Windows.Forms.Button();
+            this.txt_documento = new System.Windows.Forms.TextBox();
+            this.lbl_documento = new System.Windows.Forms.Label();
             this.cmb_informe = new System.Windows.Forms.ComboBox();
             this.gb_solicitud_cliente = new System.Windows.Forms.GroupBox();
             this.lbl_num_informe = new System.Windows.Forms.Label();
@@ -108,11 +113,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmb_via = new System.Windows.Forms.ComboBox();
             this.lbl_via = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txt_documento = new System.Windows.Forms.TextBox();
-            this.lbl_documento = new System.Windows.Forms.Label();
-            this.btn_añadir_ruta_doc = new System.Windows.Forms.Button();
-            this.btn_borrar_ruta_doc = new System.Windows.Forms.Button();
             this.gb_ref_metalcaucho.SuspendLayout();
             this.tp_documentacion.SuspendLayout();
             this.gb_adjunta.SuspendLayout();
@@ -128,10 +128,10 @@
             this.tc_observaciones.SuspendLayout();
             this.tp_lineas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tp_administracion.SuspendLayout();
             this.gb_solicitud_cliente.SuspendLayout();
             this.gb_respuesta_mc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_num_registro
@@ -587,7 +587,7 @@
             this.tc_datos.Controls.Add(this.tp_images);
             this.tc_datos.Controls.Add(this.tp_documentacion);
             this.tc_datos.Controls.Add(this.tp_lineas);
-            this.tc_datos.Controls.Add(this.tabPage1);
+            this.tc_datos.Controls.Add(this.tp_administracion);
             this.tc_datos.Location = new System.Drawing.Point(14, 220);
             this.tc_datos.Name = "tc_datos";
             this.tc_datos.SelectedIndex = 0;
@@ -707,6 +707,54 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(254, 99);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // tp_administracion
+            // 
+            this.tp_administracion.BackColor = System.Drawing.Color.RoyalBlue;
+            this.tp_administracion.Controls.Add(this.btn_borrar_ruta_doc);
+            this.tp_administracion.Controls.Add(this.btn_añadir_ruta_doc);
+            this.tp_administracion.Controls.Add(this.txt_documento);
+            this.tp_administracion.Controls.Add(this.lbl_documento);
+            this.tp_administracion.Location = new System.Drawing.Point(4, 22);
+            this.tp_administracion.Name = "tp_administracion";
+            this.tp_administracion.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_administracion.Size = new System.Drawing.Size(775, 126);
+            this.tp_administracion.TabIndex = 5;
+            this.tp_administracion.Text = "Administración";
+            // 
+            // btn_borrar_ruta_doc
+            // 
+            this.btn_borrar_ruta_doc.Location = new System.Drawing.Point(341, 44);
+            this.btn_borrar_ruta_doc.Name = "btn_borrar_ruta_doc";
+            this.btn_borrar_ruta_doc.Size = new System.Drawing.Size(75, 23);
+            this.btn_borrar_ruta_doc.TabIndex = 66;
+            this.btn_borrar_ruta_doc.Text = "Eliminar";
+            this.btn_borrar_ruta_doc.UseVisualStyleBackColor = true;
+            // 
+            // btn_añadir_ruta_doc
+            // 
+            this.btn_añadir_ruta_doc.Location = new System.Drawing.Point(341, 15);
+            this.btn_añadir_ruta_doc.Name = "btn_añadir_ruta_doc";
+            this.btn_añadir_ruta_doc.Size = new System.Drawing.Size(75, 23);
+            this.btn_añadir_ruta_doc.TabIndex = 65;
+            this.btn_añadir_ruta_doc.Text = "Añadir";
+            this.btn_añadir_ruta_doc.UseVisualStyleBackColor = true;
+            // 
+            // txt_documento
+            // 
+            this.txt_documento.Location = new System.Drawing.Point(89, 15);
+            this.txt_documento.Name = "txt_documento";
+            this.txt_documento.Size = new System.Drawing.Size(246, 20);
+            this.txt_documento.TabIndex = 54;
+            // 
+            // lbl_documento
+            // 
+            this.lbl_documento.AutoSize = true;
+            this.lbl_documento.Location = new System.Drawing.Point(20, 18);
+            this.lbl_documento.Name = "lbl_documento";
+            this.lbl_documento.Size = new System.Drawing.Size(62, 13);
+            this.lbl_documento.TabIndex = 55;
+            this.lbl_documento.Text = "Documento";
             // 
             // cmb_informe
             // 
@@ -856,54 +904,6 @@
             this.lbl_via.TabIndex = 61;
             this.lbl_via.Text = "Vía";
             // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.tabPage1.Controls.Add(this.btn_borrar_ruta_doc);
-            this.tabPage1.Controls.Add(this.btn_añadir_ruta_doc);
-            this.tabPage1.Controls.Add(this.txt_documento);
-            this.tabPage1.Controls.Add(this.lbl_documento);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(775, 126);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "tabPage1";
-            // 
-            // txt_documento
-            // 
-            this.txt_documento.Location = new System.Drawing.Point(89, 15);
-            this.txt_documento.Name = "txt_documento";
-            this.txt_documento.Size = new System.Drawing.Size(246, 20);
-            this.txt_documento.TabIndex = 54;
-            // 
-            // lbl_documento
-            // 
-            this.lbl_documento.AutoSize = true;
-            this.lbl_documento.Location = new System.Drawing.Point(20, 18);
-            this.lbl_documento.Name = "lbl_documento";
-            this.lbl_documento.Size = new System.Drawing.Size(62, 13);
-            this.lbl_documento.TabIndex = 55;
-            this.lbl_documento.Text = "Documento";
-            // 
-            // btn_añadir_ruta_doc
-            // 
-            this.btn_añadir_ruta_doc.Location = new System.Drawing.Point(341, 15);
-            this.btn_añadir_ruta_doc.Name = "btn_añadir_ruta_doc";
-            this.btn_añadir_ruta_doc.Size = new System.Drawing.Size(75, 23);
-            this.btn_añadir_ruta_doc.TabIndex = 65;
-            this.btn_añadir_ruta_doc.Text = "Guardar";
-            this.btn_añadir_ruta_doc.UseVisualStyleBackColor = true;
-            // 
-            // btn_borrar_ruta_doc
-            // 
-            this.btn_borrar_ruta_doc.Location = new System.Drawing.Point(341, 44);
-            this.btn_borrar_ruta_doc.Name = "btn_borrar_ruta_doc";
-            this.btn_borrar_ruta_doc.Size = new System.Drawing.Size(75, 23);
-            this.btn_borrar_ruta_doc.TabIndex = 66;
-            this.btn_borrar_ruta_doc.Text = "Guardar";
-            this.btn_borrar_ruta_doc.UseVisualStyleBackColor = true;
-            // 
             // frm_registro_garantias_tramite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -962,13 +962,13 @@
             this.tp_lineas.ResumeLayout(false);
             this.tp_lineas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tp_administracion.ResumeLayout(false);
+            this.tp_administracion.PerformLayout();
             this.gb_solicitud_cliente.ResumeLayout(false);
             this.gb_solicitud_cliente.PerformLayout();
             this.gb_respuesta_mc.ResumeLayout(false);
             this.gb_respuesta_mc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1055,7 +1055,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cmb_via;
         private System.Windows.Forms.Label lbl_via;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tp_administracion;
         private System.Windows.Forms.TextBox txt_documento;
         private System.Windows.Forms.Label lbl_documento;
         private System.Windows.Forms.Button btn_borrar_ruta_doc;

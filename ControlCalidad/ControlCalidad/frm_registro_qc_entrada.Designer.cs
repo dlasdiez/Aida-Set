@@ -77,10 +77,20 @@
             this.txt_certificados = new System.Windows.Forms.TextBox();
             this.lbl_fecha_calidad = new System.Windows.Forms.Label();
             this.lbl_accion_realizada = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_acciones = new System.Windows.Forms.TextBox();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dtp_fecha_creacion = new System.Windows.Forms.DateTimePicker();
+            this.lbl_fecha_creacion = new System.Windows.Forms.Label();
+            this.lbl_usuario = new System.Windows.Forms.Label();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
+            this.btn_borrar_ruta_doc = new System.Windows.Forms.Button();
+            this.btn_añadir_ruta_doc = new System.Windows.Forms.Button();
+            this.txt_documento = new System.Windows.Forms.TextBox();
+            this.lbl_documento = new System.Windows.Forms.Label();
+            this.btn_eliminar_certificado = new System.Windows.Forms.Button();
+            this.btn_añadir_certificado = new System.Windows.Forms.Button();
             this.gb_resultado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_verificacion)).BeginInit();
             this.gb_muestreo.SuspendLayout();
@@ -116,7 +126,7 @@
             // lbl_date_revision
             // 
             this.lbl_date_revision.AutoSize = true;
-            this.lbl_date_revision.Location = new System.Drawing.Point(200, 31);
+            this.lbl_date_revision.Location = new System.Drawing.Point(200, 54);
             this.lbl_date_revision.Name = "lbl_date_revision";
             this.lbl_date_revision.Size = new System.Drawing.Size(81, 13);
             this.lbl_date_revision.TabIndex = 2;
@@ -125,7 +135,7 @@
             // dtp_fecha_revision
             // 
             this.dtp_fecha_revision.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_revision.Location = new System.Drawing.Point(287, 28);
+            this.dtp_fecha_revision.Location = new System.Drawing.Point(287, 51);
             this.dtp_fecha_revision.Name = "dtp_fecha_revision";
             this.dtp_fecha_revision.Size = new System.Drawing.Size(100, 20);
             this.dtp_fecha_revision.TabIndex = 3;
@@ -133,7 +143,7 @@
             // lbl_ref_metalcaucho
             // 
             this.lbl_ref_metalcaucho.AutoSize = true;
-            this.lbl_ref_metalcaucho.Location = new System.Drawing.Point(417, 31);
+            this.lbl_ref_metalcaucho.Location = new System.Drawing.Point(410, 58);
             this.lbl_ref_metalcaucho.Name = "lbl_ref_metalcaucho";
             this.lbl_ref_metalcaucho.Size = new System.Drawing.Size(43, 13);
             this.lbl_ref_metalcaucho.TabIndex = 5;
@@ -141,7 +151,7 @@
             // 
             // txt_ref_metalcaucho
             // 
-            this.txt_ref_metalcaucho.Location = new System.Drawing.Point(466, 28);
+            this.txt_ref_metalcaucho.Location = new System.Drawing.Point(459, 51);
             this.txt_ref_metalcaucho.Name = "txt_ref_metalcaucho";
             this.txt_ref_metalcaucho.Size = new System.Drawing.Size(100, 20);
             this.txt_ref_metalcaucho.TabIndex = 4;
@@ -165,7 +175,7 @@
             // lbl_num_lote
             // 
             this.lbl_num_lote.AutoSize = true;
-            this.lbl_num_lote.Location = new System.Drawing.Point(238, 57);
+            this.lbl_num_lote.Location = new System.Drawing.Point(238, 80);
             this.lbl_num_lote.Name = "lbl_num_lote";
             this.lbl_num_lote.Size = new System.Drawing.Size(43, 13);
             this.lbl_num_lote.TabIndex = 9;
@@ -173,7 +183,7 @@
             // 
             // txt_num_lote
             // 
-            this.txt_num_lote.Location = new System.Drawing.Point(287, 54);
+            this.txt_num_lote.Location = new System.Drawing.Point(287, 77);
             this.txt_num_lote.Name = "txt_num_lote";
             this.txt_num_lote.Size = new System.Drawing.Size(100, 20);
             this.txt_num_lote.TabIndex = 8;
@@ -181,7 +191,7 @@
             // lbl_num_pl
             // 
             this.lbl_num_pl.AutoSize = true;
-            this.lbl_num_pl.Location = new System.Drawing.Point(422, 57);
+            this.lbl_num_pl.Location = new System.Drawing.Point(415, 80);
             this.lbl_num_pl.Name = "lbl_num_pl";
             this.lbl_num_pl.Size = new System.Drawing.Size(38, 13);
             this.lbl_num_pl.TabIndex = 11;
@@ -189,7 +199,7 @@
             // 
             // txt_num_pl
             // 
-            this.txt_num_pl.Location = new System.Drawing.Point(466, 54);
+            this.txt_num_pl.Location = new System.Drawing.Point(459, 77);
             this.txt_num_pl.Name = "txt_num_pl";
             this.txt_num_pl.Size = new System.Drawing.Size(100, 20);
             this.txt_num_pl.TabIndex = 10;
@@ -255,7 +265,7 @@
             // lbl_verificador
             // 
             this.lbl_verificador.AutoSize = true;
-            this.lbl_verificador.Location = new System.Drawing.Point(14, 18);
+            this.lbl_verificador.Location = new System.Drawing.Point(18, 18);
             this.lbl_verificador.Name = "lbl_verificador";
             this.lbl_verificador.Size = new System.Drawing.Size(57, 13);
             this.lbl_verificador.TabIndex = 16;
@@ -271,7 +281,7 @@
             // lbl_almacen
             // 
             this.lbl_almacen.AutoSize = true;
-            this.lbl_almacen.Location = new System.Drawing.Point(223, 18);
+            this.lbl_almacen.Location = new System.Drawing.Point(236, 18);
             this.lbl_almacen.Name = "lbl_almacen";
             this.lbl_almacen.Size = new System.Drawing.Size(48, 13);
             this.lbl_almacen.TabIndex = 18;
@@ -432,6 +442,10 @@
             // tp_images
             // 
             this.tp_images.BackColor = System.Drawing.Color.RoyalBlue;
+            this.tp_images.Controls.Add(this.btn_borrar_ruta_doc);
+            this.tp_images.Controls.Add(this.btn_añadir_ruta_doc);
+            this.tp_images.Controls.Add(this.txt_documento);
+            this.tp_images.Controls.Add(this.lbl_documento);
             this.tp_images.Controls.Add(this.pb5);
             this.tp_images.Controls.Add(this.pb4);
             this.tp_images.Controls.Add(this.pb2);
@@ -487,12 +501,14 @@
             // tp_calidad
             // 
             this.tp_calidad.BackColor = System.Drawing.Color.RoyalBlue;
+            this.tp_calidad.Controls.Add(this.btn_eliminar_certificado);
+            this.tp_calidad.Controls.Add(this.btn_añadir_certificado);
             this.tp_calidad.Controls.Add(this.lbl_certificados);
             this.tp_calidad.Controls.Add(this.dtp_fecha_calidad);
             this.tp_calidad.Controls.Add(this.txt_certificados);
             this.tp_calidad.Controls.Add(this.lbl_fecha_calidad);
             this.tp_calidad.Controls.Add(this.lbl_accion_realizada);
-            this.tp_calidad.Controls.Add(this.textBox1);
+            this.tp_calidad.Controls.Add(this.txt_acciones);
             this.tp_calidad.Location = new System.Drawing.Point(4, 22);
             this.tp_calidad.Name = "tp_calidad";
             this.tp_calidad.Padding = new System.Windows.Forms.Padding(3);
@@ -503,7 +519,7 @@
             // lbl_certificados
             // 
             this.lbl_certificados.AutoSize = true;
-            this.lbl_certificados.Location = new System.Drawing.Point(70, 144);
+            this.lbl_certificados.Location = new System.Drawing.Point(18, 163);
             this.lbl_certificados.Name = "lbl_certificados";
             this.lbl_certificados.Size = new System.Drawing.Size(113, 13);
             this.lbl_certificados.TabIndex = 32;
@@ -542,13 +558,13 @@
             this.lbl_accion_realizada.TabIndex = 31;
             this.lbl_accion_realizada.Text = "Acciones";
             // 
-            // textBox1
+            // txt_acciones
             // 
-            this.textBox1.Location = new System.Drawing.Point(137, 6);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(627, 103);
-            this.textBox1.TabIndex = 23;
+            this.txt_acciones.Location = new System.Drawing.Point(137, 6);
+            this.txt_acciones.Multiline = true;
+            this.txt_acciones.Name = "txt_acciones";
+            this.txt_acciones.Size = new System.Drawing.Size(627, 103);
+            this.txt_acciones.TabIndex = 23;
             // 
             // btn_guardar
             // 
@@ -578,12 +594,101 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // dtp_fecha_creacion
+            // 
+            this.dtp_fecha_creacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_creacion.Location = new System.Drawing.Point(287, 25);
+            this.dtp_fecha_creacion.Name = "dtp_fecha_creacion";
+            this.dtp_fecha_creacion.Size = new System.Drawing.Size(100, 20);
+            this.dtp_fecha_creacion.TabIndex = 33;
+            // 
+            // lbl_fecha_creacion
+            // 
+            this.lbl_fecha_creacion.AutoSize = true;
+            this.lbl_fecha_creacion.Location = new System.Drawing.Point(199, 28);
+            this.lbl_fecha_creacion.Name = "lbl_fecha_creacion";
+            this.lbl_fecha_creacion.Size = new System.Drawing.Size(82, 13);
+            this.lbl_fecha_creacion.TabIndex = 32;
+            this.lbl_fecha_creacion.Text = "Fecha Creación";
+            // 
+            // lbl_usuario
+            // 
+            this.lbl_usuario.AutoSize = true;
+            this.lbl_usuario.Location = new System.Drawing.Point(410, 31);
+            this.lbl_usuario.Name = "lbl_usuario";
+            this.lbl_usuario.Size = new System.Drawing.Size(43, 13);
+            this.lbl_usuario.TabIndex = 35;
+            this.lbl_usuario.Text = "Usuario";
+            // 
+            // txt_usuario
+            // 
+            this.txt_usuario.Location = new System.Drawing.Point(459, 28);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(100, 20);
+            this.txt_usuario.TabIndex = 34;
+            // 
+            // btn_borrar_ruta_doc
+            // 
+            this.btn_borrar_ruta_doc.Location = new System.Drawing.Point(335, 202);
+            this.btn_borrar_ruta_doc.Name = "btn_borrar_ruta_doc";
+            this.btn_borrar_ruta_doc.Size = new System.Drawing.Size(75, 23);
+            this.btn_borrar_ruta_doc.TabIndex = 70;
+            this.btn_borrar_ruta_doc.Text = "Eliminar";
+            this.btn_borrar_ruta_doc.UseVisualStyleBackColor = true;
+            // 
+            // btn_añadir_ruta_doc
+            // 
+            this.btn_añadir_ruta_doc.Location = new System.Drawing.Point(335, 173);
+            this.btn_añadir_ruta_doc.Name = "btn_añadir_ruta_doc";
+            this.btn_añadir_ruta_doc.Size = new System.Drawing.Size(75, 23);
+            this.btn_añadir_ruta_doc.TabIndex = 69;
+            this.btn_añadir_ruta_doc.Text = "Añadir";
+            this.btn_añadir_ruta_doc.UseVisualStyleBackColor = true;
+            // 
+            // txt_documento
+            // 
+            this.txt_documento.Location = new System.Drawing.Point(83, 173);
+            this.txt_documento.Name = "txt_documento";
+            this.txt_documento.Size = new System.Drawing.Size(246, 20);
+            this.txt_documento.TabIndex = 67;
+            // 
+            // lbl_documento
+            // 
+            this.lbl_documento.AutoSize = true;
+            this.lbl_documento.Location = new System.Drawing.Point(14, 176);
+            this.lbl_documento.Name = "lbl_documento";
+            this.lbl_documento.Size = new System.Drawing.Size(62, 13);
+            this.lbl_documento.TabIndex = 68;
+            this.lbl_documento.Text = "Documento";
+            // 
+            // btn_eliminar_certificado
+            // 
+            this.btn_eliminar_certificado.Location = new System.Drawing.Point(605, 187);
+            this.btn_eliminar_certificado.Name = "btn_eliminar_certificado";
+            this.btn_eliminar_certificado.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminar_certificado.TabIndex = 72;
+            this.btn_eliminar_certificado.Text = "Eliminar";
+            this.btn_eliminar_certificado.UseVisualStyleBackColor = true;
+            // 
+            // btn_añadir_certificado
+            // 
+            this.btn_añadir_certificado.Location = new System.Drawing.Point(605, 158);
+            this.btn_añadir_certificado.Name = "btn_añadir_certificado";
+            this.btn_añadir_certificado.Size = new System.Drawing.Size(75, 23);
+            this.btn_añadir_certificado.TabIndex = 71;
+            this.btn_añadir_certificado.Text = "Añadir";
+            this.btn_añadir_certificado.UseVisualStyleBackColor = true;
+            // 
             // frm_registro_qc_entrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(916, 425);
+            this.Controls.Add(this.lbl_usuario);
+            this.Controls.Add(this.txt_usuario);
+            this.Controls.Add(this.dtp_fecha_creacion);
+            this.Controls.Add(this.lbl_fecha_creacion);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_guardar);
@@ -615,6 +720,7 @@
             this.tp_entradas.PerformLayout();
             this.gb_metodo_verificacion.ResumeLayout(false);
             this.tp_images.ResumeLayout(false);
+            this.tp_images.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
@@ -675,12 +781,22 @@
         private System.Windows.Forms.PictureBox pb3;
         private System.Windows.Forms.PictureBox pb1;
         private System.Windows.Forms.TabPage tp_calidad;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_acciones;
         private System.Windows.Forms.Label lbl_accion_realizada;
         private System.Windows.Forms.DateTimePicker dtp_fecha_calidad;
         private System.Windows.Forms.Label lbl_fecha_calidad;
         private System.Windows.Forms.Label lbl_certificados;
         private System.Windows.Forms.TextBox txt_certificados;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_creacion;
+        private System.Windows.Forms.Label lbl_fecha_creacion;
+        private System.Windows.Forms.Label lbl_usuario;
+        private System.Windows.Forms.TextBox txt_usuario;
+        private System.Windows.Forms.Button btn_borrar_ruta_doc;
+        private System.Windows.Forms.Button btn_añadir_ruta_doc;
+        private System.Windows.Forms.TextBox txt_documento;
+        private System.Windows.Forms.Label lbl_documento;
+        private System.Windows.Forms.Button btn_eliminar_certificado;
+        private System.Windows.Forms.Button btn_añadir_certificado;
     }
 }
