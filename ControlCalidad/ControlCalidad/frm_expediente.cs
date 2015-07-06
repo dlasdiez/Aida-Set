@@ -18,7 +18,7 @@ namespace ControlCalidad
 
     private void frm_expediente_Load(object sender, EventArgs e)
     {
-      this.dtp_fecha_revision.Value = DateTime.Now;
+      this.dtp_fecha_expedicion.Value = DateTime.Now;
       this.dtp_fecha_calidad.Value = DateTime.Now;
     }
   }
