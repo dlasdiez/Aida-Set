@@ -48,5 +48,13 @@ namespace ControlCalidad
           _frm = new frm_evaluacion_piezas();
           _frm.ShowDialog();
         }
+
+        private void btn_evaluacion_muestras_report_Click(object sender, EventArgs e)
+        {
+          frm_evaluacion_muestras_report _frm;
+
+          _frm = new frm_evaluacion_muestras_report();
+          _frm.ShowDialog();
+        }
     }
 }

@@ -9,17 +9,11 @@ using System.Windows.Forms;
 
 namespace ControlCalidad
 {
-  public partial class frm_expediente : Form
+  public partial class frm_evaluacion_muestras_report : Form
   {
-    public frm_expediente()
+    public frm_evaluacion_muestras_report()
     {
       InitializeComponent();
-    }
-
-    private void frm_expediente_Load(object sender, EventArgs e)
-    {
-      this.dtp_fecha_creacion.Value = DateTime.Now;
-      this.dtp_fecha_expedicion.Value = DateTime.Now;
     }
   }
 }

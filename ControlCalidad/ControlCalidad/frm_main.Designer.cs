@@ -33,6 +33,7 @@
       this.btn_registro_garantia_tramite = new System.Windows.Forms.Button();
       this.btn_expediente = new System.Windows.Forms.Button();
       this.btn_evaluacion_piezas = new System.Windows.Forms.Button();
+      this.btn_evaluacion_muestras_report = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // btn_registro_qc_entrada
@@ -75,6 +76,16 @@
       this.btn_evaluacion_piezas.UseVisualStyleBackColor = true;
       this.btn_evaluacion_piezas.Click += new System.EventHandler(this.btn_evaluacion_piezas_Click);
       // 
+      // btn_evaluacion_muestras_report
+      // 
+      this.btn_evaluacion_muestras_report.Location = new System.Drawing.Point(36, 197);
+      this.btn_evaluacion_muestras_report.Name = "btn_evaluacion_muestras_report";
+      this.btn_evaluacion_muestras_report.Size = new System.Drawing.Size(75, 49);
+      this.btn_evaluacion_muestras_report.TabIndex = 4;
+      this.btn_evaluacion_muestras_report.Text = "Evaluación Muestras Report";
+      this.btn_evaluacion_muestras_report.UseVisualStyleBackColor = true;
+      this.btn_evaluacion_muestras_report.Click += new System.EventHandler(this.btn_evaluacion_muestras_report_Click);
+      // 
       // frm_main
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -82,6 +93,7 @@
       this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
       this.ClientSize = new System.Drawing.Size(447, 363);
+      this.Controls.Add(this.btn_evaluacion_muestras_report);
       this.Controls.Add(this.btn_evaluacion_piezas);
       this.Controls.Add(this.btn_expediente);
       this.Controls.Add(this.btn_registro_garantia_tramite);
@@ -99,6 +111,7 @@
         private System.Windows.Forms.Button btn_registro_garantia_tramite;
         private System.Windows.Forms.Button btn_expediente;
         private System.Windows.Forms.Button btn_evaluacion_piezas;
+        private System.Windows.Forms.Button btn_evaluacion_muestras_report;
     }
 }
 
