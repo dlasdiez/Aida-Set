@@ -13,7 +13,8 @@ namespace ControlCalidad
     {
         public frm_main()
         {
-            InitializeComponent();
+          InitializeComponent();
+          Configuracion.Config.ReadConfig();
         }
 
         private void btn_registro_qc_entrada_Click(object sender, EventArgs e)
@@ -62,6 +63,14 @@ namespace ControlCalidad
           frm_evaluacion_muestras_garantia_stock_report _frm;
 
           _frm = new frm_evaluacion_muestras_garantia_stock_report();
+          _frm.ShowDialog();
+        }
+
+        private void btn_configuracion_Click(object sender, EventArgs e)
+        {
+          frm_configuracion _frm;
+
+          _frm = new frm_configuracion();
           _frm.ShowDialog();
         }
     }

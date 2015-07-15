@@ -11,3 +11,6 @@ lavanderia\lavanderia\obj\x86\Debug*/
 ControlCalidad\DAL\bin\Debug*/
 ControlCalidad/DAL/obj/Debug/DAL.dll
 ControlCalidad/DAL/bin/Debug/DAL.dll
+ControlCalidad/Configuracion/bin/Debug/Configuracion.dll
+*.dll
+ControlCalidad/ControlCalidad/bin/Debug/config
