@@ -28,7 +28,6 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_registro_qc_entrada));
       this.txt_num_registro = new System.Windows.Forms.TextBox();
       this.lbl_num_registro = new System.Windows.Forms.Label();
       this.lbl_date_revision = new System.Windows.Forms.Label();
@@ -66,31 +65,28 @@
       this.btn_eliminar_verificacion = new System.Windows.Forms.Button();
       this.btn_añadir_verificacion = new System.Windows.Forms.Button();
       this.tp_images = new System.Windows.Forms.TabPage();
+      this.btn_borrar_ruta_doc = new System.Windows.Forms.Button();
+      this.btn_añadir_ruta_doc = new System.Windows.Forms.Button();
+      this.txt_documento = new System.Windows.Forms.TextBox();
+      this.lbl_documento = new System.Windows.Forms.Label();
       this.pb5 = new System.Windows.Forms.PictureBox();
       this.pb4 = new System.Windows.Forms.PictureBox();
       this.pb2 = new System.Windows.Forms.PictureBox();
       this.pb3 = new System.Windows.Forms.PictureBox();
       this.pb1 = new System.Windows.Forms.PictureBox();
       this.tp_calidad = new System.Windows.Forms.TabPage();
+      this.btn_eliminar_certificado = new System.Windows.Forms.Button();
+      this.btn_añadir_certificado = new System.Windows.Forms.Button();
       this.lbl_certificados = new System.Windows.Forms.Label();
       this.dtp_fecha_calidad = new System.Windows.Forms.DateTimePicker();
       this.txt_certificados = new System.Windows.Forms.TextBox();
       this.lbl_fecha_calidad = new System.Windows.Forms.Label();
       this.lbl_accion_realizada = new System.Windows.Forms.Label();
       this.txt_acciones = new System.Windows.Forms.TextBox();
-      this.btn_guardar = new System.Windows.Forms.Button();
-      this.btn_salir = new System.Windows.Forms.Button();
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.dtp_fecha_creacion = new System.Windows.Forms.DateTimePicker();
       this.lbl_fecha_creacion = new System.Windows.Forms.Label();
       this.lbl_usuario = new System.Windows.Forms.Label();
       this.txt_usuario = new System.Windows.Forms.TextBox();
-      this.btn_borrar_ruta_doc = new System.Windows.Forms.Button();
-      this.btn_añadir_ruta_doc = new System.Windows.Forms.Button();
-      this.txt_documento = new System.Windows.Forms.TextBox();
-      this.lbl_documento = new System.Windows.Forms.Label();
-      this.btn_eliminar_certificado = new System.Windows.Forms.Button();
-      this.btn_añadir_certificado = new System.Windows.Forms.Button();
       this.gb_resultado.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dgv_verificacion)).BeginInit();
       this.gb_muestreo.SuspendLayout();
@@ -104,7 +100,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
       this.tp_calidad.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.SuspendLayout();
       // 
       // txt_num_registro
@@ -458,6 +453,40 @@
       this.tp_images.TabIndex = 1;
       this.tp_images.Text = "Imagenes";
       // 
+      // btn_borrar_ruta_doc
+      // 
+      this.btn_borrar_ruta_doc.Location = new System.Drawing.Point(335, 202);
+      this.btn_borrar_ruta_doc.Name = "btn_borrar_ruta_doc";
+      this.btn_borrar_ruta_doc.Size = new System.Drawing.Size(75, 23);
+      this.btn_borrar_ruta_doc.TabIndex = 70;
+      this.btn_borrar_ruta_doc.Text = "Eliminar";
+      this.btn_borrar_ruta_doc.UseVisualStyleBackColor = true;
+      // 
+      // btn_añadir_ruta_doc
+      // 
+      this.btn_añadir_ruta_doc.Location = new System.Drawing.Point(335, 173);
+      this.btn_añadir_ruta_doc.Name = "btn_añadir_ruta_doc";
+      this.btn_añadir_ruta_doc.Size = new System.Drawing.Size(75, 23);
+      this.btn_añadir_ruta_doc.TabIndex = 69;
+      this.btn_añadir_ruta_doc.Text = "Añadir";
+      this.btn_añadir_ruta_doc.UseVisualStyleBackColor = true;
+      // 
+      // txt_documento
+      // 
+      this.txt_documento.Location = new System.Drawing.Point(83, 173);
+      this.txt_documento.Name = "txt_documento";
+      this.txt_documento.Size = new System.Drawing.Size(246, 20);
+      this.txt_documento.TabIndex = 67;
+      // 
+      // lbl_documento
+      // 
+      this.lbl_documento.AutoSize = true;
+      this.lbl_documento.Location = new System.Drawing.Point(14, 176);
+      this.lbl_documento.Name = "lbl_documento";
+      this.lbl_documento.Size = new System.Drawing.Size(62, 13);
+      this.lbl_documento.TabIndex = 68;
+      this.lbl_documento.Text = "Documento";
+      // 
       // pb5
       // 
       this.pb5.Location = new System.Drawing.Point(629, 19);
@@ -516,6 +545,24 @@
       this.tp_calidad.TabIndex = 2;
       this.tp_calidad.Text = "Calidad";
       // 
+      // btn_eliminar_certificado
+      // 
+      this.btn_eliminar_certificado.Location = new System.Drawing.Point(605, 187);
+      this.btn_eliminar_certificado.Name = "btn_eliminar_certificado";
+      this.btn_eliminar_certificado.Size = new System.Drawing.Size(75, 23);
+      this.btn_eliminar_certificado.TabIndex = 72;
+      this.btn_eliminar_certificado.Text = "Eliminar";
+      this.btn_eliminar_certificado.UseVisualStyleBackColor = true;
+      // 
+      // btn_añadir_certificado
+      // 
+      this.btn_añadir_certificado.Location = new System.Drawing.Point(605, 158);
+      this.btn_añadir_certificado.Name = "btn_añadir_certificado";
+      this.btn_añadir_certificado.Size = new System.Drawing.Size(75, 23);
+      this.btn_añadir_certificado.TabIndex = 71;
+      this.btn_añadir_certificado.Text = "Añadir";
+      this.btn_añadir_certificado.UseVisualStyleBackColor = true;
+      // 
       // lbl_certificados
       // 
       this.lbl_certificados.AutoSize = true;
@@ -566,34 +613,6 @@
       this.txt_acciones.Size = new System.Drawing.Size(627, 103);
       this.txt_acciones.TabIndex = 23;
       // 
-      // btn_guardar
-      // 
-      this.btn_guardar.Location = new System.Drawing.Point(829, 360);
-      this.btn_guardar.Name = "btn_guardar";
-      this.btn_guardar.Size = new System.Drawing.Size(75, 23);
-      this.btn_guardar.TabIndex = 24;
-      this.btn_guardar.Text = "Guardar";
-      this.btn_guardar.UseVisualStyleBackColor = true;
-      // 
-      // btn_salir
-      // 
-      this.btn_salir.Location = new System.Drawing.Point(829, 389);
-      this.btn_salir.Name = "btn_salir";
-      this.btn_salir.Size = new System.Drawing.Size(75, 23);
-      this.btn_salir.TabIndex = 30;
-      this.btn_salir.Text = "Salir";
-      this.btn_salir.UseVisualStyleBackColor = true;
-      // 
-      // pictureBox1
-      // 
-      this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-      this.pictureBox1.Location = new System.Drawing.Point(816, 21);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(96, 66);
-      this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox1.TabIndex = 31;
-      this.pictureBox1.TabStop = false;
-      // 
       // dtp_fecha_creacion
       // 
       this.dtp_fecha_creacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -627,58 +646,6 @@
       this.txt_usuario.Size = new System.Drawing.Size(100, 20);
       this.txt_usuario.TabIndex = 34;
       // 
-      // btn_borrar_ruta_doc
-      // 
-      this.btn_borrar_ruta_doc.Location = new System.Drawing.Point(335, 202);
-      this.btn_borrar_ruta_doc.Name = "btn_borrar_ruta_doc";
-      this.btn_borrar_ruta_doc.Size = new System.Drawing.Size(75, 23);
-      this.btn_borrar_ruta_doc.TabIndex = 70;
-      this.btn_borrar_ruta_doc.Text = "Eliminar";
-      this.btn_borrar_ruta_doc.UseVisualStyleBackColor = true;
-      // 
-      // btn_añadir_ruta_doc
-      // 
-      this.btn_añadir_ruta_doc.Location = new System.Drawing.Point(335, 173);
-      this.btn_añadir_ruta_doc.Name = "btn_añadir_ruta_doc";
-      this.btn_añadir_ruta_doc.Size = new System.Drawing.Size(75, 23);
-      this.btn_añadir_ruta_doc.TabIndex = 69;
-      this.btn_añadir_ruta_doc.Text = "Añadir";
-      this.btn_añadir_ruta_doc.UseVisualStyleBackColor = true;
-      // 
-      // txt_documento
-      // 
-      this.txt_documento.Location = new System.Drawing.Point(83, 173);
-      this.txt_documento.Name = "txt_documento";
-      this.txt_documento.Size = new System.Drawing.Size(246, 20);
-      this.txt_documento.TabIndex = 67;
-      // 
-      // lbl_documento
-      // 
-      this.lbl_documento.AutoSize = true;
-      this.lbl_documento.Location = new System.Drawing.Point(14, 176);
-      this.lbl_documento.Name = "lbl_documento";
-      this.lbl_documento.Size = new System.Drawing.Size(62, 13);
-      this.lbl_documento.TabIndex = 68;
-      this.lbl_documento.Text = "Documento";
-      // 
-      // btn_eliminar_certificado
-      // 
-      this.btn_eliminar_certificado.Location = new System.Drawing.Point(605, 187);
-      this.btn_eliminar_certificado.Name = "btn_eliminar_certificado";
-      this.btn_eliminar_certificado.Size = new System.Drawing.Size(75, 23);
-      this.btn_eliminar_certificado.TabIndex = 72;
-      this.btn_eliminar_certificado.Text = "Eliminar";
-      this.btn_eliminar_certificado.UseVisualStyleBackColor = true;
-      // 
-      // btn_añadir_certificado
-      // 
-      this.btn_añadir_certificado.Location = new System.Drawing.Point(605, 158);
-      this.btn_añadir_certificado.Name = "btn_añadir_certificado";
-      this.btn_añadir_certificado.Size = new System.Drawing.Size(75, 23);
-      this.btn_añadir_certificado.TabIndex = 71;
-      this.btn_añadir_certificado.Text = "Añadir";
-      this.btn_añadir_certificado.UseVisualStyleBackColor = true;
-      // 
       // frm_registro_qc_entrada
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -689,9 +656,6 @@
       this.Controls.Add(this.txt_usuario);
       this.Controls.Add(this.dtp_fecha_creacion);
       this.Controls.Add(this.lbl_fecha_creacion);
-      this.Controls.Add(this.pictureBox1);
-      this.Controls.Add(this.btn_salir);
-      this.Controls.Add(this.btn_guardar);
       this.Controls.Add(this.tc_datos);
       this.Controls.Add(this.gb_muestreo);
       this.Controls.Add(this.gb_resultado);
@@ -728,7 +692,6 @@
       ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
       this.tp_calidad.ResumeLayout(false);
       this.tp_calidad.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -773,8 +736,6 @@
     private System.Windows.Forms.GroupBox gb_metodo_verificacion;
     private System.Windows.Forms.Button btn_eliminar_verificacion;
     private System.Windows.Forms.Button btn_añadir_verificacion;
-    private System.Windows.Forms.Button btn_guardar;
-    private System.Windows.Forms.Button btn_salir;
     private System.Windows.Forms.PictureBox pb5;
     private System.Windows.Forms.PictureBox pb4;
     private System.Windows.Forms.PictureBox pb2;
@@ -787,7 +748,6 @@
     private System.Windows.Forms.Label lbl_fecha_calidad;
     private System.Windows.Forms.Label lbl_certificados;
     private System.Windows.Forms.TextBox txt_certificados;
-    private System.Windows.Forms.PictureBox pictureBox1;
     private System.Windows.Forms.DateTimePicker dtp_fecha_creacion;
     private System.Windows.Forms.Label lbl_fecha_creacion;
     private System.Windows.Forms.Label lbl_usuario;

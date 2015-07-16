@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ControlCalidad
 {
-  public partial class frm_registro_qc_entrada : Form
+  public partial class frm_registro_qc_entrada : frm_maestro
   {
     public frm_registro_qc_entrada()
     {

@@ -28,17 +28,13 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_evaluacion_piezas));
-      this.btn_guardar = new System.Windows.Forms.Button();
       this.lbl_ref_metalcaucho = new System.Windows.Forms.Label();
       this.txt_ref_metalcaucho = new System.Windows.Forms.TextBox();
-      this.btn_salir = new System.Windows.Forms.Button();
       this.gb_ref_metalcaucho = new System.Windows.Forms.GroupBox();
       this.txt_cod_acceso = new System.Windows.Forms.TextBox();
       this.lbl_cod_acceso = new System.Windows.Forms.Label();
       this.txt_descripcion = new System.Windows.Forms.TextBox();
       this.lbl_descripcion = new System.Windows.Forms.Label();
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.lbl_num_lote = new System.Windows.Forms.Label();
       this.txt_num_lote = new System.Windows.Forms.TextBox();
       this.lbl_expediente = new System.Windows.Forms.Label();
@@ -48,45 +44,35 @@
       this.txt_motivos_problema = new System.Windows.Forms.TextBox();
       this.lbl_motivo_problema = new System.Windows.Forms.Label();
       this.gb_registro_garantia = new System.Windows.Forms.GroupBox();
+      this.dtp_fecha_registro = new System.Windows.Forms.DateTimePicker();
       this.lbl_numero = new System.Windows.Forms.Label();
       this.txt_num_recibidas = new System.Windows.Forms.TextBox();
       this.lbl_fecha_registro = new System.Windows.Forms.Label();
-      this.dtp_fecha_registro = new System.Windows.Forms.DateTimePicker();
       this.tc_datos = new System.Windows.Forms.TabControl();
       this.tp_resolucion = new System.Windows.Forms.TabPage();
-      this.tp_responsable = new System.Windows.Forms.TabPage();
-      this.lbl_pruebas_efectuadas = new System.Windows.Forms.Label();
-      this.txt_pruebas_efectuadas = new System.Windows.Forms.TextBox();
-      this.lbl_anomalias = new System.Windows.Forms.Label();
-      this.txt_anomalias = new System.Windows.Forms.TextBox();
+      this.lbl_observaciones = new System.Windows.Forms.Label();
+      this.txt_observaciones = new System.Windows.Forms.TextBox();
       this.lbl_resultado_pruebas = new System.Windows.Forms.Label();
       this.txt_resultado_pruebas = new System.Windows.Forms.TextBox();
-      this.txt_observaciones = new System.Windows.Forms.TextBox();
-      this.lbl_observaciones = new System.Windows.Forms.Label();
-      this.lbl_resultado_final = new System.Windows.Forms.Label();
-      this.txt_resultado_final = new System.Windows.Forms.TextBox();
-      this.lbl_garantia = new System.Windows.Forms.Label();
-      this.txt_garantia = new System.Windows.Forms.TextBox();
-      this.txt_verificador = new System.Windows.Forms.TextBox();
-      this.lbl_verificador = new System.Windows.Forms.Label();
+      this.lbl_anomalias = new System.Windows.Forms.Label();
+      this.txt_anomalias = new System.Windows.Forms.TextBox();
+      this.lbl_pruebas_efectuadas = new System.Windows.Forms.Label();
+      this.txt_pruebas_efectuadas = new System.Windows.Forms.TextBox();
+      this.tp_responsable = new System.Windows.Forms.TabPage();
       this.txt_responsable_dpto = new System.Windows.Forms.TextBox();
       this.lbl_responsable = new System.Windows.Forms.Label();
+      this.txt_verificador = new System.Windows.Forms.TextBox();
+      this.lbl_verificador = new System.Windows.Forms.Label();
+      this.lbl_garantia = new System.Windows.Forms.Label();
+      this.txt_garantia = new System.Windows.Forms.TextBox();
+      this.lbl_resultado_final = new System.Windows.Forms.Label();
+      this.txt_resultado_final = new System.Windows.Forms.TextBox();
       this.gb_ref_metalcaucho.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.gb_registro_garantia.SuspendLayout();
       this.tc_datos.SuspendLayout();
       this.tp_resolucion.SuspendLayout();
       this.tp_responsable.SuspendLayout();
       this.SuspendLayout();
-      // 
-      // btn_guardar
-      // 
-      this.btn_guardar.Location = new System.Drawing.Point(817, 318);
-      this.btn_guardar.Name = "btn_guardar";
-      this.btn_guardar.Size = new System.Drawing.Size(75, 23);
-      this.btn_guardar.TabIndex = 44;
-      this.btn_guardar.Text = "Guardar";
-      this.btn_guardar.UseVisualStyleBackColor = true;
       // 
       // lbl_ref_metalcaucho
       // 
@@ -103,15 +89,6 @@
       this.txt_ref_metalcaucho.Name = "txt_ref_metalcaucho";
       this.txt_ref_metalcaucho.Size = new System.Drawing.Size(128, 20);
       this.txt_ref_metalcaucho.TabIndex = 35;
-      // 
-      // btn_salir
-      // 
-      this.btn_salir.Location = new System.Drawing.Point(817, 347);
-      this.btn_salir.Name = "btn_salir";
-      this.btn_salir.Size = new System.Drawing.Size(75, 23);
-      this.btn_salir.TabIndex = 47;
-      this.btn_salir.Text = "Salir";
-      this.btn_salir.UseVisualStyleBackColor = true;
       // 
       // gb_ref_metalcaucho
       // 
@@ -159,16 +136,6 @@
       this.lbl_descripcion.Size = new System.Drawing.Size(63, 13);
       this.lbl_descripcion.TabIndex = 38;
       this.lbl_descripcion.Text = "Descripción";
-      // 
-      // pictureBox1
-      // 
-      this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-      this.pictureBox1.Location = new System.Drawing.Point(808, 21);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(96, 66);
-      this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox1.TabIndex = 64;
-      this.pictureBox1.TabStop = false;
       // 
       // lbl_num_lote
       // 
@@ -249,6 +216,14 @@
       this.gb_registro_garantia.TabStop = false;
       this.gb_registro_garantia.Text = "Registro de garantias";
       // 
+      // dtp_fecha_registro
+      // 
+      this.dtp_fecha_registro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+      this.dtp_fecha_registro.Location = new System.Drawing.Point(61, 42);
+      this.dtp_fecha_registro.Name = "dtp_fecha_registro";
+      this.dtp_fecha_registro.Size = new System.Drawing.Size(100, 20);
+      this.dtp_fecha_registro.TabIndex = 34;
+      // 
       // lbl_numero
       // 
       this.lbl_numero.AutoSize = true;
@@ -273,14 +248,6 @@
       this.lbl_fecha_registro.Size = new System.Drawing.Size(37, 13);
       this.lbl_fecha_registro.TabIndex = 25;
       this.lbl_fecha_registro.Text = "Fecha";
-      // 
-      // dtp_fecha_registro
-      // 
-      this.dtp_fecha_registro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-      this.dtp_fecha_registro.Location = new System.Drawing.Point(61, 42);
-      this.dtp_fecha_registro.Name = "dtp_fecha_registro";
-      this.dtp_fecha_registro.Size = new System.Drawing.Size(100, 20);
-      this.dtp_fecha_registro.TabIndex = 34;
       // 
       // tc_datos
       // 
@@ -310,6 +277,71 @@
       this.tp_resolucion.TabIndex = 0;
       this.tp_resolucion.Text = "Resolución";
       // 
+      // lbl_observaciones
+      // 
+      this.lbl_observaciones.AutoSize = true;
+      this.lbl_observaciones.Location = new System.Drawing.Point(383, 63);
+      this.lbl_observaciones.Name = "lbl_observaciones";
+      this.lbl_observaciones.Size = new System.Drawing.Size(78, 13);
+      this.lbl_observaciones.TabIndex = 35;
+      this.lbl_observaciones.Text = "Observaciones";
+      // 
+      // txt_observaciones
+      // 
+      this.txt_observaciones.Location = new System.Drawing.Point(467, 60);
+      this.txt_observaciones.Multiline = true;
+      this.txt_observaciones.Name = "txt_observaciones";
+      this.txt_observaciones.Size = new System.Drawing.Size(288, 48);
+      this.txt_observaciones.TabIndex = 79;
+      // 
+      // lbl_resultado_pruebas
+      // 
+      this.lbl_resultado_pruebas.Location = new System.Drawing.Point(401, 6);
+      this.lbl_resultado_pruebas.Name = "lbl_resultado_pruebas";
+      this.lbl_resultado_pruebas.Size = new System.Drawing.Size(60, 29);
+      this.lbl_resultado_pruebas.TabIndex = 78;
+      this.lbl_resultado_pruebas.Text = "Resultado pruebas";
+      // 
+      // txt_resultado_pruebas
+      // 
+      this.txt_resultado_pruebas.Location = new System.Drawing.Point(467, 6);
+      this.txt_resultado_pruebas.Multiline = true;
+      this.txt_resultado_pruebas.Name = "txt_resultado_pruebas";
+      this.txt_resultado_pruebas.Size = new System.Drawing.Size(288, 48);
+      this.txt_resultado_pruebas.TabIndex = 77;
+      // 
+      // lbl_anomalias
+      // 
+      this.lbl_anomalias.Location = new System.Drawing.Point(17, 60);
+      this.lbl_anomalias.Name = "lbl_anomalias";
+      this.lbl_anomalias.Size = new System.Drawing.Size(62, 29);
+      this.lbl_anomalias.TabIndex = 76;
+      this.lbl_anomalias.Text = "Anomalías detectadas";
+      // 
+      // txt_anomalias
+      // 
+      this.txt_anomalias.Location = new System.Drawing.Point(85, 60);
+      this.txt_anomalias.Multiline = true;
+      this.txt_anomalias.Name = "txt_anomalias";
+      this.txt_anomalias.Size = new System.Drawing.Size(288, 48);
+      this.txt_anomalias.TabIndex = 75;
+      // 
+      // lbl_pruebas_efectuadas
+      // 
+      this.lbl_pruebas_efectuadas.Location = new System.Drawing.Point(17, 6);
+      this.lbl_pruebas_efectuadas.Name = "lbl_pruebas_efectuadas";
+      this.lbl_pruebas_efectuadas.Size = new System.Drawing.Size(62, 29);
+      this.lbl_pruebas_efectuadas.TabIndex = 74;
+      this.lbl_pruebas_efectuadas.Text = "Pruebas efectuadas";
+      // 
+      // txt_pruebas_efectuadas
+      // 
+      this.txt_pruebas_efectuadas.Location = new System.Drawing.Point(85, 6);
+      this.txt_pruebas_efectuadas.Multiline = true;
+      this.txt_pruebas_efectuadas.Name = "txt_pruebas_efectuadas";
+      this.txt_pruebas_efectuadas.Size = new System.Drawing.Size(288, 48);
+      this.txt_pruebas_efectuadas.TabIndex = 73;
+      // 
       // tp_responsable
       // 
       this.tp_responsable.BackColor = System.Drawing.Color.RoyalBlue;
@@ -328,86 +360,37 @@
       this.tp_responsable.TabIndex = 1;
       this.tp_responsable.Text = "Responsable";
       // 
-      // lbl_pruebas_efectuadas
+      // txt_responsable_dpto
       // 
-      this.lbl_pruebas_efectuadas.Location = new System.Drawing.Point(17, 6);
-      this.lbl_pruebas_efectuadas.Name = "lbl_pruebas_efectuadas";
-      this.lbl_pruebas_efectuadas.Size = new System.Drawing.Size(62, 29);
-      this.lbl_pruebas_efectuadas.TabIndex = 74;
-      this.lbl_pruebas_efectuadas.Text = "Pruebas efectuadas";
+      this.txt_responsable_dpto.Location = new System.Drawing.Point(494, 32);
+      this.txt_responsable_dpto.Name = "txt_responsable_dpto";
+      this.txt_responsable_dpto.Size = new System.Drawing.Size(100, 20);
+      this.txt_responsable_dpto.TabIndex = 84;
       // 
-      // txt_pruebas_efectuadas
+      // lbl_responsable
       // 
-      this.txt_pruebas_efectuadas.Location = new System.Drawing.Point(85, 6);
-      this.txt_pruebas_efectuadas.Multiline = true;
-      this.txt_pruebas_efectuadas.Name = "txt_pruebas_efectuadas";
-      this.txt_pruebas_efectuadas.Size = new System.Drawing.Size(288, 48);
-      this.txt_pruebas_efectuadas.TabIndex = 73;
+      this.lbl_responsable.AutoSize = true;
+      this.lbl_responsable.Location = new System.Drawing.Point(392, 35);
+      this.lbl_responsable.Name = "lbl_responsable";
+      this.lbl_responsable.Size = new System.Drawing.Size(96, 13);
+      this.lbl_responsable.TabIndex = 85;
+      this.lbl_responsable.Text = "Responsable dpto.";
       // 
-      // lbl_anomalias
+      // txt_verificador
       // 
-      this.lbl_anomalias.Location = new System.Drawing.Point(17, 60);
-      this.lbl_anomalias.Name = "lbl_anomalias";
-      this.lbl_anomalias.Size = new System.Drawing.Size(62, 29);
-      this.lbl_anomalias.TabIndex = 76;
-      this.lbl_anomalias.Text = "Anomalías detectadas";
+      this.txt_verificador.Location = new System.Drawing.Point(494, 6);
+      this.txt_verificador.Name = "txt_verificador";
+      this.txt_verificador.Size = new System.Drawing.Size(100, 20);
+      this.txt_verificador.TabIndex = 82;
       // 
-      // txt_anomalias
+      // lbl_verificador
       // 
-      this.txt_anomalias.Location = new System.Drawing.Point(85, 60);
-      this.txt_anomalias.Multiline = true;
-      this.txt_anomalias.Name = "txt_anomalias";
-      this.txt_anomalias.Size = new System.Drawing.Size(288, 48);
-      this.txt_anomalias.TabIndex = 75;
-      // 
-      // lbl_resultado_pruebas
-      // 
-      this.lbl_resultado_pruebas.Location = new System.Drawing.Point(401, 6);
-      this.lbl_resultado_pruebas.Name = "lbl_resultado_pruebas";
-      this.lbl_resultado_pruebas.Size = new System.Drawing.Size(60, 29);
-      this.lbl_resultado_pruebas.TabIndex = 78;
-      this.lbl_resultado_pruebas.Text = "Resultado pruebas";
-      // 
-      // txt_resultado_pruebas
-      // 
-      this.txt_resultado_pruebas.Location = new System.Drawing.Point(467, 6);
-      this.txt_resultado_pruebas.Multiline = true;
-      this.txt_resultado_pruebas.Name = "txt_resultado_pruebas";
-      this.txt_resultado_pruebas.Size = new System.Drawing.Size(288, 48);
-      this.txt_resultado_pruebas.TabIndex = 77;
-      // 
-      // txt_observaciones
-      // 
-      this.txt_observaciones.Location = new System.Drawing.Point(467, 60);
-      this.txt_observaciones.Multiline = true;
-      this.txt_observaciones.Name = "txt_observaciones";
-      this.txt_observaciones.Size = new System.Drawing.Size(288, 48);
-      this.txt_observaciones.TabIndex = 79;
-      // 
-      // lbl_observaciones
-      // 
-      this.lbl_observaciones.AutoSize = true;
-      this.lbl_observaciones.Location = new System.Drawing.Point(383, 63);
-      this.lbl_observaciones.Name = "lbl_observaciones";
-      this.lbl_observaciones.Size = new System.Drawing.Size(78, 13);
-      this.lbl_observaciones.TabIndex = 35;
-      this.lbl_observaciones.Text = "Observaciones";
-      // 
-      // lbl_resultado_final
-      // 
-      this.lbl_resultado_final.Location = new System.Drawing.Point(19, 6);
-      this.lbl_resultado_final.Name = "lbl_resultado_final";
-      this.lbl_resultado_final.Size = new System.Drawing.Size(60, 29);
-      this.lbl_resultado_final.TabIndex = 76;
-      this.lbl_resultado_final.Text = "Resultado final";
-      // 
-      // txt_resultado_final
-      // 
-      this.txt_resultado_final.Location = new System.Drawing.Point(85, 6);
-      this.txt_resultado_final.Multiline = true;
-      this.txt_resultado_final.Name = "txt_resultado_final";
-      this.txt_resultado_final.Size = new System.Drawing.Size(288, 48);
-      this.txt_resultado_final.TabIndex = 75;
+      this.lbl_verificador.AutoSize = true;
+      this.lbl_verificador.Location = new System.Drawing.Point(413, 9);
+      this.lbl_verificador.Name = "lbl_verificador";
+      this.lbl_verificador.Size = new System.Drawing.Size(75, 13);
+      this.lbl_verificador.TabIndex = 83;
+      this.lbl_verificador.Text = "Verificador por";
       // 
       // lbl_garantia
       // 
@@ -426,44 +409,28 @@
       this.txt_garantia.Size = new System.Drawing.Size(288, 48);
       this.txt_garantia.TabIndex = 81;
       // 
-      // txt_verificador
+      // lbl_resultado_final
       // 
-      this.txt_verificador.Location = new System.Drawing.Point(494, 6);
-      this.txt_verificador.Name = "txt_verificador";
-      this.txt_verificador.Size = new System.Drawing.Size(100, 20);
-      this.txt_verificador.TabIndex = 82;
+      this.lbl_resultado_final.Location = new System.Drawing.Point(19, 6);
+      this.lbl_resultado_final.Name = "lbl_resultado_final";
+      this.lbl_resultado_final.Size = new System.Drawing.Size(60, 29);
+      this.lbl_resultado_final.TabIndex = 76;
+      this.lbl_resultado_final.Text = "Resultado final";
       // 
-      // lbl_verificador
+      // txt_resultado_final
       // 
-      this.lbl_verificador.AutoSize = true;
-      this.lbl_verificador.Location = new System.Drawing.Point(413, 9);
-      this.lbl_verificador.Name = "lbl_verificador";
-      this.lbl_verificador.Size = new System.Drawing.Size(75, 13);
-      this.lbl_verificador.TabIndex = 83;
-      this.lbl_verificador.Text = "Verificador por";
-      // 
-      // txt_responsable_dpto
-      // 
-      this.txt_responsable_dpto.Location = new System.Drawing.Point(494, 32);
-      this.txt_responsable_dpto.Name = "txt_responsable_dpto";
-      this.txt_responsable_dpto.Size = new System.Drawing.Size(100, 20);
-      this.txt_responsable_dpto.TabIndex = 84;
-      // 
-      // lbl_responsable
-      // 
-      this.lbl_responsable.AutoSize = true;
-      this.lbl_responsable.Location = new System.Drawing.Point(392, 35);
-      this.lbl_responsable.Name = "lbl_responsable";
-      this.lbl_responsable.Size = new System.Drawing.Size(96, 13);
-      this.lbl_responsable.TabIndex = 85;
-      this.lbl_responsable.Text = "Responsable dpto.";
+      this.txt_resultado_final.Location = new System.Drawing.Point(85, 6);
+      this.txt_resultado_final.Multiline = true;
+      this.txt_resultado_final.Name = "txt_resultado_final";
+      this.txt_resultado_final.Size = new System.Drawing.Size(288, 48);
+      this.txt_resultado_final.TabIndex = 75;
       // 
       // frm_evaluacion_piezas
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.RoyalBlue;
-      this.ClientSize = new System.Drawing.Size(916, 382);
+      this.ClientSize = new System.Drawing.Size(920, 474);
       this.Controls.Add(this.tc_datos);
       this.Controls.Add(this.gb_registro_garantia);
       this.Controls.Add(this.lbl_motivo_problema);
@@ -473,17 +440,24 @@
       this.Controls.Add(this.lbl_expediente);
       this.Controls.Add(this.txt_expediente);
       this.Controls.Add(this.lbl_num_lote);
-      this.Controls.Add(this.pictureBox1);
       this.Controls.Add(this.txt_num_lote);
       this.Controls.Add(this.gb_ref_metalcaucho);
-      this.Controls.Add(this.btn_guardar);
-      this.Controls.Add(this.btn_salir);
       this.Name = "frm_evaluacion_piezas";
       this.Text = "Evaluación piezas";
       this.Load += new System.EventHandler(this.frm_evaluacion_piezas_Load);
+      this.Controls.SetChildIndex(this.gb_ref_metalcaucho, 0);
+      this.Controls.SetChildIndex(this.txt_num_lote, 0);
+      this.Controls.SetChildIndex(this.lbl_num_lote, 0);
+      this.Controls.SetChildIndex(this.txt_expediente, 0);
+      this.Controls.SetChildIndex(this.lbl_expediente, 0);
+      this.Controls.SetChildIndex(this.txt_cliente, 0);
+      this.Controls.SetChildIndex(this.lbl_cliente, 0);
+      this.Controls.SetChildIndex(this.txt_motivos_problema, 0);
+      this.Controls.SetChildIndex(this.lbl_motivo_problema, 0);
+      this.Controls.SetChildIndex(this.gb_registro_garantia, 0);
+      this.Controls.SetChildIndex(this.tc_datos, 0);
       this.gb_ref_metalcaucho.ResumeLayout(false);
       this.gb_ref_metalcaucho.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.gb_registro_garantia.ResumeLayout(false);
       this.gb_registro_garantia.PerformLayout();
       this.tc_datos.ResumeLayout(false);
@@ -498,16 +472,13 @@
 
     #endregion
 
-    private System.Windows.Forms.Button btn_guardar;
     private System.Windows.Forms.Label lbl_ref_metalcaucho;
     private System.Windows.Forms.TextBox txt_ref_metalcaucho;
-    private System.Windows.Forms.Button btn_salir;
     private System.Windows.Forms.GroupBox gb_ref_metalcaucho;
     private System.Windows.Forms.TextBox txt_cod_acceso;
     private System.Windows.Forms.Label lbl_cod_acceso;
     private System.Windows.Forms.TextBox txt_descripcion;
     private System.Windows.Forms.Label lbl_descripcion;
-    private System.Windows.Forms.PictureBox pictureBox1;
     private System.Windows.Forms.Label lbl_num_lote;
     private System.Windows.Forms.TextBox txt_num_lote;
     private System.Windows.Forms.Label lbl_expediente;

@@ -28,9 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_registro_garantias_tramite));
       this.txt_num_registro = new System.Windows.Forms.TextBox();
-      this.btn_guardar = new System.Windows.Forms.Button();
       this.lbl_expediente = new System.Windows.Forms.Label();
       this.txt_expediente = new System.Windows.Forms.TextBox();
       this.lbl_num_lote = new System.Windows.Forms.Label();
@@ -42,7 +40,6 @@
       this.dtp_fecha_recepcion = new System.Windows.Forms.DateTimePicker();
       this.lbl_date_recepcion = new System.Windows.Forms.Label();
       this.lbl_num_registro = new System.Windows.Forms.Label();
-      this.btn_salir = new System.Windows.Forms.Button();
       this.dtp_fecha_creacion = new System.Windows.Forms.DateTimePicker();
       this.lbl_fecha_creacion = new System.Windows.Forms.Label();
       this.lbl_usuario = new System.Windows.Forms.Label();
@@ -110,7 +107,6 @@
       this.cmb_estado = new System.Windows.Forms.ComboBox();
       this.lbl_estado = new System.Windows.Forms.Label();
       this.ch_banco_pruebas = new System.Windows.Forms.CheckBox();
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.cmb_via = new System.Windows.Forms.ComboBox();
       this.lbl_via = new System.Windows.Forms.Label();
       this.gb_ref_metalcaucho.SuspendLayout();
@@ -131,7 +127,6 @@
       this.tp_administracion.SuspendLayout();
       this.gb_solicitud_cliente.SuspendLayout();
       this.gb_respuesta_mc.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.SuspendLayout();
       // 
       // txt_num_registro
@@ -140,15 +135,6 @@
       this.txt_num_registro.Name = "txt_num_registro";
       this.txt_num_registro.Size = new System.Drawing.Size(100, 20);
       this.txt_num_registro.TabIndex = 31;
-      // 
-      // btn_guardar
-      // 
-      this.btn_guardar.Location = new System.Drawing.Point(817, 318);
-      this.btn_guardar.Name = "btn_guardar";
-      this.btn_guardar.Size = new System.Drawing.Size(75, 23);
-      this.btn_guardar.TabIndex = 44;
-      this.btn_guardar.Text = "Guardar";
-      this.btn_guardar.UseVisualStyleBackColor = true;
       // 
       // lbl_expediente
       // 
@@ -240,15 +226,6 @@
       this.lbl_num_registro.Size = new System.Drawing.Size(61, 13);
       this.lbl_num_registro.TabIndex = 32;
       this.lbl_num_registro.Text = "Nº Registro";
-      // 
-      // btn_salir
-      // 
-      this.btn_salir.Location = new System.Drawing.Point(817, 347);
-      this.btn_salir.Name = "btn_salir";
-      this.btn_salir.Size = new System.Drawing.Size(75, 23);
-      this.btn_salir.TabIndex = 47;
-      this.btn_salir.Text = "Salir";
-      this.btn_salir.UseVisualStyleBackColor = true;
       // 
       // dtp_fecha_creacion
       // 
@@ -877,16 +854,6 @@
       this.ch_banco_pruebas.Text = "Banco Pruebas";
       this.ch_banco_pruebas.UseVisualStyleBackColor = true;
       // 
-      // pictureBox1
-      // 
-      this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-      this.pictureBox1.Location = new System.Drawing.Point(808, 21);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(96, 66);
-      this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox1.TabIndex = 64;
-      this.pictureBox1.TabStop = false;
-      // 
       // cmb_via
       // 
       this.cmb_via.FormattingEnabled = true;
@@ -909,10 +876,9 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.RoyalBlue;
-      this.ClientSize = new System.Drawing.Size(916, 382);
+      this.ClientSize = new System.Drawing.Size(916, 470);
       this.Controls.Add(this.cmb_via);
       this.Controls.Add(this.lbl_via);
-      this.Controls.Add(this.pictureBox1);
       this.Controls.Add(this.ch_banco_pruebas);
       this.Controls.Add(this.cmb_estado);
       this.Controls.Add(this.lbl_estado);
@@ -927,7 +893,6 @@
       this.Controls.Add(this.lbl_fecha_creacion);
       this.Controls.Add(this.txt_num_registro);
       this.Controls.Add(this.tc_datos);
-      this.Controls.Add(this.btn_guardar);
       this.Controls.Add(this.lbl_expediente);
       this.Controls.Add(this.txt_expediente);
       this.Controls.Add(this.lbl_num_lote);
@@ -937,10 +902,34 @@
       this.Controls.Add(this.dtp_fecha_recepcion);
       this.Controls.Add(this.lbl_date_recepcion);
       this.Controls.Add(this.lbl_num_registro);
-      this.Controls.Add(this.btn_salir);
       this.Name = "frm_registro_garantias_tramite";
       this.Text = "Registro de garantias en tramite";
       this.Load += new System.EventHandler(this.frm_registro_garantias_tramite_Load);
+      this.Controls.SetChildIndex(this.lbl_num_registro, 0);
+      this.Controls.SetChildIndex(this.lbl_date_recepcion, 0);
+      this.Controls.SetChildIndex(this.dtp_fecha_recepcion, 0);
+      this.Controls.SetChildIndex(this.txt_proveedor, 0);
+      this.Controls.SetChildIndex(this.lbl_proveedor, 0);
+      this.Controls.SetChildIndex(this.txt_num_lote, 0);
+      this.Controls.SetChildIndex(this.lbl_num_lote, 0);
+      this.Controls.SetChildIndex(this.txt_expediente, 0);
+      this.Controls.SetChildIndex(this.lbl_expediente, 0);
+      this.Controls.SetChildIndex(this.tc_datos, 0);
+      this.Controls.SetChildIndex(this.txt_num_registro, 0);
+      this.Controls.SetChildIndex(this.lbl_fecha_creacion, 0);
+      this.Controls.SetChildIndex(this.dtp_fecha_creacion, 0);
+      this.Controls.SetChildIndex(this.txt_usuario, 0);
+      this.Controls.SetChildIndex(this.lbl_usuario, 0);
+      this.Controls.SetChildIndex(this.gb_ref_metalcaucho, 0);
+      this.Controls.SetChildIndex(this.txt_cliente, 0);
+      this.Controls.SetChildIndex(this.lbl_cliente, 0);
+      this.Controls.SetChildIndex(this.gb_solicitud_cliente, 0);
+      this.Controls.SetChildIndex(this.gb_respuesta_mc, 0);
+      this.Controls.SetChildIndex(this.lbl_estado, 0);
+      this.Controls.SetChildIndex(this.cmb_estado, 0);
+      this.Controls.SetChildIndex(this.ch_banco_pruebas, 0);
+      this.Controls.SetChildIndex(this.lbl_via, 0);
+      this.Controls.SetChildIndex(this.cmb_via, 0);
       this.gb_ref_metalcaucho.ResumeLayout(false);
       this.gb_ref_metalcaucho.PerformLayout();
       this.tp_documentacion.ResumeLayout(false);
@@ -968,7 +957,6 @@
       this.gb_solicitud_cliente.PerformLayout();
       this.gb_respuesta_mc.ResumeLayout(false);
       this.gb_respuesta_mc.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -977,7 +965,6 @@
     #endregion
 
     private System.Windows.Forms.TextBox txt_num_registro;
-    private System.Windows.Forms.Button btn_guardar;
     private System.Windows.Forms.Label lbl_expediente;
     private System.Windows.Forms.TextBox txt_expediente;
     private System.Windows.Forms.Label lbl_num_lote;
@@ -989,7 +976,6 @@
     private System.Windows.Forms.DateTimePicker dtp_fecha_recepcion;
     private System.Windows.Forms.Label lbl_date_recepcion;
     private System.Windows.Forms.Label lbl_num_registro;
-    private System.Windows.Forms.Button btn_salir;
     private System.Windows.Forms.DateTimePicker dtp_fecha_creacion;
     private System.Windows.Forms.Label lbl_fecha_creacion;
     private System.Windows.Forms.Label lbl_usuario;
@@ -1052,7 +1038,6 @@
     private System.Windows.Forms.ComboBox cmb_estado;
     private System.Windows.Forms.Label lbl_estado;
     private System.Windows.Forms.CheckBox ch_banco_pruebas;
-    private System.Windows.Forms.PictureBox pictureBox1;
     private System.Windows.Forms.ComboBox cmb_via;
     private System.Windows.Forms.Label lbl_via;
     private System.Windows.Forms.TabPage tp_administracion;

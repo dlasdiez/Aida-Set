@@ -28,7 +28,6 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_expediente));
       this.txt_num_registro = new System.Windows.Forms.TextBox();
       this.lbl_num_registro = new System.Windows.Forms.Label();
       this.lbl_date_expedicion = new System.Windows.Forms.Label();
@@ -41,26 +40,22 @@
       this.txt_cli_referencia = new System.Windows.Forms.TextBox();
       this.txt_observaciones = new System.Windows.Forms.TextBox();
       this.lbl_observaciones = new System.Windows.Forms.Label();
-      this.btn_guardar = new System.Windows.Forms.Button();
-      this.btn_salir = new System.Windows.Forms.Button();
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.dtp_fecha_creacion = new System.Windows.Forms.DateTimePicker();
       this.lbl_fecha_creacion = new System.Windows.Forms.Label();
       this.lbl_usuario = new System.Windows.Forms.Label();
       this.txt_usuario = new System.Windows.Forms.TextBox();
       this.gb_cliente = new System.Windows.Forms.GroupBox();
-      this.lbl_cli_email = new System.Windows.Forms.Label();
-      this.txt_cli_email = new System.Windows.Forms.TextBox();
-      this.ch_cli_SDC = new System.Windows.Forms.CheckBox();
-      this.ch_cli_DC = new System.Windows.Forms.CheckBox();
       this.lbl_cli_solicita = new System.Windows.Forms.Label();
+      this.ch_cli_SDC = new System.Windows.Forms.CheckBox();
+      this.txt_cli_email = new System.Windows.Forms.TextBox();
+      this.ch_cli_DC = new System.Windows.Forms.CheckBox();
+      this.lbl_cli_email = new System.Windows.Forms.Label();
       this.lbl_motivo_denegacion = new System.Windows.Forms.Label();
       this.txt_motivo_denegacion = new System.Windows.Forms.TextBox();
       this.gb_registro_lineas = new System.Windows.Forms.GroupBox();
-      this.btn_añadir_verificacion = new System.Windows.Forms.Button();
-      this.btn_eliminar_verificacion = new System.Windows.Forms.Button();
       this.dgv_verificacion = new System.Windows.Forms.DataGridView();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+      this.btn_eliminar_verificacion = new System.Windows.Forms.Button();
+      this.btn_añadir_verificacion = new System.Windows.Forms.Button();
       this.gb_cliente.SuspendLayout();
       this.gb_registro_lineas.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dgv_verificacion)).BeginInit();
@@ -164,34 +159,6 @@
       this.lbl_observaciones.TabIndex = 23;
       this.lbl_observaciones.Text = "Observaciones";
       // 
-      // btn_guardar
-      // 
-      this.btn_guardar.Location = new System.Drawing.Point(829, 412);
-      this.btn_guardar.Name = "btn_guardar";
-      this.btn_guardar.Size = new System.Drawing.Size(75, 23);
-      this.btn_guardar.TabIndex = 24;
-      this.btn_guardar.Text = "Guardar";
-      this.btn_guardar.UseVisualStyleBackColor = true;
-      // 
-      // btn_salir
-      // 
-      this.btn_salir.Location = new System.Drawing.Point(829, 441);
-      this.btn_salir.Name = "btn_salir";
-      this.btn_salir.Size = new System.Drawing.Size(75, 23);
-      this.btn_salir.TabIndex = 30;
-      this.btn_salir.Text = "Salir";
-      this.btn_salir.UseVisualStyleBackColor = true;
-      // 
-      // pictureBox1
-      // 
-      this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-      this.pictureBox1.Location = new System.Drawing.Point(816, 21);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(96, 66);
-      this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox1.TabIndex = 31;
-      this.pictureBox1.TabStop = false;
-      // 
       // dtp_fecha_creacion
       // 
       this.dtp_fecha_creacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -243,21 +210,14 @@
       this.gb_cliente.TabStop = false;
       this.gb_cliente.Text = "Cliente";
       // 
-      // lbl_cli_email
+      // lbl_cli_solicita
       // 
-      this.lbl_cli_email.AutoSize = true;
-      this.lbl_cli_email.Location = new System.Drawing.Point(31, 81);
-      this.lbl_cli_email.Name = "lbl_cli_email";
-      this.lbl_cli_email.Size = new System.Drawing.Size(31, 13);
-      this.lbl_cli_email.TabIndex = 16;
-      this.lbl_cli_email.Text = "email";
-      // 
-      // txt_cli_email
-      // 
-      this.txt_cli_email.Location = new System.Drawing.Point(68, 78);
-      this.txt_cli_email.Name = "txt_cli_email";
-      this.txt_cli_email.Size = new System.Drawing.Size(288, 20);
-      this.txt_cli_email.TabIndex = 15;
+      this.lbl_cli_solicita.AutoSize = true;
+      this.lbl_cli_solicita.Location = new System.Drawing.Point(18, 109);
+      this.lbl_cli_solicita.Name = "lbl_cli_solicita";
+      this.lbl_cli_solicita.Size = new System.Drawing.Size(44, 13);
+      this.lbl_cli_solicita.TabIndex = 40;
+      this.lbl_cli_solicita.Text = "Solicita:";
       // 
       // ch_cli_SDC
       // 
@@ -269,6 +229,13 @@
       this.ch_cli_SDC.Text = "S.D.C";
       this.ch_cli_SDC.UseVisualStyleBackColor = true;
       // 
+      // txt_cli_email
+      // 
+      this.txt_cli_email.Location = new System.Drawing.Point(68, 78);
+      this.txt_cli_email.Name = "txt_cli_email";
+      this.txt_cli_email.Size = new System.Drawing.Size(288, 20);
+      this.txt_cli_email.TabIndex = 15;
+      // 
       // ch_cli_DC
       // 
       this.ch_cli_DC.AutoSize = true;
@@ -279,14 +246,14 @@
       this.ch_cli_DC.Text = "D.C";
       this.ch_cli_DC.UseVisualStyleBackColor = true;
       // 
-      // lbl_cli_solicita
+      // lbl_cli_email
       // 
-      this.lbl_cli_solicita.AutoSize = true;
-      this.lbl_cli_solicita.Location = new System.Drawing.Point(18, 109);
-      this.lbl_cli_solicita.Name = "lbl_cli_solicita";
-      this.lbl_cli_solicita.Size = new System.Drawing.Size(44, 13);
-      this.lbl_cli_solicita.TabIndex = 40;
-      this.lbl_cli_solicita.Text = "Solicita:";
+      this.lbl_cli_email.AutoSize = true;
+      this.lbl_cli_email.Location = new System.Drawing.Point(31, 81);
+      this.lbl_cli_email.Name = "lbl_cli_email";
+      this.lbl_cli_email.Size = new System.Drawing.Size(31, 13);
+      this.lbl_cli_email.TabIndex = 16;
+      this.lbl_cli_email.Text = "email";
       // 
       // lbl_motivo_denegacion
       // 
@@ -317,14 +284,13 @@
       this.gb_registro_lineas.TabStop = false;
       this.gb_registro_lineas.Text = "Registro de Líneas";
       // 
-      // btn_añadir_verificacion
+      // dgv_verificacion
       // 
-      this.btn_añadir_verificacion.Location = new System.Drawing.Point(704, 122);
-      this.btn_añadir_verificacion.Name = "btn_añadir_verificacion";
-      this.btn_añadir_verificacion.Size = new System.Drawing.Size(75, 23);
-      this.btn_añadir_verificacion.TabIndex = 22;
-      this.btn_añadir_verificacion.Text = "Añadir";
-      this.btn_añadir_verificacion.UseVisualStyleBackColor = true;
+      this.dgv_verificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dgv_verificacion.Location = new System.Drawing.Point(16, 19);
+      this.dgv_verificacion.Name = "dgv_verificacion";
+      this.dgv_verificacion.Size = new System.Drawing.Size(682, 155);
+      this.dgv_verificacion.TabIndex = 21;
       // 
       // btn_eliminar_verificacion
       // 
@@ -335,13 +301,14 @@
       this.btn_eliminar_verificacion.Text = "Eliminar";
       this.btn_eliminar_verificacion.UseVisualStyleBackColor = true;
       // 
-      // dgv_verificacion
+      // btn_añadir_verificacion
       // 
-      this.dgv_verificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dgv_verificacion.Location = new System.Drawing.Point(16, 19);
-      this.dgv_verificacion.Name = "dgv_verificacion";
-      this.dgv_verificacion.Size = new System.Drawing.Size(682, 155);
-      this.dgv_verificacion.TabIndex = 21;
+      this.btn_añadir_verificacion.Location = new System.Drawing.Point(704, 122);
+      this.btn_añadir_verificacion.Name = "btn_añadir_verificacion";
+      this.btn_añadir_verificacion.Size = new System.Drawing.Size(75, 23);
+      this.btn_añadir_verificacion.TabIndex = 22;
+      this.btn_añadir_verificacion.Text = "Añadir";
+      this.btn_añadir_verificacion.UseVisualStyleBackColor = true;
       // 
       // frm_expediente
       // 
@@ -359,9 +326,6 @@
       this.Controls.Add(this.txt_usuario);
       this.Controls.Add(this.dtp_fecha_creacion);
       this.Controls.Add(this.lbl_fecha_creacion);
-      this.Controls.Add(this.pictureBox1);
-      this.Controls.Add(this.btn_salir);
-      this.Controls.Add(this.btn_guardar);
       this.Controls.Add(this.lbl_ref_metalcaucho);
       this.Controls.Add(this.txt_ref_metalcaucho);
       this.Controls.Add(this.dtp_fecha_expedicion);
@@ -370,8 +334,22 @@
       this.Controls.Add(this.txt_num_registro);
       this.Name = "frm_expediente";
       this.Text = "Expediente";
-      this.Load += new System.EventHandler(this.frm_expediente_Load);
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+      this.Controls.SetChildIndex(this.txt_num_registro, 0);
+      this.Controls.SetChildIndex(this.lbl_num_registro, 0);
+      this.Controls.SetChildIndex(this.lbl_date_expedicion, 0);
+      this.Controls.SetChildIndex(this.dtp_fecha_expedicion, 0);
+      this.Controls.SetChildIndex(this.txt_ref_metalcaucho, 0);
+      this.Controls.SetChildIndex(this.lbl_ref_metalcaucho, 0);
+      this.Controls.SetChildIndex(this.lbl_fecha_creacion, 0);
+      this.Controls.SetChildIndex(this.dtp_fecha_creacion, 0);
+      this.Controls.SetChildIndex(this.txt_usuario, 0);
+      this.Controls.SetChildIndex(this.lbl_usuario, 0);
+      this.Controls.SetChildIndex(this.txt_observaciones, 0);
+      this.Controls.SetChildIndex(this.lbl_observaciones, 0);
+      this.Controls.SetChildIndex(this.gb_cliente, 0);
+      this.Controls.SetChildIndex(this.txt_motivo_denegacion, 0);
+      this.Controls.SetChildIndex(this.lbl_motivo_denegacion, 0);
+      this.Controls.SetChildIndex(this.gb_registro_lineas, 0);
       this.gb_cliente.ResumeLayout(false);
       this.gb_cliente.PerformLayout();
       this.gb_registro_lineas.ResumeLayout(false);
@@ -395,9 +373,6 @@
     private System.Windows.Forms.TextBox txt_cli_referencia;
     private System.Windows.Forms.TextBox txt_observaciones;
     private System.Windows.Forms.Label lbl_observaciones;
-    private System.Windows.Forms.Button btn_guardar;
-    private System.Windows.Forms.Button btn_salir;
-    private System.Windows.Forms.PictureBox pictureBox1;
     private System.Windows.Forms.DateTimePicker dtp_fecha_creacion;
     private System.Windows.Forms.Label lbl_fecha_creacion;
     private System.Windows.Forms.Label lbl_usuario;

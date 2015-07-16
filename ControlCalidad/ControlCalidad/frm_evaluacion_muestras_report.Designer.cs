@@ -28,10 +28,6 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_evaluacion_muestras_report));
-      this.btn_guardar = new System.Windows.Forms.Button();
-      this.btn_salir = new System.Windows.Forms.Button();
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.lbl_num_registro = new System.Windows.Forms.Label();
       this.txt_num_registro = new System.Windows.Forms.TextBox();
       this.dtp_fecha_creacion = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +51,17 @@
       this.textBox1 = new System.Windows.Forms.TextBox();
       this.tc_datos = new System.Windows.Forms.TabControl();
       this.tp_lineas_prov = new System.Windows.Forms.TabPage();
+      this.label3 = new System.Windows.Forms.Label();
+      this.textBox3 = new System.Windows.Forms.TextBox();
+      this.label2 = new System.Windows.Forms.Label();
+      this.textBox2 = new System.Windows.Forms.TextBox();
+      this.lbl_proveedor = new System.Windows.Forms.Label();
+      this.txt_proveedor = new System.Windows.Forms.TextBox();
+      this.button1 = new System.Windows.Forms.Button();
+      this.button2 = new System.Windows.Forms.Button();
+      this.lbl_lin_prov_lote = new System.Windows.Forms.Label();
+      this.txt_lote = new System.Windows.Forms.TextBox();
+      this.dataGridView2 = new System.Windows.Forms.DataGridView();
       this.tp_lineas = new System.Windows.Forms.TabPage();
       this.cmb_estado = new System.Windows.Forms.ComboBox();
       this.lbl_estado = new System.Windows.Forms.Label();
@@ -78,30 +85,19 @@
       this.ch_rj_final = new System.Windows.Forms.CheckBox();
       this.ch_hl_final = new System.Windows.Forms.CheckBox();
       this.ch_ok_final = new System.Windows.Forms.CheckBox();
+      this.label4 = new System.Windows.Forms.Label();
+      this.textBox4 = new System.Windows.Forms.TextBox();
       this.lbl_reportador_proveedor = new System.Windows.Forms.Label();
       this.txt_reportador_proveedor = new System.Windows.Forms.TextBox();
       this.lbl_muestra_homologada = new System.Windows.Forms.Label();
       this.txt_muestra_homologada = new System.Windows.Forms.TextBox();
       this.ch_repetir_muestra = new System.Windows.Forms.CheckBox();
-      this.button1 = new System.Windows.Forms.Button();
-      this.button2 = new System.Windows.Forms.Button();
-      this.lbl_lin_prov_lote = new System.Windows.Forms.Label();
-      this.txt_lote = new System.Windows.Forms.TextBox();
-      this.dataGridView2 = new System.Windows.Forms.DataGridView();
-      this.lbl_proveedor = new System.Windows.Forms.Label();
-      this.txt_proveedor = new System.Windows.Forms.TextBox();
-      this.label2 = new System.Windows.Forms.Label();
-      this.textBox2 = new System.Windows.Forms.TextBox();
-      this.label3 = new System.Windows.Forms.Label();
-      this.textBox3 = new System.Windows.Forms.TextBox();
-      this.textBox4 = new System.Windows.Forms.TextBox();
-      this.label4 = new System.Windows.Forms.Label();
       this.textBox5 = new System.Windows.Forms.TextBox();
       this.label5 = new System.Windows.Forms.Label();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.gb_ref_metalcaucho.SuspendLayout();
       this.tc_datos.SuspendLayout();
       this.tp_lineas_prov.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
       this.tp_lineas.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
       this.tp_imagenes.SuspendLayout();
@@ -112,36 +108,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
       this.tp_resultados_tecnicos.SuspendLayout();
       this.gb_resultado_final.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
       this.SuspendLayout();
-      // 
-      // btn_guardar
-      // 
-      this.btn_guardar.Location = new System.Drawing.Point(818, 348);
-      this.btn_guardar.Name = "btn_guardar";
-      this.btn_guardar.Size = new System.Drawing.Size(75, 23);
-      this.btn_guardar.TabIndex = 44;
-      this.btn_guardar.Text = "Guardar";
-      this.btn_guardar.UseVisualStyleBackColor = true;
-      // 
-      // btn_salir
-      // 
-      this.btn_salir.Location = new System.Drawing.Point(818, 377);
-      this.btn_salir.Name = "btn_salir";
-      this.btn_salir.Size = new System.Drawing.Size(75, 23);
-      this.btn_salir.TabIndex = 47;
-      this.btn_salir.Text = "Salir";
-      this.btn_salir.UseVisualStyleBackColor = true;
-      // 
-      // pictureBox1
-      // 
-      this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-      this.pictureBox1.Location = new System.Drawing.Point(808, 21);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(96, 66);
-      this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox1.TabIndex = 64;
-      this.pictureBox1.TabStop = false;
       // 
       // lbl_num_registro
       // 
@@ -354,6 +321,96 @@
       this.tp_lineas_prov.Size = new System.Drawing.Size(775, 186);
       this.tp_lineas_prov.TabIndex = 0;
       this.tp_lineas_prov.Text = "Lineas Proveedor";
+      // 
+      // label3
+      // 
+      this.label3.AutoSize = true;
+      this.label3.Location = new System.Drawing.Point(340, 126);
+      this.label3.Name = "label3";
+      this.label3.Size = new System.Drawing.Size(107, 13);
+      this.label3.TabIndex = 82;
+      this.label3.Text = "Unidades Verificadas";
+      // 
+      // textBox3
+      // 
+      this.textBox3.Location = new System.Drawing.Point(453, 123);
+      this.textBox3.Name = "textBox3";
+      this.textBox3.Size = new System.Drawing.Size(165, 20);
+      this.textBox3.TabIndex = 81;
+      // 
+      // label2
+      // 
+      this.label2.AutoSize = true;
+      this.label2.Location = new System.Drawing.Point(345, 100);
+      this.label2.Name = "label2";
+      this.label2.Size = new System.Drawing.Size(102, 13);
+      this.label2.TabIndex = 80;
+      this.label2.Text = "Unidades Recibidas";
+      // 
+      // textBox2
+      // 
+      this.textBox2.Location = new System.Drawing.Point(453, 97);
+      this.textBox2.Name = "textBox2";
+      this.textBox2.Size = new System.Drawing.Size(165, 20);
+      this.textBox2.TabIndex = 79;
+      // 
+      // lbl_proveedor
+      // 
+      this.lbl_proveedor.AutoSize = true;
+      this.lbl_proveedor.Location = new System.Drawing.Point(391, 47);
+      this.lbl_proveedor.Name = "lbl_proveedor";
+      this.lbl_proveedor.Size = new System.Drawing.Size(56, 13);
+      this.lbl_proveedor.TabIndex = 78;
+      this.lbl_proveedor.Text = "Proveedor";
+      // 
+      // txt_proveedor
+      // 
+      this.txt_proveedor.Location = new System.Drawing.Point(453, 44);
+      this.txt_proveedor.Name = "txt_proveedor";
+      this.txt_proveedor.Size = new System.Drawing.Size(165, 20);
+      this.txt_proveedor.TabIndex = 77;
+      // 
+      // button1
+      // 
+      this.button1.Location = new System.Drawing.Point(656, 77);
+      this.button1.Name = "button1";
+      this.button1.Size = new System.Drawing.Size(75, 23);
+      this.button1.TabIndex = 76;
+      this.button1.Text = "Borrar";
+      this.button1.UseVisualStyleBackColor = true;
+      // 
+      // button2
+      // 
+      this.button2.Location = new System.Drawing.Point(656, 48);
+      this.button2.Name = "button2";
+      this.button2.Size = new System.Drawing.Size(75, 23);
+      this.button2.TabIndex = 74;
+      this.button2.Text = "Añadir";
+      this.button2.UseVisualStyleBackColor = true;
+      // 
+      // lbl_lin_prov_lote
+      // 
+      this.lbl_lin_prov_lote.AutoSize = true;
+      this.lbl_lin_prov_lote.Location = new System.Drawing.Point(384, 73);
+      this.lbl_lin_prov_lote.Name = "lbl_lin_prov_lote";
+      this.lbl_lin_prov_lote.Size = new System.Drawing.Size(63, 13);
+      this.lbl_lin_prov_lote.TabIndex = 75;
+      this.lbl_lin_prov_lote.Text = "No. de Lote";
+      // 
+      // txt_lote
+      // 
+      this.txt_lote.Location = new System.Drawing.Point(453, 70);
+      this.txt_lote.Name = "txt_lote";
+      this.txt_lote.Size = new System.Drawing.Size(165, 20);
+      this.txt_lote.TabIndex = 73;
+      // 
+      // dataGridView2
+      // 
+      this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+      this.dataGridView2.Location = new System.Drawing.Point(43, 44);
+      this.dataGridView2.Name = "dataGridView2";
+      this.dataGridView2.Size = new System.Drawing.Size(254, 99);
+      this.dataGridView2.TabIndex = 72;
       // 
       // tp_lineas
       // 
@@ -584,6 +641,22 @@
       this.ch_ok_final.Text = "OK";
       this.ch_ok_final.UseVisualStyleBackColor = true;
       // 
+      // label4
+      // 
+      this.label4.AutoSize = true;
+      this.label4.Location = new System.Drawing.Point(241, 79);
+      this.label4.Name = "label4";
+      this.label4.Size = new System.Drawing.Size(77, 13);
+      this.label4.TabIndex = 79;
+      this.label4.Text = "Solicitud Plano";
+      // 
+      // textBox4
+      // 
+      this.textBox4.Location = new System.Drawing.Point(324, 75);
+      this.textBox4.Name = "textBox4";
+      this.textBox4.Size = new System.Drawing.Size(107, 20);
+      this.textBox4.TabIndex = 78;
+      // 
       // lbl_reportador_proveedor
       // 
       this.lbl_reportador_proveedor.AutoSize = true;
@@ -626,112 +699,6 @@
       this.ch_repetir_muestra.Text = "Repetir muestra";
       this.ch_repetir_muestra.UseVisualStyleBackColor = true;
       // 
-      // button1
-      // 
-      this.button1.Location = new System.Drawing.Point(656, 77);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(75, 23);
-      this.button1.TabIndex = 76;
-      this.button1.Text = "Borrar";
-      this.button1.UseVisualStyleBackColor = true;
-      // 
-      // button2
-      // 
-      this.button2.Location = new System.Drawing.Point(656, 48);
-      this.button2.Name = "button2";
-      this.button2.Size = new System.Drawing.Size(75, 23);
-      this.button2.TabIndex = 74;
-      this.button2.Text = "Añadir";
-      this.button2.UseVisualStyleBackColor = true;
-      // 
-      // lbl_lin_prov_lote
-      // 
-      this.lbl_lin_prov_lote.AutoSize = true;
-      this.lbl_lin_prov_lote.Location = new System.Drawing.Point(384, 73);
-      this.lbl_lin_prov_lote.Name = "lbl_lin_prov_lote";
-      this.lbl_lin_prov_lote.Size = new System.Drawing.Size(63, 13);
-      this.lbl_lin_prov_lote.TabIndex = 75;
-      this.lbl_lin_prov_lote.Text = "No. de Lote";
-      // 
-      // txt_lote
-      // 
-      this.txt_lote.Location = new System.Drawing.Point(453, 70);
-      this.txt_lote.Name = "txt_lote";
-      this.txt_lote.Size = new System.Drawing.Size(165, 20);
-      this.txt_lote.TabIndex = 73;
-      // 
-      // dataGridView2
-      // 
-      this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dataGridView2.Location = new System.Drawing.Point(43, 44);
-      this.dataGridView2.Name = "dataGridView2";
-      this.dataGridView2.Size = new System.Drawing.Size(254, 99);
-      this.dataGridView2.TabIndex = 72;
-      // 
-      // lbl_proveedor
-      // 
-      this.lbl_proveedor.AutoSize = true;
-      this.lbl_proveedor.Location = new System.Drawing.Point(391, 47);
-      this.lbl_proveedor.Name = "lbl_proveedor";
-      this.lbl_proveedor.Size = new System.Drawing.Size(56, 13);
-      this.lbl_proveedor.TabIndex = 78;
-      this.lbl_proveedor.Text = "Proveedor";
-      // 
-      // txt_proveedor
-      // 
-      this.txt_proveedor.Location = new System.Drawing.Point(453, 44);
-      this.txt_proveedor.Name = "txt_proveedor";
-      this.txt_proveedor.Size = new System.Drawing.Size(165, 20);
-      this.txt_proveedor.TabIndex = 77;
-      // 
-      // label2
-      // 
-      this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(345, 100);
-      this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(102, 13);
-      this.label2.TabIndex = 80;
-      this.label2.Text = "Unidades Recibidas";
-      // 
-      // textBox2
-      // 
-      this.textBox2.Location = new System.Drawing.Point(453, 97);
-      this.textBox2.Name = "textBox2";
-      this.textBox2.Size = new System.Drawing.Size(165, 20);
-      this.textBox2.TabIndex = 79;
-      // 
-      // label3
-      // 
-      this.label3.AutoSize = true;
-      this.label3.Location = new System.Drawing.Point(340, 126);
-      this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(107, 13);
-      this.label3.TabIndex = 82;
-      this.label3.Text = "Unidades Verificadas";
-      // 
-      // textBox3
-      // 
-      this.textBox3.Location = new System.Drawing.Point(453, 123);
-      this.textBox3.Name = "textBox3";
-      this.textBox3.Size = new System.Drawing.Size(165, 20);
-      this.textBox3.TabIndex = 81;
-      // 
-      // textBox4
-      // 
-      this.textBox4.Location = new System.Drawing.Point(324, 75);
-      this.textBox4.Name = "textBox4";
-      this.textBox4.Size = new System.Drawing.Size(107, 20);
-      this.textBox4.TabIndex = 78;
-      // 
-      // label4
-      // 
-      this.label4.AutoSize = true;
-      this.label4.Location = new System.Drawing.Point(241, 79);
-      this.label4.Name = "label4";
-      this.label4.Size = new System.Drawing.Size(77, 13);
-      this.label4.TabIndex = 79;
-      this.label4.Text = "Solicitud Plano";
-      // 
       // textBox5
       // 
       this.textBox5.Location = new System.Drawing.Point(110, 140);
@@ -753,7 +720,7 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.RoyalBlue;
-      this.ClientSize = new System.Drawing.Size(916, 421);
+      this.ClientSize = new System.Drawing.Size(915, 473);
       this.Controls.Add(this.tc_datos);
       this.Controls.Add(this.label1);
       this.Controls.Add(this.textBox1);
@@ -772,17 +739,32 @@
       this.Controls.Add(this.lbl_fecha_creacion);
       this.Controls.Add(this.lbl_num_registro);
       this.Controls.Add(this.txt_num_registro);
-      this.Controls.Add(this.pictureBox1);
-      this.Controls.Add(this.btn_guardar);
-      this.Controls.Add(this.btn_salir);
       this.Name = "frm_evaluacion_muestras_report";
       this.Text = "Reporte de evaluación de muestras";
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+      this.Controls.SetChildIndex(this.txt_num_registro, 0);
+      this.Controls.SetChildIndex(this.lbl_num_registro, 0);
+      this.Controls.SetChildIndex(this.lbl_fecha_creacion, 0);
+      this.Controls.SetChildIndex(this.dtp_fecha_creacion, 0);
+      this.Controls.SetChildIndex(this.lbl_date_recepcion, 0);
+      this.Controls.SetChildIndex(this.dtp_fecha_expedicion, 0);
+      this.Controls.SetChildIndex(this.txt_usuario_creacion, 0);
+      this.Controls.SetChildIndex(this.lbl_usuario_creacion, 0);
+      this.Controls.SetChildIndex(this.txt_usuario_verificado, 0);
+      this.Controls.SetChildIndex(this.textBox5, 0);
+      this.Controls.SetChildIndex(this.lbl_usuario_verificado, 0);
+      this.Controls.SetChildIndex(this.label5, 0);
+      this.Controls.SetChildIndex(this.gb_ref_metalcaucho, 0);
+      this.Controls.SetChildIndex(this.cb_metodo_verificado, 0);
+      this.Controls.SetChildIndex(this.lbl_metodo_verificado, 0);
+      this.Controls.SetChildIndex(this.textBox1, 0);
+      this.Controls.SetChildIndex(this.label1, 0);
+      this.Controls.SetChildIndex(this.tc_datos, 0);
       this.gb_ref_metalcaucho.ResumeLayout(false);
       this.gb_ref_metalcaucho.PerformLayout();
       this.tc_datos.ResumeLayout(false);
       this.tp_lineas_prov.ResumeLayout(false);
       this.tp_lineas_prov.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
       this.tp_lineas.ResumeLayout(false);
       this.tp_lineas.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -796,7 +778,6 @@
       this.tp_resultados_tecnicos.PerformLayout();
       this.gb_resultado_final.ResumeLayout(false);
       this.gb_resultado_final.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -804,9 +785,6 @@
 
     #endregion
 
-    private System.Windows.Forms.Button btn_guardar;
-    private System.Windows.Forms.Button btn_salir;
-    private System.Windows.Forms.PictureBox pictureBox1;
     private System.Windows.Forms.Label lbl_num_registro;
     private System.Windows.Forms.TextBox txt_num_registro;
     private System.Windows.Forms.DateTimePicker dtp_fecha_creacion;
