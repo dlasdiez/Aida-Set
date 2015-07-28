@@ -14,16 +14,28 @@ namespace DAL
     private MySqlConnection m_connection;
     private string m_server;
     private string m_database;
+    private string m_puerto;
     private string m_uid;
     private string m_password;
 
     //Constructor
-    public DBConnect()
+    public DBConnect(String Server, String Database, String Puerto, String User, String Password)
     {
+      m_server = Server;
+      m_database = Database;
+      m_puerto = Puerto;
+      m_uid = User;
+      m_password = Password;
+
       Initialize();
     }
 
     #region Public Functions
+    public Boolean IsOpen()
+    {
+      return this.OpenConnection();
+    }
+
     //Insert statement
     public void Insert()
     {
@@ -77,6 +89,27 @@ namespace DAL
         cmd.ExecuteNonQuery();
         this.CloseConnection();
       }
+    }
+
+    public void ExecuteCreateDataBaseCommand(String Command)
+    {
+      try
+      {
+        if (this.OpenConnection() == true)
+        {
+          MySqlCommand cmd = new MySqlCommand(Command, m_connection);
+          cmd.ExecuteNonQuery();
+        }
+      }
+      catch (Exception _ex)
+      {
+        throw _ex;
+      }
+    }
+
+    public void Close()
+    {
+      this.CloseConnection();
     }
 
     //Select statement
@@ -227,12 +260,12 @@ namespace DAL
     //Initialize values
     private void Initialize()
     {
-      m_server = "localhost";
-      m_database = "test";
-      m_uid = "jcalero";
-      m_password = "n3ww3b";
+      //m_server = "localhost";
+      //m_database = "test";
+      //m_uid = "jcalero";
+      //m_password = "n3ww3b";
       string connectionString;
-      connectionString = "SERVER=" + m_server + ";" + "DATABASE=" + m_database + ";" + "UID=" + m_uid + ";" + "PASSWORD=" + m_password + ";";
+      connectionString = "SERVER=" + m_server + ";" + "PORT=" + m_puerto + ";" + "UID=" + m_uid + ";" + "PASSWORD=" + m_password + ";" + "DATABASE=" + m_database + ";";
 
       m_connection = new MySqlConnection(connectionString);
     }

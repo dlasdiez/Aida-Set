@@ -9,6 +9,16 @@ namespace Configuracion
   public class ConfigValues
   {
     public String Color = "#FFFFFF";
+    public String Servidor_BD = "";
+    public String Database = "Metalcaucho";
+    public String Puerto = "3306";
+    public String Usuario_BD = "";
+    public String Password_BD = "";
+    public String Usuario_Admin = "";
+    public String Password_Admin = "";
+    public String Runtime = "";
+    public String PathDatos = "";
+    public String PathWebServices = "";
   }
 
   public static class Config
@@ -22,7 +32,7 @@ namespace Configuracion
 
       _path = AppDomain.CurrentDomain.BaseDirectory + "config";
 
-      if(!System.IO.File.Exists(_path))
+      if (!System.IO.File.Exists(_path))
       {
         return false;
       }
@@ -36,9 +46,41 @@ namespace Configuracion
       {
         foreach (XmlNode node2 in node1.ChildNodes)
         {
-          if (node1.Name == "color")
+          switch (node1.Name)
           {
-            ValueConfig.Color = node2.Value;
+            case "ServidorBD":
+              ValueConfig.Servidor_BD = node2.Value;
+              break;
+            case "BaseDatos":
+              ValueConfig.Database = node2.Value;
+              break;
+            case "Puerto":
+              ValueConfig.Puerto = node2.Value;
+              break;
+            case "Usuario":
+              ValueConfig.Usuario_BD = node2.Value;
+              break;
+            case "Password":
+              ValueConfig.Password_BD = node2.Value;
+              break;
+            case "Usuario_Admin":
+              ValueConfig.Usuario_Admin = node2.Value;
+              break;
+            case "Password_Admin":
+              ValueConfig.Password_Admin = node2.Value;
+              break;
+            case "Color":
+              ValueConfig.Color = node2.Value;
+              break;
+            case "Runtime":
+              ValueConfig.Runtime = node2.Value;
+              break;
+            case "RutaDatos":
+              ValueConfig.PathDatos = node2.Value;
+              break;
+            case "Webservice":
+              ValueConfig.PathWebServices = node2.Value;
+              break;
           }
         }
       }
@@ -58,7 +100,17 @@ namespace Configuracion
       writer.Formatting = Formatting.Indented;
       writer.WriteStartDocument();
       writer.WriteStartElement("configuracion");
-      writer.WriteElementString("color", Values.Color);
+      writer.WriteElementString("ServidorBD", Values.Servidor_BD);
+      writer.WriteElementString("BaseDatos", Values.Database);
+      writer.WriteElementString("Puerto", Values.Puerto);
+      writer.WriteElementString("Usuario", Values.Usuario_BD);
+      writer.WriteElementString("Password", Values.Password_BD);
+      writer.WriteElementString("Usuario_Admin", Values.Usuario_Admin);
+      writer.WriteElementString("Password_Admin", Values.Password_Admin);
+      writer.WriteElementString("Color", Values.Color);
+      writer.WriteElementString("Runtime", Values.Runtime);
+      writer.WriteElementString("RutaDatos", Values.PathDatos);
+      writer.WriteElementString("Webservice", Values.PathWebServices);
       writer.WriteEndElement();
       writer.WriteEndDocument();
       writer.Flush();
