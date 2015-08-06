@@ -19,6 +19,8 @@ namespace Configuracion
     public String Runtime = "";
     public String PathDatos = "";
     public String PathWebServices = "";
+    public String PathLogo = "";
+    public String PathImagenes = "";
   }
 
   public static class Config
@@ -78,8 +80,14 @@ namespace Configuracion
             case "RutaDatos":
               ValueConfig.PathDatos = node2.Value;
               break;
-            case "Webservice":
+            case "Path_Webservice":
               ValueConfig.PathWebServices = node2.Value;
+              break;
+            case "Path_Logo":
+              ValueConfig.PathLogo = node2.Value;
+              break;
+            case "Path_Images":
+              ValueConfig.PathImagenes = node2.Value;
               break;
           }
         }
@@ -110,7 +118,9 @@ namespace Configuracion
       writer.WriteElementString("Color", Values.Color);
       writer.WriteElementString("Runtime", Values.Runtime);
       writer.WriteElementString("RutaDatos", Values.PathDatos);
-      writer.WriteElementString("Webservice", Values.PathWebServices);
+      writer.WriteElementString("Path_Webservice", Values.PathWebServices);
+      writer.WriteElementString("Path_Logo", Values.PathLogo);
+      writer.WriteElementString("Path_Images", Values.PathImagenes);
       writer.WriteEndElement();
       writer.WriteEndDocument();
       writer.Flush();

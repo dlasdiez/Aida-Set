@@ -31,8 +31,8 @@
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_maestro));
       this.btn_salir = new System.Windows.Forms.Button();
       this.btn_guardar = new System.Windows.Forms.Button();
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+      this.pb_logo = new System.Windows.Forms.PictureBox();
+      ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
       this.SuspendLayout();
       // 
       // btn_salir
@@ -55,28 +55,28 @@
       this.btn_guardar.UseVisualStyleBackColor = true;
       this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
       // 
-      // pictureBox1
+      // pb_logo
       // 
-      this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-      this.pictureBox1.Location = new System.Drawing.Point(804, 12);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(96, 66);
-      this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pictureBox1.TabIndex = 33;
-      this.pictureBox1.TabStop = false;
+      this.pb_logo.Image = ((System.Drawing.Image)(resources.GetObject("pb_logo.Image")));
+      this.pb_logo.Location = new System.Drawing.Point(804, 12);
+      this.pb_logo.Name = "pb_logo";
+      this.pb_logo.Size = new System.Drawing.Size(96, 66);
+      this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+      this.pb_logo.TabIndex = 33;
+      this.pb_logo.TabStop = false;
       // 
       // frm_maestro
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(912, 477);
-      this.Controls.Add(this.pictureBox1);
+      this.Controls.Add(this.pb_logo);
       this.Controls.Add(this.btn_salir);
       this.Controls.Add(this.btn_guardar);
       this.Name = "frm_maestro";
       this.Text = "frm_maestro";
       this.Load += new System.EventHandler(this.frm_maestro_Load);
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -85,6 +85,6 @@
 
     private System.Windows.Forms.Button btn_salir;
     private System.Windows.Forms.Button btn_guardar;
-    private System.Windows.Forms.PictureBox pictureBox1;
+    private System.Windows.Forms.PictureBox pb_logo;
   }
 }

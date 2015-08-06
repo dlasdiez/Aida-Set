@@ -25,14 +25,19 @@ namespace ControlCalidad
         Configuracion.Config.ValueConfig = new Configuracion.ConfigValues();
       }
 
+      //Cargamos logo
+      this.pb_logo.Image = Image.FromFile(Configuracion.Config.ValueConfig.PathLogo);
+
       _color = ColorTranslator.FromHtml(Configuracion.Config.ValueConfig.Color);
 
       this.BackColor = _color;
+      //Cargamos Color
       foreach (Control _controls in this.Controls)
       {
         foreach (Control _ctr in _controls.Controls)
         {
-          if (_ctr.GetType() != typeof(Button) && _ctr.GetType() != typeof(TextBox) && _ctr.GetType() != typeof(PictureBox))
+          if (_ctr.GetType() != typeof(Button) && _ctr.GetType() != typeof(TextBox) && _ctr.GetType() != typeof(PictureBox) &&
+             _ctr.GetType() != typeof(ComboBox))
           {
             _ctr.BackColor = _color;
           }
@@ -47,7 +52,7 @@ namespace ControlCalidad
 
     public virtual void btn_salir_Click(object sender, EventArgs e)
     {
-
+      this.Close();
     }
   }
 }

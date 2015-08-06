@@ -34,7 +34,6 @@
       this.btn_guardar = new System.Windows.Forms.Button();
       this.colorDialog1 = new System.Windows.Forms.ColorDialog();
       this.tb_conexiones = new System.Windows.Forms.TabControl();
-      this.tp_conexion_cobol = new System.Windows.Forms.TabPage();
       this.tp_conexion_bd = new System.Windows.Forms.TabPage();
       this.lbl_puerto = new System.Windows.Forms.Label();
       this.txt_puerto_BD = new System.Windows.Forms.TextBox();
@@ -47,11 +46,12 @@
       this.txt_database = new System.Windows.Forms.TextBox();
       this.lbl_servidor_bd = new System.Windows.Forms.Label();
       this.txt_servidor_bd = new System.Windows.Forms.TextBox();
+      this.tp_conexion_cobol = new System.Windows.Forms.TabPage();
       this.txt_path_webservices = new System.Windows.Forms.TextBox();
       this.lbl_path_webservices = new System.Windows.Forms.Label();
       this.txt_path_datos = new System.Windows.Forms.TextBox();
       this.lbl_path_datos = new System.Windows.Forms.Label();
-      this.txt_runtime = new System.Windows.Forms.TextBox();
+      this.txt_ruta_runtime = new System.Windows.Forms.TextBox();
       this.lbl_runtime = new System.Windows.Forms.Label();
       this.tp_crear_bd = new System.Windows.Forms.TabPage();
       this.btn_crear_bd = new System.Windows.Forms.Button();
@@ -59,9 +59,20 @@
       this.txt_password_admin = new System.Windows.Forms.TextBox();
       this.lbl_user_admin = new System.Windows.Forms.Label();
       this.txt_user_admin = new System.Windows.Forms.TextBox();
+      this.txt_ruta_logo = new System.Windows.Forms.TextBox();
+      this.lbl_ruta_logo = new System.Windows.Forms.Label();
+      this.btn_seleccionar_ruta_logo = new System.Windows.Forms.Button();
+      this.btn_seleccionar_ruta_images = new System.Windows.Forms.Button();
+      this.txt_ruta_images = new System.Windows.Forms.TextBox();
+      this.lbl_ruta_images = new System.Windows.Forms.Label();
+      this.fb_dialog_path = new System.Windows.Forms.FolderBrowserDialog();
+      this.of_dialog_file = new System.Windows.Forms.OpenFileDialog();
+      this.btn_ruta_runtime = new System.Windows.Forms.Button();
+      this.btn_ruta_datos = new System.Windows.Forms.Button();
+      this.btn_ruta_webservice = new System.Windows.Forms.Button();
       this.tb_conexiones.SuspendLayout();
-      this.tp_conexion_cobol.SuspendLayout();
       this.tp_conexion_bd.SuspendLayout();
+      this.tp_conexion_cobol.SuspendLayout();
       this.tp_crear_bd.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -96,7 +107,7 @@
       // 
       // btn_guardar
       // 
-      this.btn_guardar.Location = new System.Drawing.Point(497, 244);
+      this.btn_guardar.Location = new System.Drawing.Point(501, 329);
       this.btn_guardar.Name = "btn_guardar";
       this.btn_guardar.Size = new System.Drawing.Size(92, 38);
       this.btn_guardar.TabIndex = 15;
@@ -106,30 +117,14 @@
       // 
       // tb_conexiones
       // 
-      this.tb_conexiones.Controls.Add(this.tp_conexion_bd);
       this.tb_conexiones.Controls.Add(this.tp_conexion_cobol);
+      this.tb_conexiones.Controls.Add(this.tp_conexion_bd);
       this.tb_conexiones.Controls.Add(this.tp_crear_bd);
-      this.tb_conexiones.Location = new System.Drawing.Point(1, 12);
+      this.tb_conexiones.Location = new System.Drawing.Point(12, 12);
       this.tb_conexiones.Name = "tb_conexiones";
       this.tb_conexiones.SelectedIndex = 0;
-      this.tb_conexiones.Size = new System.Drawing.Size(592, 189);
+      this.tb_conexiones.Size = new System.Drawing.Size(581, 189);
       this.tb_conexiones.TabIndex = 30;
-      // 
-      // tp_conexion_cobol
-      // 
-      this.tp_conexion_cobol.BackColor = System.Drawing.SystemColors.Control;
-      this.tp_conexion_cobol.Controls.Add(this.txt_path_webservices);
-      this.tp_conexion_cobol.Controls.Add(this.lbl_path_webservices);
-      this.tp_conexion_cobol.Controls.Add(this.txt_path_datos);
-      this.tp_conexion_cobol.Controls.Add(this.lbl_path_datos);
-      this.tp_conexion_cobol.Controls.Add(this.txt_runtime);
-      this.tp_conexion_cobol.Controls.Add(this.lbl_runtime);
-      this.tp_conexion_cobol.Location = new System.Drawing.Point(4, 22);
-      this.tp_conexion_cobol.Name = "tp_conexion_cobol";
-      this.tp_conexion_cobol.Padding = new System.Windows.Forms.Padding(3);
-      this.tp_conexion_cobol.Size = new System.Drawing.Size(584, 163);
-      this.tp_conexion_cobol.TabIndex = 0;
-      this.tp_conexion_cobol.Text = "Conexión Cobol";
       // 
       // tp_conexion_bd
       // 
@@ -148,7 +143,7 @@
       this.tp_conexion_bd.Location = new System.Drawing.Point(4, 22);
       this.tp_conexion_bd.Name = "tp_conexion_bd";
       this.tp_conexion_bd.Padding = new System.Windows.Forms.Padding(3);
-      this.tp_conexion_bd.Size = new System.Drawing.Size(584, 163);
+      this.tp_conexion_bd.Size = new System.Drawing.Size(573, 163);
       this.tp_conexion_bd.TabIndex = 1;
       this.tp_conexion_bd.Text = "Conexión BD";
       // 
@@ -258,13 +253,32 @@
       this.txt_servidor_bd.Size = new System.Drawing.Size(150, 26);
       this.txt_servidor_bd.TabIndex = 30;
       // 
+      // tp_conexion_cobol
+      // 
+      this.tp_conexion_cobol.BackColor = System.Drawing.SystemColors.Control;
+      this.tp_conexion_cobol.Controls.Add(this.btn_ruta_webservice);
+      this.tp_conexion_cobol.Controls.Add(this.btn_ruta_datos);
+      this.tp_conexion_cobol.Controls.Add(this.btn_ruta_runtime);
+      this.tp_conexion_cobol.Controls.Add(this.txt_path_webservices);
+      this.tp_conexion_cobol.Controls.Add(this.lbl_path_webservices);
+      this.tp_conexion_cobol.Controls.Add(this.txt_path_datos);
+      this.tp_conexion_cobol.Controls.Add(this.lbl_path_datos);
+      this.tp_conexion_cobol.Controls.Add(this.txt_ruta_runtime);
+      this.tp_conexion_cobol.Controls.Add(this.lbl_runtime);
+      this.tp_conexion_cobol.Location = new System.Drawing.Point(4, 22);
+      this.tp_conexion_cobol.Name = "tp_conexion_cobol";
+      this.tp_conexion_cobol.Padding = new System.Windows.Forms.Padding(3);
+      this.tp_conexion_cobol.Size = new System.Drawing.Size(573, 163);
+      this.tp_conexion_cobol.TabIndex = 0;
+      this.tp_conexion_cobol.Text = "Conexión Cobol";
+      // 
       // txt_path_webservices
       // 
       this.txt_path_webservices.BackColor = System.Drawing.Color.White;
       this.txt_path_webservices.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txt_path_webservices.Location = new System.Drawing.Point(130, 86);
+      this.txt_path_webservices.Location = new System.Drawing.Point(166, 86);
       this.txt_path_webservices.Name = "txt_path_webservices";
-      this.txt_path_webservices.Size = new System.Drawing.Size(429, 26);
+      this.txt_path_webservices.Size = new System.Drawing.Size(294, 26);
       this.txt_path_webservices.TabIndex = 22;
       // 
       // lbl_path_webservices
@@ -273,9 +287,9 @@
       this.lbl_path_webservices.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lbl_path_webservices.Location = new System.Drawing.Point(15, 89);
       this.lbl_path_webservices.Name = "lbl_path_webservices";
-      this.lbl_path_webservices.Size = new System.Drawing.Size(109, 18);
+      this.lbl_path_webservices.Size = new System.Drawing.Size(145, 18);
       this.lbl_path_webservices.TabIndex = 21;
-      this.lbl_path_webservices.Text = "xWebServices";
+      this.lbl_path_webservices.Text = "xPath WebServices";
       // 
       // txt_path_datos
       // 
@@ -283,7 +297,7 @@
       this.txt_path_datos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txt_path_datos.Location = new System.Drawing.Point(130, 54);
       this.txt_path_datos.Name = "txt_path_datos";
-      this.txt_path_datos.Size = new System.Drawing.Size(429, 26);
+      this.txt_path_datos.Size = new System.Drawing.Size(330, 26);
       this.txt_path_datos.TabIndex = 20;
       // 
       // lbl_path_datos
@@ -296,14 +310,14 @@
       this.lbl_path_datos.TabIndex = 19;
       this.lbl_path_datos.Text = "xRuta Datos";
       // 
-      // txt_runtime
+      // txt_ruta_runtime
       // 
-      this.txt_runtime.BackColor = System.Drawing.Color.White;
-      this.txt_runtime.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txt_runtime.Location = new System.Drawing.Point(130, 22);
-      this.txt_runtime.Name = "txt_runtime";
-      this.txt_runtime.Size = new System.Drawing.Size(429, 26);
-      this.txt_runtime.TabIndex = 18;
+      this.txt_ruta_runtime.BackColor = System.Drawing.Color.White;
+      this.txt_ruta_runtime.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txt_ruta_runtime.Location = new System.Drawing.Point(130, 22);
+      this.txt_ruta_runtime.Name = "txt_ruta_runtime";
+      this.txt_ruta_runtime.Size = new System.Drawing.Size(330, 26);
+      this.txt_ruta_runtime.TabIndex = 18;
       // 
       // lbl_runtime
       // 
@@ -326,7 +340,7 @@
       this.tp_crear_bd.Location = new System.Drawing.Point(4, 22);
       this.tp_crear_bd.Name = "tp_crear_bd";
       this.tp_crear_bd.Padding = new System.Windows.Forms.Padding(3);
-      this.tp_crear_bd.Size = new System.Drawing.Size(584, 163);
+      this.tp_crear_bd.Size = new System.Drawing.Size(573, 163);
       this.tp_crear_bd.TabIndex = 2;
       this.tp_crear_bd.Text = "Crear BD";
       // 
@@ -379,11 +393,111 @@
       this.txt_user_admin.Size = new System.Drawing.Size(150, 26);
       this.txt_user_admin.TabIndex = 39;
       // 
+      // txt_ruta_logo
+      // 
+      this.txt_ruta_logo.BackColor = System.Drawing.Color.White;
+      this.txt_ruta_logo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txt_ruta_logo.Location = new System.Drawing.Point(167, 239);
+      this.txt_ruta_logo.Name = "txt_ruta_logo";
+      this.txt_ruta_logo.ReadOnly = true;
+      this.txt_ruta_logo.Size = new System.Drawing.Size(228, 26);
+      this.txt_ruta_logo.TabIndex = 24;
+      // 
+      // lbl_ruta_logo
+      // 
+      this.lbl_ruta_logo.AutoSize = true;
+      this.lbl_ruta_logo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lbl_ruta_logo.Location = new System.Drawing.Point(80, 242);
+      this.lbl_ruta_logo.Name = "lbl_ruta_logo";
+      this.lbl_ruta_logo.Size = new System.Drawing.Size(81, 18);
+      this.lbl_ruta_logo.TabIndex = 23;
+      this.lbl_ruta_logo.Text = "xPath logo";
+      // 
+      // btn_seleccionar_ruta_logo
+      // 
+      this.btn_seleccionar_ruta_logo.Location = new System.Drawing.Point(401, 242);
+      this.btn_seleccionar_ruta_logo.Name = "btn_seleccionar_ruta_logo";
+      this.btn_seleccionar_ruta_logo.Size = new System.Drawing.Size(75, 23);
+      this.btn_seleccionar_ruta_logo.TabIndex = 31;
+      this.btn_seleccionar_ruta_logo.Text = "button1";
+      this.btn_seleccionar_ruta_logo.UseVisualStyleBackColor = true;
+      this.btn_seleccionar_ruta_logo.Click += new System.EventHandler(this.btn_seleccionar_ruta_logo_Click);
+      // 
+      // btn_seleccionar_ruta_images
+      // 
+      this.btn_seleccionar_ruta_images.Location = new System.Drawing.Point(401, 274);
+      this.btn_seleccionar_ruta_images.Name = "btn_seleccionar_ruta_images";
+      this.btn_seleccionar_ruta_images.Size = new System.Drawing.Size(75, 23);
+      this.btn_seleccionar_ruta_images.TabIndex = 34;
+      this.btn_seleccionar_ruta_images.Text = "button1";
+      this.btn_seleccionar_ruta_images.UseVisualStyleBackColor = true;
+      this.btn_seleccionar_ruta_images.Click += new System.EventHandler(this.btn_seleccionar_ruta_images_Click);
+      // 
+      // txt_ruta_images
+      // 
+      this.txt_ruta_images.BackColor = System.Drawing.Color.White;
+      this.txt_ruta_images.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txt_ruta_images.Location = new System.Drawing.Point(167, 271);
+      this.txt_ruta_images.Name = "txt_ruta_images";
+      this.txt_ruta_images.ReadOnly = true;
+      this.txt_ruta_images.Size = new System.Drawing.Size(228, 26);
+      this.txt_ruta_images.TabIndex = 33;
+      // 
+      // lbl_ruta_images
+      // 
+      this.lbl_ruta_images.AutoSize = true;
+      this.lbl_ruta_images.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lbl_ruta_images.Location = new System.Drawing.Point(58, 275);
+      this.lbl_ruta_images.Name = "lbl_ruta_images";
+      this.lbl_ruta_images.Size = new System.Drawing.Size(103, 18);
+      this.lbl_ruta_images.TabIndex = 32;
+      this.lbl_ruta_images.Text = "xPath images";
+      // 
+      // of_dialog_file
+      // 
+      this.of_dialog_file.FileName = "openFileDialog1";
+      // 
+      // btn_ruta_runtime
+      // 
+      this.btn_ruta_runtime.Location = new System.Drawing.Point(466, 24);
+      this.btn_ruta_runtime.Name = "btn_ruta_runtime";
+      this.btn_ruta_runtime.Size = new System.Drawing.Size(75, 23);
+      this.btn_ruta_runtime.TabIndex = 35;
+      this.btn_ruta_runtime.Text = "button1";
+      this.btn_ruta_runtime.UseVisualStyleBackColor = true;
+      this.btn_ruta_runtime.Click += new System.EventHandler(this.btn_ruta_runtime_Click);
+      // 
+      // btn_ruta_datos
+      // 
+      this.btn_ruta_datos.Location = new System.Drawing.Point(466, 56);
+      this.btn_ruta_datos.Name = "btn_ruta_datos";
+      this.btn_ruta_datos.Size = new System.Drawing.Size(75, 23);
+      this.btn_ruta_datos.TabIndex = 36;
+      this.btn_ruta_datos.Text = "button1";
+      this.btn_ruta_datos.UseVisualStyleBackColor = true;
+      this.btn_ruta_datos.Click += new System.EventHandler(this.btn_ruta_datos_Click);
+      // 
+      // btn_ruta_webservice
+      // 
+      this.btn_ruta_webservice.Location = new System.Drawing.Point(466, 88);
+      this.btn_ruta_webservice.Name = "btn_ruta_webservice";
+      this.btn_ruta_webservice.Size = new System.Drawing.Size(75, 23);
+      this.btn_ruta_webservice.TabIndex = 37;
+      this.btn_ruta_webservice.Text = "button1";
+      this.btn_ruta_webservice.UseVisualStyleBackColor = true;
+      this.btn_ruta_webservice.Click += new System.EventHandler(this.btn_ruta_webservice_Click);
+      // 
       // frm_configuracion
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(605, 287);
+      this.ClientSize = new System.Drawing.Size(620, 379);
+      this.Controls.Add(this.btn_seleccionar_ruta_images);
+      this.Controls.Add(this.txt_ruta_images);
+      this.Controls.Add(this.lbl_ruta_images);
+      this.Controls.Add(this.btn_seleccionar_ruta_logo);
+      this.Controls.Add(this.txt_ruta_logo);
+      this.Controls.Add(this.lbl_ruta_logo);
       this.Controls.Add(this.tb_conexiones);
       this.Controls.Add(this.lbl_color);
       this.Controls.Add(this.txt_color);
@@ -393,10 +507,10 @@
       this.Text = "Configuración";
       this.Load += new System.EventHandler(this.frm_configuracion_Load);
       this.tb_conexiones.ResumeLayout(false);
-      this.tp_conexion_cobol.ResumeLayout(false);
-      this.tp_conexion_cobol.PerformLayout();
       this.tp_conexion_bd.ResumeLayout(false);
       this.tp_conexion_bd.PerformLayout();
+      this.tp_conexion_cobol.ResumeLayout(false);
+      this.tp_conexion_cobol.PerformLayout();
       this.tp_crear_bd.ResumeLayout(false);
       this.tp_crear_bd.PerformLayout();
       this.ResumeLayout(false);
@@ -429,7 +543,7 @@
     private System.Windows.Forms.Label lbl_path_webservices;
     private System.Windows.Forms.TextBox txt_path_datos;
     private System.Windows.Forms.Label lbl_path_datos;
-    private System.Windows.Forms.TextBox txt_runtime;
+    private System.Windows.Forms.TextBox txt_ruta_runtime;
     private System.Windows.Forms.Label lbl_runtime;
     private System.Windows.Forms.TabPage tp_crear_bd;
     private System.Windows.Forms.Button btn_crear_bd;
@@ -437,5 +551,16 @@
     private System.Windows.Forms.TextBox txt_password_admin;
     private System.Windows.Forms.Label lbl_user_admin;
     private System.Windows.Forms.TextBox txt_user_admin;
+    private System.Windows.Forms.TextBox txt_ruta_logo;
+    private System.Windows.Forms.Label lbl_ruta_logo;
+    private System.Windows.Forms.Button btn_seleccionar_ruta_logo;
+    private System.Windows.Forms.Button btn_seleccionar_ruta_images;
+    private System.Windows.Forms.TextBox txt_ruta_images;
+    private System.Windows.Forms.Label lbl_ruta_images;
+    private System.Windows.Forms.FolderBrowserDialog fb_dialog_path;
+    private System.Windows.Forms.OpenFileDialog of_dialog_file;
+    private System.Windows.Forms.Button btn_ruta_runtime;
+    private System.Windows.Forms.Button btn_ruta_datos;
+    private System.Windows.Forms.Button btn_ruta_webservice;
   }
 }

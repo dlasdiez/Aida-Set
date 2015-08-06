@@ -684,9 +684,9 @@
       this.ch_solicitar_plano.AutoSize = true;
       this.ch_solicitar_plano.Location = new System.Drawing.Point(35, 52);
       this.ch_solicitar_plano.Name = "ch_solicitar_plano";
-      this.ch_solicitar_plano.Size = new System.Drawing.Size(100, 17);
+      this.ch_solicitar_plano.Size = new System.Drawing.Size(93, 17);
       this.ch_solicitar_plano.TabIndex = 77;
-      this.ch_solicitar_plano.Text = "Repetir muestra";
+      this.ch_solicitar_plano.Text = "Solicitar Plano";
       this.ch_solicitar_plano.UseVisualStyleBackColor = true;
       // 
       // txt_usuario_aprobacion

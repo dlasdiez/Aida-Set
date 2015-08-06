@@ -32,12 +32,24 @@ namespace ControlCalidad
       this.btn_crear_bd.Text = "Crear BD";
 
       this.lbl_runtime.Text = "Ruta RunTime";
+      this.btn_ruta_runtime.Text = "Seleccionar";
+
       this.lbl_path_datos.Text = "Ruta Datos";
-      this.lbl_path_webservices.Text = "WebServices";
+      this.lbl_path_webservices.Text = "Ruta WebServices";
+      this.btn_ruta_webservice.Text = "Seleccionar";
 
       this.btn_guardar.Text = "Guardar";
       this.btn_test.Text = "Test";
       this.btn_seleccionar_color.Text = "Seleccionar";
+
+      this.lbl_ruta_logo.Text = "Ruta Logo";
+      this.btn_seleccionar_ruta_logo.Text = "Seleccionar";
+
+      this.lbl_ruta_images.Text = "Ruta Imagines";
+      this.btn_seleccionar_ruta_images.Text = "Seleccionar";
+
+      this.btn_ruta_datos.Text = "Seleccionar";
+
       this.Text = "Configuración";
 
       if (!Config.ReadConfig())
@@ -54,9 +66,12 @@ namespace ControlCalidad
       this.txt_user_admin.Text = Config.ValueConfig.Usuario_Admin;
       this.txt_password_admin.Text = Config.ValueConfig.Password_Admin;
 
-      this.txt_runtime.Text = Config.ValueConfig.Runtime;
+      this.txt_ruta_runtime.Text = Config.ValueConfig.Runtime;
       this.txt_path_datos.Text = Config.ValueConfig.PathDatos;
       this.txt_path_webservices.Text = Config.ValueConfig.PathWebServices;
+
+      this.txt_ruta_logo.Text = Config.ValueConfig.PathLogo;
+      this.txt_ruta_images.Text = Config.ValueConfig.PathImagenes;
     }
 
     private void btn_guardar_Click(object sender, EventArgs e)
@@ -71,10 +86,11 @@ namespace ControlCalidad
       _values.Password_BD = this.txt_password_bd.Text;
       _values.Usuario_Admin = this.txt_user_admin.Text;
       _values.Password_Admin = this.txt_password_admin.Text;
-      _values.Runtime = this.txt_runtime.Text;
+      _values.Runtime = this.txt_ruta_runtime.Text;
       _values.PathDatos = this.txt_path_datos.Text;
       _values.PathWebServices = this.txt_path_webservices.Text;
-
+      _values.PathLogo = this.txt_ruta_logo.Text;
+      _values.PathImagenes = this.txt_ruta_images.Text;
 
       Config.SaveConfig(ref _values);
 
@@ -176,7 +192,7 @@ namespace ControlCalidad
         _db = new DBConnect(Server, Database, Port, User, Pwd);
         _files = Directory.GetFiles(_path);
 
-        foreach (String _file in _files) 
+        foreach (String _file in _files)
         {
           _command = File.ReadAllText(_file);
 
@@ -192,6 +208,57 @@ namespace ControlCalidad
       }
 
       return true;
+    }
+
+    private void btn_seleccionar_ruta_logo_Click(object sender, EventArgs e)
+    {
+      String _file = this.txt_ruta_logo.Text;
+
+      of_dialog_file.Multiselect = false;
+
+      of_dialog_file.InitialDirectory = _file;
+
+      if (of_dialog_file.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+      {
+        _file = of_dialog_file.FileName;
+      }
+
+      this.txt_ruta_logo.Text = _file;
+      of_dialog_file.RestoreDirectory = true;
+    }
+
+    private void btn_seleccionar_ruta_images_Click(object sender, EventArgs e)
+    {
+      this.txt_ruta_images.Text = this.GetPath(this.txt_ruta_images.Text);
+    }
+
+    private void btn_ruta_runtime_Click(object sender, EventArgs e)
+    {
+      this.txt_ruta_runtime.Text = this.GetPath(this.txt_ruta_runtime.Text);
+    }
+
+    private void btn_ruta_datos_Click(object sender, EventArgs e)
+    {
+      this.txt_path_datos.Text = this.GetPath(this.txt_path_datos.Text);
+    }
+
+    private void btn_ruta_webservice_Click(object sender, EventArgs e)
+    {
+      this.txt_path_webservices.Text = this.GetPath(this.txt_path_webservices.Text);
+    }
+
+    private String GetPath(String RutaOrigen)
+    {
+      String _path = RutaOrigen;
+
+      fb_dialog_path.SelectedPath = _path;
+      fb_dialog_path.ShowDialog();
+      if (!String.IsNullOrEmpty(fb_dialog_path.SelectedPath))
+      {
+        _path = fb_dialog_path.SelectedPath;
+      }
+
+      return _path;
     }
   }
 }
