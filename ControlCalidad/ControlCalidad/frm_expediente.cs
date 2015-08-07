@@ -16,11 +16,12 @@ namespace ControlCalidad
       InitializeComponent();
     }
 
-    //public virtual void frm_expediente_Load(object sender, EventArgs e)
-    //{
-    //  this.frm_maestro_Load(sender, e);
-    //  this.dtp_fecha_creacion.Value = DateTime.Now;
-    //  this.dtp_fecha_expedicion.Value = DateTime.Now;
-    //}
+    public virtual void frm_expediente_Load(object sender, EventArgs e)
+    {
+      this.dtp_fecha_creacion.Value = DateTime.Now;
+      this.dtp_fecha_expedicion.Value = DateTime.Now;
+
+      this.Text = "Expediente";
+    }
   }
 }

@@ -18,7 +18,7 @@ namespace ControlCalidad
 
     private void frm_evaluacion_piezas_Load(object sender, EventArgs e)
     {
-
+      this.Text = "Report evaluación piezas en garantia";
     }
   }
 }

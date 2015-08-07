@@ -903,7 +903,7 @@
       this.Controls.Add(this.lbl_date_recepcion);
       this.Controls.Add(this.lbl_num_registro);
       this.Name = "frm_registro_garantias_tramite";
-      this.Text = "Registro de garantias en tramite";
+      this.Text = "xRegistro garantias en trámite O.T.";
       this.Load += new System.EventHandler(this.frm_registro_garantias_tramite_Load);
       this.Controls.SetChildIndex(this.lbl_num_registro, 0);
       this.Controls.SetChildIndex(this.lbl_date_recepcion, 0);

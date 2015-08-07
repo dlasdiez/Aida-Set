@@ -40,27 +40,27 @@
       // 
       // btn_registro_qc_entrada
       // 
-      this.btn_registro_qc_entrada.Location = new System.Drawing.Point(360, 12);
+      this.btn_registro_qc_entrada.Location = new System.Drawing.Point(36, 12);
       this.btn_registro_qc_entrada.Name = "btn_registro_qc_entrada";
       this.btn_registro_qc_entrada.Size = new System.Drawing.Size(75, 61);
       this.btn_registro_qc_entrada.TabIndex = 0;
-      this.btn_registro_qc_entrada.Text = "Registro QC entrada";
+      this.btn_registro_qc_entrada.Text = "Registro Q.C. entrada";
       this.btn_registro_qc_entrada.UseVisualStyleBackColor = true;
       this.btn_registro_qc_entrada.Click += new System.EventHandler(this.btn_registro_qc_entrada_Click);
       // 
       // btn_registro_garantia_tramite
       // 
-      this.btn_registro_garantia_tramite.Location = new System.Drawing.Point(186, 12);
+      this.btn_registro_garantia_tramite.Location = new System.Drawing.Point(177, 124);
       this.btn_registro_garantia_tramite.Name = "btn_registro_garantia_tramite";
       this.btn_registro_garantia_tramite.Size = new System.Drawing.Size(75, 61);
       this.btn_registro_garantia_tramite.TabIndex = 1;
-      this.btn_registro_garantia_tramite.Text = "Registro de garantias en tramite";
+      this.btn_registro_garantia_tramite.Text = "Registro garantias en trámite O.T.";
       this.btn_registro_garantia_tramite.UseVisualStyleBackColor = true;
       this.btn_registro_garantia_tramite.Click += new System.EventHandler(this.btn_registro_garantia_tramite_Click);
       // 
       // btn_expediente
       // 
-      this.btn_expediente.Location = new System.Drawing.Point(36, 12);
+      this.btn_expediente.Location = new System.Drawing.Point(36, 124);
       this.btn_expediente.Name = "btn_expediente";
       this.btn_expediente.Size = new System.Drawing.Size(75, 61);
       this.btn_expediente.TabIndex = 2;
@@ -70,11 +70,11 @@
       // 
       // btn_evaluacion_piezas
       // 
-      this.btn_evaluacion_piezas.Location = new System.Drawing.Point(36, 128);
+      this.btn_evaluacion_piezas.Location = new System.Drawing.Point(177, 229);
       this.btn_evaluacion_piezas.Name = "btn_evaluacion_piezas";
       this.btn_evaluacion_piezas.Size = new System.Drawing.Size(75, 61);
       this.btn_evaluacion_piezas.TabIndex = 3;
-      this.btn_evaluacion_piezas.Text = "Evaluación Piezas";
+      this.btn_evaluacion_piezas.Text = "Report evaluación piezas en garantia";
       this.btn_evaluacion_piezas.UseVisualStyleBackColor = true;
       this.btn_evaluacion_piezas.Click += new System.EventHandler(this.btn_evaluacion_piezas_Click);
       // 
@@ -84,23 +84,23 @@
       this.btn_evaluacion_muestras_report.Name = "btn_evaluacion_muestras_report";
       this.btn_evaluacion_muestras_report.Size = new System.Drawing.Size(75, 61);
       this.btn_evaluacion_muestras_report.TabIndex = 4;
-      this.btn_evaluacion_muestras_report.Text = "Evaluación Muestras Report";
+      this.btn_evaluacion_muestras_report.Text = "Report evaluación de muestras";
       this.btn_evaluacion_muestras_report.UseVisualStyleBackColor = true;
       this.btn_evaluacion_muestras_report.Click += new System.EventHandler(this.btn_evaluacion_muestras_report_Click);
       // 
       // btn_evaluacion_muestras_garantia_stock_report
       // 
-      this.btn_evaluacion_muestras_garantia_stock_report.Location = new System.Drawing.Point(360, 229);
+      this.btn_evaluacion_muestras_garantia_stock_report.Location = new System.Drawing.Point(177, 12);
       this.btn_evaluacion_muestras_garantia_stock_report.Name = "btn_evaluacion_muestras_garantia_stock_report";
-      this.btn_evaluacion_muestras_garantia_stock_report.Size = new System.Drawing.Size(75, 61);
+      this.btn_evaluacion_muestras_garantia_stock_report.Size = new System.Drawing.Size(84, 75);
       this.btn_evaluacion_muestras_garantia_stock_report.TabIndex = 4;
-      this.btn_evaluacion_muestras_garantia_stock_report.Text = "Evaluación Muestras Garantias / Stock Report";
+      this.btn_evaluacion_muestras_garantia_stock_report.Text = "Report evaluación de muestras garantias / stock";
       this.btn_evaluacion_muestras_garantia_stock_report.UseVisualStyleBackColor = true;
       this.btn_evaluacion_muestras_garantia_stock_report.Click += new System.EventHandler(this.btn_evaluacion_muestras_garantia_stock_report_Click);
       // 
       // btn_configuracion
       // 
-      this.btn_configuracion.Location = new System.Drawing.Point(186, 290);
+      this.btn_configuracion.Location = new System.Drawing.Point(339, 19);
       this.btn_configuracion.Name = "btn_configuracion";
       this.btn_configuracion.Size = new System.Drawing.Size(75, 61);
       this.btn_configuracion.TabIndex = 5;

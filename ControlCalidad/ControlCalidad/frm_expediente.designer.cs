@@ -333,7 +333,8 @@
       this.Controls.Add(this.lbl_num_registro);
       this.Controls.Add(this.txt_num_registro);
       this.Name = "frm_expediente";
-      this.Text = "Expediente";
+      this.Text = "xExpediente";
+      this.Load += new System.EventHandler(this.frm_expediente_Load);
       this.Controls.SetChildIndex(this.txt_num_registro, 0);
       this.Controls.SetChildIndex(this.lbl_num_registro, 0);
       this.Controls.SetChildIndex(this.lbl_date_expedicion, 0);

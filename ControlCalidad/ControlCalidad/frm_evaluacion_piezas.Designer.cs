@@ -443,7 +443,7 @@
       this.Controls.Add(this.txt_num_lote);
       this.Controls.Add(this.gb_ref_metalcaucho);
       this.Name = "frm_evaluacion_piezas";
-      this.Text = "Evaluación piezas";
+      this.Text = "xReport evaluación piezas en garantia";
       this.Load += new System.EventHandler(this.frm_evaluacion_piezas_Load);
       this.Controls.SetChildIndex(this.gb_ref_metalcaucho, 0);
       this.Controls.SetChildIndex(this.txt_num_lote, 0);

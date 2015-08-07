@@ -803,7 +803,8 @@
       this.Controls.Add(this.lbl_num_registro);
       this.Controls.Add(this.txt_num_registro);
       this.Name = "frm_evaluacion_muestras_garantia_stock_report";
-      this.Text = "Reporte de evaluación de muestras garantia / stock";
+      this.Text = "xReport evaluación de muestras garantias / stock";
+      this.Load += new System.EventHandler(this.frm_evaluacion_muestras_garantia_stock_report_Load);
       this.Controls.SetChildIndex(this.txt_num_registro, 0);
       this.Controls.SetChildIndex(this.lbl_num_registro, 0);
       this.Controls.SetChildIndex(this.lbl_fecha_creacion, 0);

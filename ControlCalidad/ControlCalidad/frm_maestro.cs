@@ -14,6 +14,7 @@ namespace ControlCalidad
     public frm_maestro()
     {
       InitializeComponent();
+      this.pb_logo.Image = null;
     }
 
     public void frm_maestro_Load(object sender, EventArgs e)
@@ -24,9 +25,6 @@ namespace ControlCalidad
       {
         Configuracion.Config.ValueConfig = new Configuracion.ConfigValues();
       }
-
-      //Cargamos logo
-      this.pb_logo.Image = Image.FromFile(Configuracion.Config.ValueConfig.PathLogo);
 
       _color = ColorTranslator.FromHtml(Configuracion.Config.ValueConfig.Color);
 
@@ -42,6 +40,12 @@ namespace ControlCalidad
             _ctr.BackColor = _color;
           }
         }
+      }
+
+      //Cargamos logo
+      if (!String.IsNullOrEmpty(Configuracion.Config.ValueConfig.PathLogo))
+      {
+        this.pb_logo.Image = Image.FromFile(Configuracion.Config.ValueConfig.PathLogo);
       }
     }
 

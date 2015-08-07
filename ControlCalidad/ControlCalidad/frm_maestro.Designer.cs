@@ -62,7 +62,7 @@
       this.pb_logo.Name = "pb_logo";
       this.pb_logo.Size = new System.Drawing.Size(96, 66);
       this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-      this.pb_logo.TabIndex = 33;
+      this.pb_logo.TabIndex = 34;
       this.pb_logo.TabStop = false;
       // 
       // frm_maestro

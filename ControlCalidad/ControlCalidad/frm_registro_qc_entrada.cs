@@ -20,6 +20,8 @@ namespace ControlCalidad
     {
       this.dtp_fecha_revision.Value = DateTime.Now;
       this.dtp_fecha_calidad.Value = DateTime.Now;
+
+      this.Text = "Registro Q.C. entrada";
     }
   }
 }

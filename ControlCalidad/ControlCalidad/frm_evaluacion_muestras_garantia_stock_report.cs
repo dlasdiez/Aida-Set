@@ -15,5 +15,10 @@ namespace ControlCalidad
     {
       InitializeComponent();
     }
+
+    private void frm_evaluacion_muestras_garantia_stock_report_Load(object sender, EventArgs e)
+    {
+      this.Text = "Report evaluación de muestras garantias / stock";
+    }
   }
 }

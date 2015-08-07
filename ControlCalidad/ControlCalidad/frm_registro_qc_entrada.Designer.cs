@@ -672,7 +672,7 @@
       this.Controls.Add(this.lbl_num_registro);
       this.Controls.Add(this.txt_num_registro);
       this.Name = "frm_registro_qc_entrada";
-      this.Text = "Registro de entrada";
+      this.Text = "xRegistro Q.C. entrada";
       this.Load += new System.EventHandler(this.frm_registro_qc_entrada_Load);
       this.Controls.SetChildIndex(this.txt_num_registro, 0);
       this.Controls.SetChildIndex(this.lbl_num_registro, 0);

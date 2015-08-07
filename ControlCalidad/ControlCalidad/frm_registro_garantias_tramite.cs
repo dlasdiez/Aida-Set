@@ -68,6 +68,7 @@ namespace ControlCalidad
       this.cmb_estado.Items.Add(new { Text = "Finalizado", Value = 2 });
       this.cmb_estado.SelectedIndex = 0;
 
+      this.Text = "Registro garantias en trámite O.T.";
     }
   }
 }
