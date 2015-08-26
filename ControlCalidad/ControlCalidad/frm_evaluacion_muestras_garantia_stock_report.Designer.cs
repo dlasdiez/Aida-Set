@@ -118,6 +118,14 @@
       this.gb_resultado.SuspendLayout();
       this.SuspendLayout();
       // 
+      // btn_salir
+      // 
+      this.btn_salir.Location = new System.Drawing.Point(13, 355);
+      // 
+      // btn_guardar
+      // 
+      this.btn_guardar.Location = new System.Drawing.Point(13, 304);
+      // 
       // lbl_num_registro
       // 
       this.lbl_num_registro.AutoSize = true;
@@ -351,7 +359,7 @@
       this.tc_datos.Location = new System.Drawing.Point(12, 192);
       this.tc_datos.Name = "tc_datos";
       this.tc_datos.SelectedIndex = 0;
-      this.tc_datos.Size = new System.Drawing.Size(783, 212);
+      this.tc_datos.Size = new System.Drawing.Size(777, 212);
       this.tc_datos.TabIndex = 30;
       // 
       // tp_verificacion
@@ -365,7 +373,7 @@
       this.tp_verificacion.Location = new System.Drawing.Point(4, 22);
       this.tp_verificacion.Name = "tp_verificacion";
       this.tp_verificacion.Padding = new System.Windows.Forms.Padding(3);
-      this.tp_verificacion.Size = new System.Drawing.Size(775, 186);
+      this.tp_verificacion.Size = new System.Drawing.Size(769, 186);
       this.tp_verificacion.TabIndex = 0;
       this.tp_verificacion.Text = "Verificación";
       // 
@@ -457,7 +465,7 @@
       this.tp_lineas.Location = new System.Drawing.Point(4, 22);
       this.tp_lineas.Name = "tp_lineas";
       this.tp_lineas.Padding = new System.Windows.Forms.Padding(3);
-      this.tp_lineas.Size = new System.Drawing.Size(775, 186);
+      this.tp_lineas.Size = new System.Drawing.Size(769, 186);
       this.tp_lineas.TabIndex = 1;
       this.tp_lineas.Text = "Lineas";
       // 
@@ -565,7 +573,7 @@
       this.tp_imagenes.Location = new System.Drawing.Point(4, 22);
       this.tp_imagenes.Name = "tp_imagenes";
       this.tp_imagenes.Padding = new System.Windows.Forms.Padding(3);
-      this.tp_imagenes.Size = new System.Drawing.Size(775, 186);
+      this.tp_imagenes.Size = new System.Drawing.Size(769, 186);
       this.tp_imagenes.TabIndex = 2;
       this.tp_imagenes.Text = "Imagenes";
       // 
@@ -624,7 +632,7 @@
       this.tp_resultados_tecnicos.Location = new System.Drawing.Point(4, 22);
       this.tp_resultados_tecnicos.Name = "tp_resultados_tecnicos";
       this.tp_resultados_tecnicos.Padding = new System.Windows.Forms.Padding(3);
-      this.tp_resultados_tecnicos.Size = new System.Drawing.Size(775, 186);
+      this.tp_resultados_tecnicos.Size = new System.Drawing.Size(769, 186);
       this.tp_resultados_tecnicos.TabIndex = 3;
       this.tp_resultados_tecnicos.Text = "Resultados técnicos";
       // 
@@ -785,7 +793,7 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.RoyalBlue;
-      this.ClientSize = new System.Drawing.Size(916, 476);
+      this.ClientSize = new System.Drawing.Size(916, 410);
       this.Controls.Add(this.gb_resultado);
       this.Controls.Add(this.tc_datos);
       this.Controls.Add(this.gb_muestras);

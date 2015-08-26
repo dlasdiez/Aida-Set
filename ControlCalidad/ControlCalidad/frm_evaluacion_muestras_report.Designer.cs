@@ -110,6 +110,14 @@
       this.gb_resultado_final.SuspendLayout();
       this.SuspendLayout();
       // 
+      // btn_salir
+      // 
+      this.btn_salir.Location = new System.Drawing.Point(13, 354);
+      // 
+      // btn_guardar
+      // 
+      this.btn_guardar.Location = new System.Drawing.Point(13, 303);
+      // 
       // lbl_num_registro
       // 
       this.lbl_num_registro.AutoSize = true;
@@ -720,7 +728,7 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.RoyalBlue;
-      this.ClientSize = new System.Drawing.Size(915, 473);
+      this.ClientSize = new System.Drawing.Size(915, 416);
       this.Controls.Add(this.tc_datos);
       this.Controls.Add(this.label1);
       this.Controls.Add(this.textBox1);

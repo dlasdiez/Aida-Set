@@ -6,11 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DAL;
+using MySql.Data.MySqlClient;
 
 namespace ControlCalidad
 {
   public partial class frm_maestro : Form
   {
+    public DBConnect m_connection;
+
     public frm_maestro()
     {
       InitializeComponent();
@@ -49,14 +53,33 @@ namespace ControlCalidad
       }
     }
 
-    public virtual void btn_guardar_Click(object sender, EventArgs e)
+    private void btn_guardar_Click(object sender, EventArgs e)
     {
+      if (this.IsDataOk())
+      {
+        this.m_connection = new DBConnect(Configuracion.Config.ValueConfig.Servidor_BD, Configuracion.Config.ValueConfig.Database, Configuracion.Config.ValueConfig.Puerto, Configuracion.Config.ValueConfig.Usuario_BD, Configuracion.Config.ValueConfig.Password_BD);
+        this.Guardar();
+        this.Close();
 
+        return;
+      }
+
+      MessageBox.Show("Hay errores en los datos insertados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 
-    public virtual void btn_salir_Click(object sender, EventArgs e)
+    private void btn_salir_Click(object sender, EventArgs e)
     {
       this.Close();
+    }
+
+    public virtual void Guardar()
+    {
+      
+    }
+
+    public virtual Boolean IsDataOk()
+    {
+      return true;
     }
   }
 }

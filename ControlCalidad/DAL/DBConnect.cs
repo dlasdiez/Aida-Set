@@ -37,15 +37,17 @@ namespace DAL
     }
 
     //Insert statement
-    public void Insert()
+    public void Insert(String Command, List<MySqlParameter> Parameters)
     {
-      string query = "INSERT INTO articulos (titulo, age) VALUES('John Smith', '33')";
-
       //open connection
       if (this.OpenConnection() == true)
       {
         //create command and assign the query and connection from the constructor
-        MySqlCommand cmd = new MySqlCommand(query, m_connection);
+        MySqlCommand cmd = new MySqlCommand(Command.ToString(), m_connection);
+        foreach(MySqlParameter _param in Parameters)
+        {
+          cmd.Parameters.Add(_param);
+        }
 
         //Execute command
         cmd.ExecuteNonQuery();
@@ -275,7 +277,10 @@ namespace DAL
     {
       try
       {
-        m_connection.Open();
+        if (m_connection.State != System.Data.ConnectionState.Open)
+        {
+          m_connection.Open();
+        }
         return true;
       }
       catch (MySqlException _ex)

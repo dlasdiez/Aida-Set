@@ -36,6 +36,7 @@
       this.btn_evaluacion_muestras_report = new System.Windows.Forms.Button();
       this.btn_evaluacion_muestras_garantia_stock_report = new System.Windows.Forms.Button();
       this.btn_configuracion = new System.Windows.Forms.Button();
+      this.btn_permisos = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // btn_registro_qc_entrada
@@ -108,6 +109,16 @@
       this.btn_configuracion.UseVisualStyleBackColor = true;
       this.btn_configuracion.Click += new System.EventHandler(this.btn_configuracion_Click);
       // 
+      // btn_permisos
+      // 
+      this.btn_permisos.Location = new System.Drawing.Point(339, 124);
+      this.btn_permisos.Name = "btn_permisos";
+      this.btn_permisos.Size = new System.Drawing.Size(75, 61);
+      this.btn_permisos.TabIndex = 6;
+      this.btn_permisos.Text = "Permisos";
+      this.btn_permisos.UseVisualStyleBackColor = true;
+      this.btn_permisos.Click += new System.EventHandler(this.btn_permisos_Click);
+      // 
       // frm_main
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +126,7 @@
       this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
       this.ClientSize = new System.Drawing.Size(447, 363);
+      this.Controls.Add(this.btn_permisos);
       this.Controls.Add(this.btn_configuracion);
       this.Controls.Add(this.btn_evaluacion_muestras_garantia_stock_report);
       this.Controls.Add(this.btn_evaluacion_muestras_report);
@@ -138,6 +150,7 @@
         private System.Windows.Forms.Button btn_evaluacion_muestras_report;
         private System.Windows.Forms.Button btn_evaluacion_muestras_garantia_stock_report;
         private System.Windows.Forms.Button btn_configuracion;
+        private System.Windows.Forms.Button btn_permisos;
     }
 }
 

@@ -876,7 +876,7 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.RoyalBlue;
-      this.ClientSize = new System.Drawing.Size(916, 470);
+      this.ClientSize = new System.Drawing.Size(925, 384);
       this.Controls.Add(this.cmb_via);
       this.Controls.Add(this.lbl_via);
       this.Controls.Add(this.ch_banco_pruebas);

@@ -256,7 +256,7 @@
       this.tc_datos.Location = new System.Drawing.Point(17, 221);
       this.tc_datos.Name = "tc_datos";
       this.tc_datos.SelectedIndex = 0;
-      this.tc_datos.Size = new System.Drawing.Size(783, 149);
+      this.tc_datos.Size = new System.Drawing.Size(776, 149);
       this.tc_datos.TabIndex = 72;
       // 
       // tp_resolucion
@@ -273,7 +273,7 @@
       this.tp_resolucion.Location = new System.Drawing.Point(4, 22);
       this.tp_resolucion.Name = "tp_resolucion";
       this.tp_resolucion.Padding = new System.Windows.Forms.Padding(3);
-      this.tp_resolucion.Size = new System.Drawing.Size(775, 123);
+      this.tp_resolucion.Size = new System.Drawing.Size(768, 123);
       this.tp_resolucion.TabIndex = 0;
       this.tp_resolucion.Text = "Resolución";
       // 
@@ -430,7 +430,7 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.RoyalBlue;
-      this.ClientSize = new System.Drawing.Size(920, 474);
+      this.ClientSize = new System.Drawing.Size(920, 379);
       this.Controls.Add(this.tc_datos);
       this.Controls.Add(this.gb_registro_garantia);
       this.Controls.Add(this.lbl_motivo_problema);

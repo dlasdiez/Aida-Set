@@ -14,3 +14,4 @@ ControlCalidad/DAL/bin/Debug/DAL.dll
 ControlCalidad/Configuracion/bin/Debug/Configuracion.dll
 *.dll
 ControlCalidad/ControlCalidad/bin/Debug/config
+ControlCalidad/ControlCalidad/bin/Debug/Scripts/Script0002.sql

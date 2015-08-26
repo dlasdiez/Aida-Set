@@ -61,6 +61,14 @@
       ((System.ComponentModel.ISupportInitialize)(this.dgv_verificacion)).BeginInit();
       this.SuspendLayout();
       // 
+      // btn_salir
+      // 
+      this.btn_salir.Location = new System.Drawing.Point(13, 427);
+      // 
+      // btn_guardar
+      // 
+      this.btn_guardar.Location = new System.Drawing.Point(13, 376);
+      // 
       // txt_num_registro
       // 
       this.txt_num_registro.Location = new System.Drawing.Point(84, 28);
@@ -315,7 +323,7 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.RoyalBlue;
-      this.ClientSize = new System.Drawing.Size(912, 477);
+      this.ClientSize = new System.Drawing.Size(932, 486);
       this.Controls.Add(this.gb_registro_lineas);
       this.Controls.Add(this.lbl_motivo_denegacion);
       this.Controls.Add(this.txt_motivo_denegacion);
