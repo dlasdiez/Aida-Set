@@ -18,7 +18,8 @@ namespace ControlCalidad
 
     private void frm_evaluacion_muestras_report_Load(object sender, EventArgs e)
     {
-      this.Text = "Report evaluación de muestras";
+      this.m_modulo = Constantes.Modulo.REPORT_EVALUACION_MUESTRAS;
+      this.Text = Constantes.REPORTE_EVALUACION_MUESTRAS;
     }
   }
 }

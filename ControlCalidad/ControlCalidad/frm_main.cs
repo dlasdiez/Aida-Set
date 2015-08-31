@@ -76,9 +76,9 @@ namespace ControlCalidad
 
     private void btn_permisos_Click(object sender, EventArgs e)
     {
-      frm_permisos _frm;
+      frm_permisos_list _frm;
 
-      _frm = new frm_permisos();
+      _frm = new frm_permisos_list();
       _frm.ShowDialog();
     }
   }

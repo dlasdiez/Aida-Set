@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cls_permisos.cs" />
     <Compile Include="frm_configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +91,17 @@
     <Compile Include="frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_permisos.cs">
+    <Compile Include="frm_permisos_edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_permisos.Designer.cs">
-      <DependentUpon>frm_permisos.cs</DependentUpon>
+    <Compile Include="frm_permisos_edit.Designer.cs">
+      <DependentUpon>frm_permisos_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_permisos_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_permisos_list.Designer.cs">
+      <DependentUpon>frm_permisos_list.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_registro_garantias_tramite.cs">
       <SubType>Form</SubType>
@@ -132,8 +139,11 @@
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_permisos.resx">
-      <DependentUpon>frm_permisos.cs</DependentUpon>
+    <EmbeddedResource Include="frm_permisos_edit.resx">
+      <DependentUpon>frm_permisos_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_permisos_list.resx">
+      <DependentUpon>frm_permisos_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_registro_garantias_tramite.resx">
       <DependentUpon>frm_registro_garantias_tramite.cs</DependentUpon>

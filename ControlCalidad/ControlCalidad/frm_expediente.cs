@@ -18,10 +18,12 @@ namespace ControlCalidad
 
     public virtual void frm_expediente_Load(object sender, EventArgs e)
     {
+      this.m_modulo = Constantes.Modulo.EXPEDIENTES;
+
       this.dtp_fecha_creacion.Value = DateTime.Now;
       this.dtp_fecha_expedicion.Value = DateTime.Now;
 
-      this.Text = "Expediente";
+      this.Text = Constantes.EXPEDIENTES;
     }
   }
 }

@@ -6,6 +6,7 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using System.IO;
 using System.Diagnostics;
+using System.Data;
 
 namespace DAL
 {
@@ -115,31 +116,30 @@ namespace DAL
     }
 
     //Select statement
-    public List<string>[] Select()
+    public DataTable Select(String Command, List<MySqlParameter> Parameters)
     {
-      string query = "SELECT * FROM articulos";
-
-      //Create a list to store the result
-      List<string>[] list = new List<string>[3];
-      list[0] = new List<string>();
-      list[1] = new List<string>();
-      list[2] = new List<string>();
-
+      DataTable _data = new DataTable();
       //Open connection
       if (this.OpenConnection() == true)
       {
         //Create Command
-        MySqlCommand cmd = new MySqlCommand(query, m_connection);
+        MySqlCommand cmd = new MySqlCommand(Command.ToString(), m_connection);
+        foreach(MySqlParameter _param in Parameters)
+        {
+          cmd.Parameters.Add(_param);
+        }
+
         //Create a data reader and Execute the command
         MySqlDataReader dataReader = cmd.ExecuteReader();
 
         //Read the data and store them in the list
-        while (dataReader.Read())
-        {
-          list[0].Add(dataReader["id"] + "");
-          list[1].Add(dataReader["titulo"] + "");
-          list[2].Add(dataReader["age"] + "");
-        }
+        _data.Load(dataReader);
+        //while (dataReader.Read())
+        //{
+        //  list[0].Add(dataReader["id"] + "");
+        //  list[1].Add(dataReader["titulo"] + "");
+        //  list[2].Add(dataReader["age"] + "");
+        //}
 
         //close Data Reader
         dataReader.Close();
@@ -148,12 +148,9 @@ namespace DAL
         this.CloseConnection();
 
         //return list to be displayed
-        return list;
       }
-      else
-      {
-        return list;
-      }
+
+      return _data;
     }
 
     //Count statement

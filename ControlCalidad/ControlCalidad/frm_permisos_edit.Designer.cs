@@ -1,6 +1,6 @@
 ﻿namespace ControlCalidad
 {
-  partial class frm_permisos
+  partial class frm_permisos_edit
   {
     /// <summary>
     /// Required designer variable.

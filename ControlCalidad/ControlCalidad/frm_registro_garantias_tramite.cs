@@ -18,6 +18,7 @@ namespace ControlCalidad
 
     private void frm_registro_garantias_tramite_Load(object sender, EventArgs e)
     {
+      this.m_modulo = Constantes.Modulo.REGISTRO_GARANTIA_TRAMITE_OT;
 
       this.dtp_entregado_en_fecha.Value = DateTime.Now;
       this.dtp_fecha_creacion.Value = DateTime.Now;
@@ -68,7 +69,7 @@ namespace ControlCalidad
       this.cmb_estado.Items.Add(new { Text = "Finalizado", Value = 2 });
       this.cmb_estado.SelectedIndex = 0;
 
-      this.Text = "Registro garantias en trámite O.T.";
+      this.Text = Constantes.REGISTRO_GARANTIA_TRAMITE_OT;
     }
   }
 }

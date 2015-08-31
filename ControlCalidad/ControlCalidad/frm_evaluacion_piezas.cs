@@ -18,6 +18,7 @@ namespace ControlCalidad
 
     private void frm_evaluacion_piezas_Load(object sender, EventArgs e)
     {
+      this.m_modulo = Constantes.Modulo.REPORT_EVALUACION_PIEZAS_GARANTIA;
       this.Text = "Report evaluación piezas en garantia";
     }
   }

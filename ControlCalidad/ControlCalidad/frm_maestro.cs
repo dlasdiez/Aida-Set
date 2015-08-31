@@ -14,6 +14,7 @@ namespace ControlCalidad
   public partial class frm_maestro : Form
   {
     public DBConnect m_connection;
+    public ControlCalidad.Constantes.Modulo m_modulo; 
 
     public frm_maestro()
     {

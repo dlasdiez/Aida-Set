@@ -18,7 +18,8 @@ namespace ControlCalidad
 
     private void frm_evaluacion_muestras_garantia_stock_report_Load(object sender, EventArgs e)
     {
-      this.Text = "Report evaluación de muestras garantias / stock";
+      this.m_modulo = Constantes.Modulo.REPORT_EVALUACION_MUESTRAS_GARANTIA_STOCK;
+      this.Text = Constantes.REPORT_EVALUACION_MUESTRAS_GARANTIA_STOCK;
     }
   }
 }
