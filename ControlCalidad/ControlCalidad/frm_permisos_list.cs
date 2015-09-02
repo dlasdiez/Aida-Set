@@ -9,24 +9,30 @@ using System.Windows.Forms;
 
 namespace ControlCalidad
 {
-  public partial class frm_permisos_list : Form
+  public partial class frm_permisos_list : frm_maestro_list
   {
+
+    #region Public
     public frm_permisos_list()
     {
       InitializeComponent();
     }
+    #endregion
 
-    private void frm_permisos_list_Load(object sender, EventArgs e)
+    #region Overrides
+    
+    public override void InitForm()
     {
       this.Text = "Listado de permisos";
-
-      this.dgv_permisos.Columns.Add("usuario", "Usuario");
-      this.dgv_permisos.Columns["usuario"].ReadOnly = true;
-
-      this.FillGrid();
     }
 
-    private void FillGrid()
+    public override void CreateColumns()
+    {
+      this.dgv_list.Columns.Add("usuario", "Usuario");
+      this.dgv_list.Columns["usuario"].ReadOnly = true;
+    }
+
+    public override void FillGrid()
     {
       DataTable _permisos;
       cls_permisos _perm = new cls_permisos();
@@ -35,20 +41,11 @@ namespace ControlCalidad
 
       foreach (DataRow _dr in _permisos.Rows)
       {
-        this.dgv_permisos.Rows.Add(_dr["pa_user"]);
+        this.dgv_list.Rows.Add(_dr["pa_user"]);
       }
     }
 
-    private void btn_new_Click(object sender, EventArgs e)
-    {
-      frm_permisos_edit _frm = new frm_permisos_edit();
-      _frm.ShowDialog();
-
-      this.dgv_permisos.Rows.Clear();
-      this.FillGrid();
-    }
-
-    private void dgv_permisos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+    public override void CellDobleClick(object sender, DataGridViewCellEventArgs e)
     {
       String _usuario = "";
       if (e.ColumnIndex == -1 && e.RowIndex == -1)
@@ -57,10 +54,20 @@ namespace ControlCalidad
         return;
       }
 
-      _usuario = (String)this.dgv_permisos.Rows[e.RowIndex].Cells["usuario"].Value;
+      _usuario = (String)this.dgv_list.Rows[e.RowIndex].Cells["usuario"].Value;
 
       frm_permisos_edit _frm = new frm_permisos_edit(_usuario);
       _frm.ShowDialog();
     }
+
+    public override void NuevoRegistro()
+    {
+      frm_permisos_edit _frm = new frm_permisos_edit();
+      _frm.ShowDialog();
+
+      this.dgv_list.Rows.Clear();
+      this.FillGrid();
+    }
+    #endregion
   }
 }

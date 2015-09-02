@@ -1,6 +1,6 @@
 ﻿namespace ControlCalidad
 {
-  partial class frm_maestro
+  partial class frm_maestro_edit
   {
     /// <summary>
     /// Required designer variable.
@@ -29,7 +29,7 @@
     private void InitializeComponent()
     {
       this.components = new System.ComponentModel.Container();
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_maestro));
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_maestro_edit));
       this.btn_salir = new System.Windows.Forms.Button();
       this.btn_guardar = new System.Windows.Forms.Button();
       this.pb_logo = new System.Windows.Forms.PictureBox();
@@ -104,7 +104,7 @@
       this.Controls.Add(this.pnl_botones);
       this.Name = "frm_maestro";
       this.Text = "frm_maestro";
-      this.Load += new System.EventHandler(this.frm_maestro_Load);
+      this.Load += new System.EventHandler(this.frm_maestro_edit_Load);
       ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
       this.pnl_botones.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
