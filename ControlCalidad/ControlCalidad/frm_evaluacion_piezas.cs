@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ControlCalidad
 {
-  public partial class frm_evaluacion_piezas : frm_maestro_edit
+  public partial class frm_evaluacion_piezas : frm_maestro
   {
     public frm_evaluacion_piezas()
     {
@@ -19,7 +19,7 @@ namespace ControlCalidad
     private void frm_evaluacion_piezas_Load(object sender, EventArgs e)
     {
       this.m_modulo = Constantes.Modulo.REPORT_EVALUACION_PIEZAS_GARANTIA;
-      this.Text = Constantes.REPORT_EVALUACION_PIEZAS_GARANTIA;
+      this.Text = "Report evaluación piezas en garantia";
     }
   }
 }

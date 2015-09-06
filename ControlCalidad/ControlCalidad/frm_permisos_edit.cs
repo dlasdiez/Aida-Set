@@ -12,7 +12,7 @@ using MySql.Data.MySqlClient;
 
 namespace ControlCalidad
 {
-  public partial class frm_permisos_edit : frm_maestro_edit
+  public partial class frm_permisos_edit : frm_maestro
   {
     String m_usuario;
     Boolean m_new_user = true;

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ControlCalidad
 {
-  public partial class frm_evaluacion_muestras_garantia_stock_report : frm_maestro_edit
+  public partial class frm_evaluacion_muestras_garantia_stock_report : frm_maestro
   {
     public frm_evaluacion_muestras_garantia_stock_report()
     {

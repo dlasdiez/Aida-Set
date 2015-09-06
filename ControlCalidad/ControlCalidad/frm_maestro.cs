@@ -7,27 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DAL;
+using MySql.Data.MySqlClient;
 
 namespace ControlCalidad
 {
-  public partial class frm_maestro_list : Form
+  public partial class frm_maestro : Form
   {
-    #region Miembros
     public DBConnect m_connection;
-    #endregion
+    public ControlCalidad.Constantes.Modulo m_modulo; 
 
-    #region Public
-    
-    public frm_maestro_list()
+    public frm_maestro()
     {
       InitializeComponent();
       this.pb_logo.Image = null;
     }
 
-    #endregion
-
-    #region Private
-    private void frm_maestro_list_Load(object sender, EventArgs e)
+    public void frm_maestro_Load(object sender, EventArgs e)
     {
       Color _color;
 
@@ -57,60 +52,35 @@ namespace ControlCalidad
       {
         this.pb_logo.Image = Image.FromFile(Configuracion.Config.ValueConfig.PathLogo);
       }
-
-      this.InitForm();
-
-      this.CreateColumns();
-
-      this.FillGrid();
     }
 
-    #endregion
-
-    #region Virtual
-    
-    public virtual void InitForm()
+    private void btn_guardar_Click(object sender, EventArgs e)
     {
-      
+      if (this.IsDataOk())
+      {
+        this.m_connection = new DBConnect(Configuracion.Config.ValueConfig.Servidor_BD, Configuracion.Config.ValueConfig.Database, Configuracion.Config.ValueConfig.Puerto, Configuracion.Config.ValueConfig.Usuario_BD, Configuracion.Config.ValueConfig.Password_BD);
+        this.Guardar();
+        this.Close();
+
+        return;
+      }
+
+      MessageBox.Show("Hay errores en los datos insertados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 
-    public virtual void FillGrid()
-    {
-
-    }
-
-    public virtual void CreateColumns()
-    {
-
-    }
-
-    public virtual void CellDobleClick(object sender, DataGridViewCellEventArgs e)
-    {
-
-    }
-
-    public virtual void NuevoRegistro()
-    {
-      
-    }
-    #endregion
-
-    #region Eventos
     private void btn_salir_Click(object sender, EventArgs e)
     {
       this.Close();
     }
 
-    private void dgv_list_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+    public virtual void Guardar()
     {
-      this.CellDobleClick(sender, e);
+      
     }
 
-    private void btn_new_Click(object sender, EventArgs e)
+    public virtual Boolean IsDataOk()
     {
-      this.NuevoRegistro();
+      return true;
     }
-    #endregion
-
   }
 }
