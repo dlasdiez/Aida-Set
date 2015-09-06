@@ -48,7 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cls_permisos.cs" />
+    <Compile Include="Clases\cls_permisos.cs" />
+    <Compile Include="Clases\Constantes.cs" />
     <Compile Include="frm_configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,7 +122,6 @@
     <Compile Include="frm_registro_qc_entrada.designer.cs">
       <DependentUpon>frm_registro_qc_entrada.cs</DependentUpon>
     </Compile>
-    <Compile Include="Constantes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_configuracion.resx">
