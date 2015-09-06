@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ControlCalidad
 {
-  public partial class frm_registro_garantias_tramite : frm_maestro
+  public partial class frm_registro_garantias_tramite : frm_maestro_edit
   {
     public frm_registro_garantias_tramite()
     {

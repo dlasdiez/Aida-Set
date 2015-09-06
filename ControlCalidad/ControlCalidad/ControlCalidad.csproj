@@ -79,11 +79,17 @@
     <Compile Include="frm_expediente.designer.cs">
       <DependentUpon>frm_expediente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_maestro.cs">
+    <Compile Include="Maestros\frm_maestro_edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_maestro.Designer.cs">
-      <DependentUpon>frm_maestro.cs</DependentUpon>
+    <Compile Include="Maestros\frm_maestro_edit.Designer.cs">
+      <DependentUpon>frm_maestro_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\frm_maestro_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\frm_maestro_list.Designer.cs">
+      <DependentUpon>frm_maestro_list.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
@@ -133,8 +139,11 @@
     <EmbeddedResource Include="frm_expediente.resx">
       <DependentUpon>frm_expediente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_maestro.resx">
-      <DependentUpon>frm_maestro.cs</DependentUpon>
+    <EmbeddedResource Include="Maestros\frm_maestro_edit.resx">
+      <DependentUpon>frm_maestro_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\frm_maestro_list.resx">
+      <DependentUpon>frm_maestro_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ControlCalidad
 {
-  public partial class frm_expediente : frm_maestro
+  public partial class frm_expediente : frm_maestro_edit
   {
     public frm_expediente()
     {

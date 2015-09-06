@@ -28,23 +28,24 @@
     /// </summary>
     private void InitializeComponent()
     {
-      this.dgv_permisos = new System.Windows.Forms.DataGridView();
       this.btn_new = new System.Windows.Forms.Button();
-      ((System.ComponentModel.ISupportInitialize)(this.dgv_permisos)).BeginInit();
+      this.pnl_contenedor.SuspendLayout();
       this.SuspendLayout();
       // 
-      // dgv_permisos
+      // pnl_contenedor
       // 
-      this.dgv_permisos.AllowUserToAddRows = false;
-      this.dgv_permisos.AllowUserToDeleteRows = false;
-      this.dgv_permisos.AllowUserToResizeColumns = false;
-      this.dgv_permisos.AllowUserToResizeRows = false;
-      this.dgv_permisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dgv_permisos.Location = new System.Drawing.Point(1, 64);
-      this.dgv_permisos.Name = "dgv_permisos";
-      this.dgv_permisos.Size = new System.Drawing.Size(598, 412);
-      this.dgv_permisos.TabIndex = 0;
-      this.dgv_permisos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_permisos_CellDoubleClick);
+      this.pnl_contenedor.Size = new System.Drawing.Size(455, 485);
+      // 
+      // pnl_filtro
+      // 
+      this.pnl_filtro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.pnl_filtro.Size = new System.Drawing.Size(455, 87);
+      // 
+      // pnl_datos
+      // 
+      this.pnl_datos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+      this.pnl_datos.Location = new System.Drawing.Point(0, 90);
+      this.pnl_datos.Size = new System.Drawing.Size(455, 395);
       // 
       // btn_new
       // 
@@ -54,26 +55,24 @@
       this.btn_new.TabIndex = 1;
       this.btn_new.Text = "Nuevo";
       this.btn_new.UseVisualStyleBackColor = true;
-      this.btn_new.Click += new System.EventHandler(this.btn_new_Click);
       // 
       // frm_permisos_list
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(763, 488);
+      this.ClientSize = new System.Drawing.Size(575, 485);
       this.Controls.Add(this.btn_new);
-      this.Controls.Add(this.dgv_permisos);
       this.Name = "frm_permisos_list";
       this.Text = "frm_permisos_list";
-      this.Load += new System.EventHandler(this.frm_permisos_list_Load);
-      ((System.ComponentModel.ISupportInitialize)(this.dgv_permisos)).EndInit();
+      this.Controls.SetChildIndex(this.btn_new, 0);
+      this.Controls.SetChildIndex(this.pnl_contenedor, 0);
+      this.pnl_contenedor.ResumeLayout(false);
       this.ResumeLayout(false);
 
     }
 
     #endregion
 
-    private System.Windows.Forms.DataGridView dgv_permisos;
     private System.Windows.Forms.Button btn_new;
   }
 }
