@@ -15,14 +15,13 @@ namespace ControlCalidad
   public partial class frm_permisos_edit : frm_maestro_edit
   {
     String m_usuario;
-    Boolean m_new_user = true;
 
     public frm_permisos_edit(String Usuario)
     {
       if (!String.IsNullOrEmpty(Usuario))
       {
         this.m_usuario = Usuario;
-        this.m_new_user = false;
+        this.m_new_value = false;
       }
 
       InitializeComponent();
@@ -63,7 +62,7 @@ namespace ControlCalidad
     private void FillPermisos()
     {
 
-      if (!this.m_new_user)
+      if (!this.m_new_value)
       {
         this.txt_usuario.Text = this.m_usuario;
 
@@ -91,7 +90,7 @@ namespace ControlCalidad
 
       _sb = new StringBuilder();
 
-      if (this.m_new_user)
+      if (this.m_new_value)
       {
         _sb.AppendLine(" INSERT INTO   permiso_aplicacion");
         _sb.AppendLine("           (   ");
@@ -124,7 +123,7 @@ namespace ControlCalidad
       foreach (DataGridViewRow _dgvr in this.dgv_permisos.Rows)
       {
         List<MySqlParameter> _collection = new List<MySqlParameter>();
-        if (!this.m_new_user)
+        if (!this.m_new_value)
         {
           _collection.Add(new MySqlParameter("@pId", _dgvr.Cells["id"].Value));
         }

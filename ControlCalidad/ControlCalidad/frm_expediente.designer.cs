@@ -56,6 +56,7 @@
       this.dgv_verificacion = new System.Windows.Forms.DataGridView();
       this.btn_eliminar_verificacion = new System.Windows.Forms.Button();
       this.btn_añadir_verificacion = new System.Windows.Forms.Button();
+      ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
       this.gb_cliente.SuspendLayout();
       this.gb_registro_lineas.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dgv_verificacion)).BeginInit();
@@ -68,6 +69,10 @@
       // btn_guardar
       // 
       this.btn_guardar.Location = new System.Drawing.Point(13, 376);
+      // 
+      // pnl_contenedor
+      // 
+      this.pnl_contenedor.Size = new System.Drawing.Size(811, 486);
       // 
       // txt_num_registro
       // 
@@ -259,9 +264,9 @@
       this.lbl_cli_email.AutoSize = true;
       this.lbl_cli_email.Location = new System.Drawing.Point(31, 81);
       this.lbl_cli_email.Name = "lbl_cli_email";
-      this.lbl_cli_email.Size = new System.Drawing.Size(31, 13);
+      this.lbl_cli_email.Size = new System.Drawing.Size(32, 13);
       this.lbl_cli_email.TabIndex = 16;
-      this.lbl_cli_email.Text = "email";
+      this.lbl_cli_email.Text = "Email";
       // 
       // lbl_motivo_denegacion
       // 
@@ -343,6 +348,7 @@
       this.Name = "frm_expediente";
       this.Text = "xExpediente";
       this.Load += new System.EventHandler(this.frm_expediente_Load);
+      this.Controls.SetChildIndex(this.pnl_contenedor, 0);
       this.Controls.SetChildIndex(this.txt_num_registro, 0);
       this.Controls.SetChildIndex(this.lbl_num_registro, 0);
       this.Controls.SetChildIndex(this.lbl_date_expedicion, 0);
@@ -359,6 +365,7 @@
       this.Controls.SetChildIndex(this.txt_motivo_denegacion, 0);
       this.Controls.SetChildIndex(this.lbl_motivo_denegacion, 0);
       this.Controls.SetChildIndex(this.gb_registro_lineas, 0);
+      ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
       this.gb_cliente.ResumeLayout(false);
       this.gb_cliente.PerformLayout();
       this.gb_registro_lineas.ResumeLayout(false);

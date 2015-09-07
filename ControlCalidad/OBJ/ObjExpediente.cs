@@ -11,7 +11,6 @@ namespace OBJ
     public DateTime FechaCreacion { get; set; }
     public DateTime FechaModificacion { get; set; }
     public DateTime FechaExpedicion { get; set; }
-    public DateTime FechaExpidicion { get; set; }
     public long UsuarioId { get; set; }
     public string UsuarioNombre { get; set; }
     public long ClienteId { get; set; }

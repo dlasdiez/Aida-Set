@@ -12,7 +12,7 @@ namespace DAL
 {
   public class DBConnect
   {
-    private MySqlConnection m_connection;
+    public MySqlConnection m_Msqlconnection;
     private string m_server;
     private string m_database;
     private string m_puerto;
@@ -44,7 +44,7 @@ namespace DAL
       if (this.OpenConnection() == true)
       {
         //create command and assign the query and connection from the constructor
-        MySqlCommand cmd = new MySqlCommand(Command.ToString(), m_connection);
+        MySqlCommand cmd = new MySqlCommand(Command.ToString(), m_Msqlconnection);
         foreach(MySqlParameter _param in Parameters)
         {
           cmd.Parameters.Add(_param);
@@ -71,7 +71,7 @@ namespace DAL
         //Assign the query using CommandText
         cmd.CommandText = query;
         //Assign the connection using Connection
-        cmd.Connection = m_connection;
+        cmd.Connection = m_Msqlconnection;
 
         //Execute query
         cmd.ExecuteNonQuery();
@@ -88,7 +88,7 @@ namespace DAL
 
       if (this.OpenConnection() == true)
       {
-        MySqlCommand cmd = new MySqlCommand(query, m_connection);
+        MySqlCommand cmd = new MySqlCommand(query, m_Msqlconnection);
         cmd.ExecuteNonQuery();
         this.CloseConnection();
       }
@@ -100,7 +100,7 @@ namespace DAL
       {
         if (this.OpenConnection() == true)
         {
-          MySqlCommand cmd = new MySqlCommand(Command, m_connection);
+          MySqlCommand cmd = new MySqlCommand(Command, m_Msqlconnection);
           cmd.ExecuteNonQuery();
         }
       }
@@ -123,7 +123,7 @@ namespace DAL
       if (this.OpenConnection() == true)
       {
         //Create Command
-        MySqlCommand cmd = new MySqlCommand(Command.ToString(), m_connection);
+        MySqlCommand cmd = new MySqlCommand(Command.ToString(), m_Msqlconnection);
         foreach(MySqlParameter _param in Parameters)
         {
           cmd.Parameters.Add(_param);
@@ -163,7 +163,7 @@ namespace DAL
       if (this.OpenConnection() == true)
       {
         //Create Mysql Command
-        MySqlCommand cmd = new MySqlCommand(query, m_connection);
+        MySqlCommand cmd = new MySqlCommand(query, m_Msqlconnection);
 
         //ExecuteScalar will return one value
         Count = int.Parse(cmd.ExecuteScalar() + "");
@@ -266,7 +266,7 @@ namespace DAL
       string connectionString;
       connectionString = "SERVER=" + m_server + ";" + "PORT=" + m_puerto + ";" + "UID=" + m_uid + ";" + "PASSWORD=" + m_password + ";" + "DATABASE=" + m_database + ";";
 
-      m_connection = new MySqlConnection(connectionString);
+      m_Msqlconnection = new MySqlConnection(connectionString);
     }
 
     //open connection to database
@@ -274,9 +274,9 @@ namespace DAL
     {
       try
       {
-        if (m_connection.State != System.Data.ConnectionState.Open)
+        if (m_Msqlconnection.State != System.Data.ConnectionState.Open)
         {
-          m_connection.Open();
+          m_Msqlconnection.Open();
         }
         return true;
       }
@@ -305,7 +305,7 @@ namespace DAL
     {
       try
       {
-        m_connection.Close();
+        m_Msqlconnection.Close();
         return true;
       }
       catch (MySqlException _ex)

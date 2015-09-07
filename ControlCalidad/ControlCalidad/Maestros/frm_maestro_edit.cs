@@ -15,6 +15,7 @@ namespace ControlCalidad
   {
     public DBConnect m_connection;
     public ControlCalidad.Constantes.Modulo m_modulo;
+    public Boolean m_new_value = true;
 
     public frm_maestro_edit()
     {
