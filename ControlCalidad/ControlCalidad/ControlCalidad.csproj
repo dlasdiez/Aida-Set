@@ -211,6 +211,7 @@
     <Content Include="Scripts\Script0005_garantias_tramite.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\Script0006_Expediente_Lineas.sql" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
