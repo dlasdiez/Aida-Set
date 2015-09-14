@@ -32,12 +32,12 @@
       this.pnl_lateral = new System.Windows.Forms.Panel();
       this.pb_logo = new System.Windows.Forms.PictureBox();
       this.pnl_botones = new System.Windows.Forms.Panel();
+      this.btn_new = new System.Windows.Forms.Button();
       this.btn_salir = new System.Windows.Forms.Button();
       this.pnl_contenedor = new System.Windows.Forms.Panel();
       this.pnl_filtro = new System.Windows.Forms.Panel();
       this.pnl_datos = new System.Windows.Forms.Panel();
       this.dgv_list = new System.Windows.Forms.DataGridView();
-      this.btn_new = new System.Windows.Forms.Button();
       this.pnl_lateral.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
       this.pnl_botones.SuspendLayout();
@@ -76,6 +76,16 @@
       this.pnl_botones.Name = "pnl_botones";
       this.pnl_botones.Size = new System.Drawing.Size(118, 284);
       this.pnl_botones.TabIndex = 35;
+      // 
+      // btn_new
+      // 
+      this.btn_new.Location = new System.Drawing.Point(13, 177);
+      this.btn_new.Name = "btn_new";
+      this.btn_new.Size = new System.Drawing.Size(96, 45);
+      this.btn_new.TabIndex = 33;
+      this.btn_new.Text = "Nuevo";
+      this.btn_new.UseVisualStyleBackColor = true;
+      this.btn_new.Click += new System.EventHandler(this.btn_new_Click);
       // 
       // btn_salir
       // 
@@ -125,20 +135,11 @@
       this.dgv_list.Dock = System.Windows.Forms.DockStyle.Fill;
       this.dgv_list.Location = new System.Drawing.Point(0, 0);
       this.dgv_list.Name = "dgv_list";
+      this.dgv_list.ReadOnly = true;
       this.dgv_list.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
       this.dgv_list.Size = new System.Drawing.Size(425, 388);
       this.dgv_list.TabIndex = 1;
       this.dgv_list.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_list_CellDoubleClick);
-      // 
-      // btn_new
-      // 
-      this.btn_new.Location = new System.Drawing.Point(13, 177);
-      this.btn_new.Name = "btn_new";
-      this.btn_new.Size = new System.Drawing.Size(96, 45);
-      this.btn_new.TabIndex = 33;
-      this.btn_new.Text = "Nuevo";
-      this.btn_new.UseVisualStyleBackColor = true;
-      this.btn_new.Click += new System.EventHandler(this.btn_new_Click);
       // 
       // frm_maestro_list
       // 

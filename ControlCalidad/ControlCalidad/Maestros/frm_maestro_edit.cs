@@ -53,13 +53,16 @@ namespace ControlCalidad
       {
         this.pb_logo.Image = Image.FromFile(Configuracion.Config.ValueConfig.PathLogo);
       }
+
+      this.m_connection = new DBConnect(Configuracion.Config.ValueConfig.Servidor_BD, Configuracion.Config.ValueConfig.Database, Configuracion.Config.ValueConfig.Puerto, Configuracion.Config.ValueConfig.Usuario_BD, Configuracion.Config.ValueConfig.Password_BD);
+
+      this.Init();
     }
 
     private void btn_guardar_Click(object sender, EventArgs e)
     {
       if (this.IsDataOk())
       {
-        this.m_connection = new DBConnect(Configuracion.Config.ValueConfig.Servidor_BD, Configuracion.Config.ValueConfig.Database, Configuracion.Config.ValueConfig.Puerto, Configuracion.Config.ValueConfig.Usuario_BD, Configuracion.Config.ValueConfig.Password_BD);
         this.Guardar();
         this.Close();
 
@@ -72,6 +75,11 @@ namespace ControlCalidad
     private void btn_salir_Click(object sender, EventArgs e)
     {
       this.Close();
+    }
+
+    public virtual void Init()
+    {
+      
     }
 
     public virtual void Guardar()

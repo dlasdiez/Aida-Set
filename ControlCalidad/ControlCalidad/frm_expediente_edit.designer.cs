@@ -1,6 +1,6 @@
 ﻿namespace ControlCalidad
 {
-  partial class frm_expediente
+  partial class frm_expediente_edit
   {
     /// <summary>
     /// Required designer variable.
@@ -45,6 +45,8 @@
       this.lbl_usuario = new System.Windows.Forms.Label();
       this.txt_usuario = new System.Windows.Forms.TextBox();
       this.gb_cliente = new System.Windows.Forms.GroupBox();
+      this.lbl_cod_cliente = new System.Windows.Forms.Label();
+      this.txt_cliente_id = new System.Windows.Forms.TextBox();
       this.lbl_cli_solicita = new System.Windows.Forms.Label();
       this.ch_cli_SDC = new System.Windows.Forms.CheckBox();
       this.txt_cli_email = new System.Windows.Forms.TextBox();
@@ -53,9 +55,23 @@
       this.lbl_motivo_denegacion = new System.Windows.Forms.Label();
       this.txt_motivo_denegacion = new System.Windows.Forms.TextBox();
       this.gb_registro_lineas = new System.Windows.Forms.GroupBox();
+      this.txt_nombre_proveedor = new System.Windows.Forms.TextBox();
+      this.lbl_unidades = new System.Windows.Forms.Label();
+      this.txt_unidades = new System.Windows.Forms.TextBox();
+      this.lbl_num_lote = new System.Windows.Forms.Label();
+      this.txt_num_lote = new System.Windows.Forms.TextBox();
+      this.lbl_proveedor = new System.Windows.Forms.Label();
+      this.txt_proveedor_id = new System.Windows.Forms.TextBox();
       this.dgv_verificacion = new System.Windows.Forms.DataGridView();
       this.btn_eliminar_verificacion = new System.Windows.Forms.Button();
       this.btn_añadir_verificacion = new System.Windows.Forms.Button();
+      this.txt_usuario_id = new System.Windows.Forms.TextBox();
+      this.dtp_fecha_modificacion = new System.Windows.Forms.DateTimePicker();
+      this.lbl_fecha_modificacion = new System.Windows.Forms.Label();
+      this.lbl_cod_articulo = new System.Windows.Forms.Label();
+      this.txt_cod_articulo = new System.Windows.Forms.TextBox();
+      this.txt_nombre_articulo = new System.Windows.Forms.TextBox();
+      this.pnl_contenedor.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
       this.gb_cliente.SuspendLayout();
       this.gb_registro_lineas.SuspendLayout();
@@ -72,7 +88,14 @@
       // 
       // pnl_contenedor
       // 
-      this.pnl_contenedor.Size = new System.Drawing.Size(811, 486);
+      this.pnl_contenedor.Controls.Add(this.txt_nombre_articulo);
+      this.pnl_contenedor.Controls.Add(this.lbl_cod_articulo);
+      this.pnl_contenedor.Controls.Add(this.gb_registro_lineas);
+      this.pnl_contenedor.Controls.Add(this.txt_cod_articulo);
+      this.pnl_contenedor.Controls.Add(this.dtp_fecha_modificacion);
+      this.pnl_contenedor.Controls.Add(this.lbl_fecha_modificacion);
+      this.pnl_contenedor.Controls.Add(this.txt_usuario_id);
+      this.pnl_contenedor.Size = new System.Drawing.Size(859, 607);
       // 
       // txt_num_registro
       // 
@@ -126,7 +149,7 @@
       // lbl_cli_nombre
       // 
       this.lbl_cli_nombre.AutoSize = true;
-      this.lbl_cli_nombre.Location = new System.Drawing.Point(18, 29);
+      this.lbl_cli_nombre.Location = new System.Drawing.Point(18, 58);
       this.lbl_cli_nombre.Name = "lbl_cli_nombre";
       this.lbl_cli_nombre.Size = new System.Drawing.Size(44, 13);
       this.lbl_cli_nombre.TabIndex = 16;
@@ -134,7 +157,7 @@
       // 
       // txt_cli_nombre
       // 
-      this.txt_cli_nombre.Location = new System.Drawing.Point(68, 26);
+      this.txt_cli_nombre.Location = new System.Drawing.Point(68, 55);
       this.txt_cli_nombre.Name = "txt_cli_nombre";
       this.txt_cli_nombre.Size = new System.Drawing.Size(288, 20);
       this.txt_cli_nombre.TabIndex = 15;
@@ -142,7 +165,7 @@
       // lbl_cli_referencia
       // 
       this.lbl_cli_referencia.AutoSize = true;
-      this.lbl_cli_referencia.Location = new System.Drawing.Point(3, 55);
+      this.lbl_cli_referencia.Location = new System.Drawing.Point(3, 84);
       this.lbl_cli_referencia.Name = "lbl_cli_referencia";
       this.lbl_cli_referencia.Size = new System.Drawing.Size(59, 13);
       this.lbl_cli_referencia.TabIndex = 18;
@@ -150,14 +173,14 @@
       // 
       // txt_cli_referencia
       // 
-      this.txt_cli_referencia.Location = new System.Drawing.Point(68, 52);
+      this.txt_cli_referencia.Location = new System.Drawing.Point(68, 81);
       this.txt_cli_referencia.Name = "txt_cli_referencia";
       this.txt_cli_referencia.Size = new System.Drawing.Size(100, 20);
       this.txt_cli_referencia.TabIndex = 17;
       // 
       // txt_observaciones
       // 
-      this.txt_observaciones.Location = new System.Drawing.Point(20, 369);
+      this.txt_observaciones.Location = new System.Drawing.Point(20, 453);
       this.txt_observaciones.Multiline = true;
       this.txt_observaciones.Name = "txt_observaciones";
       this.txt_observaciones.Size = new System.Drawing.Size(362, 103);
@@ -166,7 +189,7 @@
       // lbl_observaciones
       // 
       this.lbl_observaciones.AutoSize = true;
-      this.lbl_observaciones.Location = new System.Drawing.Point(159, 348);
+      this.lbl_observaciones.Location = new System.Drawing.Point(159, 432);
       this.lbl_observaciones.Name = "lbl_observaciones";
       this.lbl_observaciones.Size = new System.Drawing.Size(78, 13);
       this.lbl_observaciones.TabIndex = 23;
@@ -207,6 +230,8 @@
       // 
       // gb_cliente
       // 
+      this.gb_cliente.Controls.Add(this.lbl_cod_cliente);
+      this.gb_cliente.Controls.Add(this.txt_cliente_id);
       this.gb_cliente.Controls.Add(this.lbl_cli_solicita);
       this.gb_cliente.Controls.Add(this.ch_cli_SDC);
       this.gb_cliente.Controls.Add(this.txt_cli_email);
@@ -218,15 +243,31 @@
       this.gb_cliente.Controls.Add(this.lbl_cli_referencia);
       this.gb_cliente.Location = new System.Drawing.Point(437, 6);
       this.gb_cliente.Name = "gb_cliente";
-      this.gb_cliente.Size = new System.Drawing.Size(362, 134);
+      this.gb_cliente.Size = new System.Drawing.Size(362, 180);
       this.gb_cliente.TabIndex = 37;
       this.gb_cliente.TabStop = false;
       this.gb_cliente.Text = "Cliente";
       // 
+      // lbl_cod_cliente
+      // 
+      this.lbl_cod_cliente.AutoSize = true;
+      this.lbl_cod_cliente.Location = new System.Drawing.Point(22, 32);
+      this.lbl_cod_cliente.Name = "lbl_cod_cliente";
+      this.lbl_cod_cliente.Size = new System.Drawing.Size(40, 13);
+      this.lbl_cod_cliente.TabIndex = 41;
+      this.lbl_cod_cliente.Text = "Código";
+      // 
+      // txt_cliente_id
+      // 
+      this.txt_cliente_id.Location = new System.Drawing.Point(68, 29);
+      this.txt_cliente_id.Name = "txt_cliente_id";
+      this.txt_cliente_id.Size = new System.Drawing.Size(100, 20);
+      this.txt_cliente_id.TabIndex = 40;
+      // 
       // lbl_cli_solicita
       // 
       this.lbl_cli_solicita.AutoSize = true;
-      this.lbl_cli_solicita.Location = new System.Drawing.Point(18, 109);
+      this.lbl_cli_solicita.Location = new System.Drawing.Point(18, 138);
       this.lbl_cli_solicita.Name = "lbl_cli_solicita";
       this.lbl_cli_solicita.Size = new System.Drawing.Size(44, 13);
       this.lbl_cli_solicita.TabIndex = 40;
@@ -235,7 +276,7 @@
       // ch_cli_SDC
       // 
       this.ch_cli_SDC.AutoSize = true;
-      this.ch_cli_SDC.Location = new System.Drawing.Point(114, 107);
+      this.ch_cli_SDC.Location = new System.Drawing.Point(114, 136);
       this.ch_cli_SDC.Name = "ch_cli_SDC";
       this.ch_cli_SDC.Size = new System.Drawing.Size(54, 17);
       this.ch_cli_SDC.TabIndex = 39;
@@ -244,7 +285,7 @@
       // 
       // txt_cli_email
       // 
-      this.txt_cli_email.Location = new System.Drawing.Point(68, 78);
+      this.txt_cli_email.Location = new System.Drawing.Point(68, 107);
       this.txt_cli_email.Name = "txt_cli_email";
       this.txt_cli_email.Size = new System.Drawing.Size(288, 20);
       this.txt_cli_email.TabIndex = 15;
@@ -252,7 +293,7 @@
       // ch_cli_DC
       // 
       this.ch_cli_DC.AutoSize = true;
-      this.ch_cli_DC.Location = new System.Drawing.Point(68, 107);
+      this.ch_cli_DC.Location = new System.Drawing.Point(68, 136);
       this.ch_cli_DC.Name = "ch_cli_DC";
       this.ch_cli_DC.Size = new System.Drawing.Size(44, 17);
       this.ch_cli_DC.TabIndex = 38;
@@ -262,7 +303,7 @@
       // lbl_cli_email
       // 
       this.lbl_cli_email.AutoSize = true;
-      this.lbl_cli_email.Location = new System.Drawing.Point(31, 81);
+      this.lbl_cli_email.Location = new System.Drawing.Point(31, 110);
       this.lbl_cli_email.Name = "lbl_cli_email";
       this.lbl_cli_email.Size = new System.Drawing.Size(32, 13);
       this.lbl_cli_email.TabIndex = 16;
@@ -271,7 +312,7 @@
       // lbl_motivo_denegacion
       // 
       this.lbl_motivo_denegacion.AutoSize = true;
-      this.lbl_motivo_denegacion.Location = new System.Drawing.Point(580, 348);
+      this.lbl_motivo_denegacion.Location = new System.Drawing.Point(580, 432);
       this.lbl_motivo_denegacion.Name = "lbl_motivo_denegacion";
       this.lbl_motivo_denegacion.Size = new System.Drawing.Size(98, 13);
       this.lbl_motivo_denegacion.TabIndex = 39;
@@ -279,7 +320,7 @@
       // 
       // txt_motivo_denegacion
       // 
-      this.txt_motivo_denegacion.Location = new System.Drawing.Point(441, 369);
+      this.txt_motivo_denegacion.Location = new System.Drawing.Point(441, 453);
       this.txt_motivo_denegacion.Multiline = true;
       this.txt_motivo_denegacion.Name = "txt_motivo_denegacion";
       this.txt_motivo_denegacion.Size = new System.Drawing.Size(362, 103);
@@ -287,23 +328,92 @@
       // 
       // gb_registro_lineas
       // 
+      this.gb_registro_lineas.Controls.Add(this.txt_nombre_proveedor);
+      this.gb_registro_lineas.Controls.Add(this.lbl_unidades);
+      this.gb_registro_lineas.Controls.Add(this.txt_unidades);
+      this.gb_registro_lineas.Controls.Add(this.lbl_num_lote);
+      this.gb_registro_lineas.Controls.Add(this.txt_num_lote);
+      this.gb_registro_lineas.Controls.Add(this.lbl_proveedor);
+      this.gb_registro_lineas.Controls.Add(this.txt_proveedor_id);
       this.gb_registro_lineas.Controls.Add(this.dgv_verificacion);
       this.gb_registro_lineas.Controls.Add(this.btn_eliminar_verificacion);
       this.gb_registro_lineas.Controls.Add(this.btn_añadir_verificacion);
-      this.gb_registro_lineas.Location = new System.Drawing.Point(20, 153);
+      this.gb_registro_lineas.Location = new System.Drawing.Point(20, 192);
       this.gb_registro_lineas.Name = "gb_registro_lineas";
-      this.gb_registro_lineas.Size = new System.Drawing.Size(783, 180);
+      this.gb_registro_lineas.Size = new System.Drawing.Size(783, 230);
       this.gb_registro_lineas.TabIndex = 24;
       this.gb_registro_lineas.TabStop = false;
       this.gb_registro_lineas.Text = "Registro de Líneas";
       // 
+      // txt_nombre_proveedor
+      // 
+      this.txt_nombre_proveedor.Location = new System.Drawing.Point(158, 19);
+      this.txt_nombre_proveedor.Name = "txt_nombre_proveedor";
+      this.txt_nombre_proveedor.Size = new System.Drawing.Size(112, 20);
+      this.txt_nombre_proveedor.TabIndex = 47;
+      // 
+      // lbl_unidades
+      // 
+      this.lbl_unidades.AutoSize = true;
+      this.lbl_unidades.Location = new System.Drawing.Point(533, 22);
+      this.lbl_unidades.Name = "lbl_unidades";
+      this.lbl_unidades.Size = new System.Drawing.Size(52, 13);
+      this.lbl_unidades.TabIndex = 46;
+      this.lbl_unidades.Text = "Unidades";
+      // 
+      // txt_unidades
+      // 
+      this.txt_unidades.Location = new System.Drawing.Point(590, 19);
+      this.txt_unidades.Name = "txt_unidades";
+      this.txt_unidades.Size = new System.Drawing.Size(75, 20);
+      this.txt_unidades.TabIndex = 45;
+      // 
+      // lbl_num_lote
+      // 
+      this.lbl_num_lote.AutoSize = true;
+      this.lbl_num_lote.Location = new System.Drawing.Point(335, 22);
+      this.lbl_num_lote.Name = "lbl_num_lote";
+      this.lbl_num_lote.Size = new System.Drawing.Size(56, 13);
+      this.lbl_num_lote.TabIndex = 44;
+      this.lbl_num_lote.Text = "Num. Lote";
+      // 
+      // txt_num_lote
+      // 
+      this.txt_num_lote.Location = new System.Drawing.Point(397, 19);
+      this.txt_num_lote.Name = "txt_num_lote";
+      this.txt_num_lote.Size = new System.Drawing.Size(75, 20);
+      this.txt_num_lote.TabIndex = 43;
+      // 
+      // lbl_proveedor
+      // 
+      this.lbl_proveedor.AutoSize = true;
+      this.lbl_proveedor.Location = new System.Drawing.Point(15, 22);
+      this.lbl_proveedor.Name = "lbl_proveedor";
+      this.lbl_proveedor.Size = new System.Drawing.Size(56, 13);
+      this.lbl_proveedor.TabIndex = 42;
+      this.lbl_proveedor.Text = "Proveedor";
+      // 
+      // txt_proveedor_id
+      // 
+      this.txt_proveedor_id.Location = new System.Drawing.Point(77, 19);
+      this.txt_proveedor_id.Name = "txt_proveedor_id";
+      this.txt_proveedor_id.Size = new System.Drawing.Size(75, 20);
+      this.txt_proveedor_id.TabIndex = 42;
+      // 
       // dgv_verificacion
       // 
+      this.dgv_verificacion.AllowUserToAddRows = false;
+      this.dgv_verificacion.AllowUserToDeleteRows = false;
+      this.dgv_verificacion.AllowUserToOrderColumns = true;
+      this.dgv_verificacion.AllowUserToResizeColumns = false;
+      this.dgv_verificacion.AllowUserToResizeRows = false;
       this.dgv_verificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dgv_verificacion.Location = new System.Drawing.Point(16, 19);
+      this.dgv_verificacion.Location = new System.Drawing.Point(16, 65);
       this.dgv_verificacion.Name = "dgv_verificacion";
+      this.dgv_verificacion.ReadOnly = true;
       this.dgv_verificacion.Size = new System.Drawing.Size(682, 155);
       this.dgv_verificacion.TabIndex = 21;
+      this.dgv_verificacion.SelectionChanged += new System.EventHandler(this.dgv_verificacion_SelectionChanged);
       // 
       // btn_eliminar_verificacion
       // 
@@ -322,14 +432,62 @@
       this.btn_añadir_verificacion.TabIndex = 22;
       this.btn_añadir_verificacion.Text = "Añadir";
       this.btn_añadir_verificacion.UseVisualStyleBackColor = true;
+      this.btn_añadir_verificacion.Click += new System.EventHandler(this.btn_añadir_verificacion_Click);
       // 
-      // frm_expediente
+      // txt_usuario_id
+      // 
+      this.txt_usuario_id.Location = new System.Drawing.Point(57, 77);
+      this.txt_usuario_id.Name = "txt_usuario_id";
+      this.txt_usuario_id.Size = new System.Drawing.Size(100, 20);
+      this.txt_usuario_id.TabIndex = 41;
+      this.txt_usuario_id.Visible = false;
+      // 
+      // dtp_fecha_modificacion
+      // 
+      this.dtp_fecha_modificacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+      this.dtp_fecha_modificacion.Location = new System.Drawing.Point(287, 77);
+      this.dtp_fecha_modificacion.Name = "dtp_fecha_modificacion";
+      this.dtp_fecha_modificacion.Size = new System.Drawing.Size(100, 20);
+      this.dtp_fecha_modificacion.TabIndex = 41;
+      // 
+      // lbl_fecha_modificacion
+      // 
+      this.lbl_fecha_modificacion.AutoSize = true;
+      this.lbl_fecha_modificacion.Location = new System.Drawing.Point(181, 80);
+      this.lbl_fecha_modificacion.Name = "lbl_fecha_modificacion";
+      this.lbl_fecha_modificacion.Size = new System.Drawing.Size(100, 13);
+      this.lbl_fecha_modificacion.TabIndex = 40;
+      this.lbl_fecha_modificacion.Text = "Fecha Modificación";
+      // 
+      // lbl_cod_articulo
+      // 
+      this.lbl_cod_articulo.AutoSize = true;
+      this.lbl_cod_articulo.Location = new System.Drawing.Point(12, 139);
+      this.lbl_cod_articulo.Name = "lbl_cod_articulo";
+      this.lbl_cod_articulo.Size = new System.Drawing.Size(67, 13);
+      this.lbl_cod_articulo.TabIndex = 48;
+      this.lbl_cod_articulo.Text = "Cod. Articulo";
+      // 
+      // txt_cod_articulo
+      // 
+      this.txt_cod_articulo.Location = new System.Drawing.Point(84, 136);
+      this.txt_cod_articulo.Name = "txt_cod_articulo";
+      this.txt_cod_articulo.Size = new System.Drawing.Size(75, 20);
+      this.txt_cod_articulo.TabIndex = 47;
+      // 
+      // txt_nombre_articulo
+      // 
+      this.txt_nombre_articulo.Location = new System.Drawing.Point(165, 136);
+      this.txt_nombre_articulo.Name = "txt_nombre_articulo";
+      this.txt_nombre_articulo.Size = new System.Drawing.Size(141, 20);
+      this.txt_nombre_articulo.TabIndex = 49;
+      // 
+      // frm_expediente_edit
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.RoyalBlue;
-      this.ClientSize = new System.Drawing.Size(932, 486);
-      this.Controls.Add(this.gb_registro_lineas);
+      this.ClientSize = new System.Drawing.Size(980, 607);
       this.Controls.Add(this.lbl_motivo_denegacion);
       this.Controls.Add(this.txt_motivo_denegacion);
       this.Controls.Add(this.gb_cliente);
@@ -345,9 +503,8 @@
       this.Controls.Add(this.lbl_date_expedicion);
       this.Controls.Add(this.lbl_num_registro);
       this.Controls.Add(this.txt_num_registro);
-      this.Name = "frm_expediente";
+      this.Name = "frm_expediente_edit";
       this.Text = "xExpediente";
-      this.Load += new System.EventHandler(this.frm_expediente_Load);
       this.Controls.SetChildIndex(this.pnl_contenedor, 0);
       this.Controls.SetChildIndex(this.txt_num_registro, 0);
       this.Controls.SetChildIndex(this.lbl_num_registro, 0);
@@ -364,11 +521,13 @@
       this.Controls.SetChildIndex(this.gb_cliente, 0);
       this.Controls.SetChildIndex(this.txt_motivo_denegacion, 0);
       this.Controls.SetChildIndex(this.lbl_motivo_denegacion, 0);
-      this.Controls.SetChildIndex(this.gb_registro_lineas, 0);
+      this.pnl_contenedor.ResumeLayout(false);
+      this.pnl_contenedor.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
       this.gb_cliente.ResumeLayout(false);
       this.gb_cliente.PerformLayout();
       this.gb_registro_lineas.ResumeLayout(false);
+      this.gb_registro_lineas.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dgv_verificacion)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -405,5 +564,20 @@
     private System.Windows.Forms.DataGridView dgv_verificacion;
     private System.Windows.Forms.Button btn_eliminar_verificacion;
     private System.Windows.Forms.Button btn_añadir_verificacion;
+    private System.Windows.Forms.TextBox txt_cliente_id;
+    private System.Windows.Forms.TextBox txt_usuario_id;
+    private System.Windows.Forms.DateTimePicker dtp_fecha_modificacion;
+    private System.Windows.Forms.Label lbl_fecha_modificacion;
+    private System.Windows.Forms.Label lbl_cod_cliente;
+    private System.Windows.Forms.Label lbl_proveedor;
+    private System.Windows.Forms.TextBox txt_proveedor_id;
+    private System.Windows.Forms.Label lbl_num_lote;
+    private System.Windows.Forms.TextBox txt_num_lote;
+    private System.Windows.Forms.Label lbl_unidades;
+    private System.Windows.Forms.TextBox txt_unidades;
+    private System.Windows.Forms.Label lbl_cod_articulo;
+    private System.Windows.Forms.TextBox txt_cod_articulo;
+    private System.Windows.Forms.TextBox txt_nombre_articulo;
+    private System.Windows.Forms.TextBox txt_nombre_proveedor;
   }
 }

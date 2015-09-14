@@ -36,9 +36,9 @@ namespace ControlCalidad
 
     private void btn_expediente_Click(object sender, EventArgs e)
     {
-      frm_expediente _frm;
+      frm_expedientes_sel _frm;
 
-      _frm = new frm_expediente();
+      _frm = new frm_expedientes_sel();
       _frm.ShowDialog();
     }
 

@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS permiso_aplicacion (
 	pa_baja         BOOLEAN DEFAULT 0,
 	pa_lectura      BOOLEAN DEFAULT 0,
 	PRIMARY KEY (pa_id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

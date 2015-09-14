@@ -38,6 +38,8 @@ namespace ControlCalidad
 
       _color = ColorTranslator.FromHtml(Configuracion.Config.ValueConfig.Color);
 
+      m_connection = new DBConnect(Configuracion.Config.ValueConfig.Servidor_BD, Configuracion.Config.ValueConfig.Database, Configuracion.Config.ValueConfig.Puerto, Configuracion.Config.ValueConfig.Usuario_BD, Configuracion.Config.ValueConfig.Password_BD);
+
       this.BackColor = _color;
       //Cargamos Color
       foreach (Control _controls in this.Controls)

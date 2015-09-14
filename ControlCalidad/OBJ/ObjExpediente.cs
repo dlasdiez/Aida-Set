@@ -13,6 +13,8 @@ namespace OBJ
     public DateTime FechaExpedicion { get; set; }
     public long UsuarioId { get; set; }
     public string UsuarioNombre { get; set; }
+    public long CodArticulo { get; set; }
+    public string ArticuloNombre { get; set; }
     public long ClienteId { get; set; }
     public string ClienteNombre { get; set; }
     public string ClienteEmail { get; set; }

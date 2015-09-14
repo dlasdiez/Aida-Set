@@ -5,6 +5,8 @@ CREATE TABLE IF NOT EXISTS `expediente` (
   `fecha_creacion` datetime NULL,
   `fecha_modificacion` datetime NULL,
   `fecha_expedicion` datetime NULL,
+  `cod_articulo` bigint(20),
+  `articulo_nombre` varchar(255),
   `usuario_id` bigint(20),
   `usuario_nombre` varchar(255),
   `cliente_id` bigint(20),

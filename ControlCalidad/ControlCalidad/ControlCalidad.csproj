@@ -74,11 +74,17 @@
     <Compile Include="frm_evaluacion_piezas.Designer.cs">
       <DependentUpon>frm_evaluacion_piezas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_expediente.cs">
+    <Compile Include="frm_expediente_edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_expediente.designer.cs">
-      <DependentUpon>frm_expediente.cs</DependentUpon>
+    <Compile Include="frm_expediente_edit.designer.cs">
+      <DependentUpon>frm_expediente_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_expedientes_sel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_expedientes_sel.Designer.cs">
+      <DependentUpon>frm_expedientes_sel.cs</DependentUpon>
     </Compile>
     <Compile Include="Maestros\frm_maestro_edit.cs">
       <SubType>Form</SubType>
@@ -136,8 +142,11 @@
     <EmbeddedResource Include="frm_evaluacion_piezas.resx">
       <DependentUpon>frm_evaluacion_piezas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_expediente.resx">
-      <DependentUpon>frm_expediente.cs</DependentUpon>
+    <EmbeddedResource Include="frm_expedientes_sel.resx">
+      <DependentUpon>frm_expedientes_sel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_expediente_edit.resx">
+      <DependentUpon>frm_expediente_edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maestros\frm_maestro_edit.resx">
       <DependentUpon>frm_maestro_edit.cs</DependentUpon>
@@ -211,7 +220,9 @@
     <Content Include="Scripts\Script0005_garantias_tramite.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\Script0006_Expediente_Lineas.sql" />
+    <Content Include="Scripts\Script0006_Expediente_Lineas.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
