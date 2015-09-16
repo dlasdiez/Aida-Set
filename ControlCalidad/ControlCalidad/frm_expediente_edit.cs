@@ -16,11 +16,11 @@ namespace ControlCalidad
   {
 
     #region Constantes
-    private String DGV_PROVEEDOR_ID = "0";
-    private String DGV_PROVEEDOR_NOMBRE = "1";
-    private String DGV_REFERENCIA_PROVEEDOR = "2";
-    private String DGV_NUM_LOTE = "3";
-    private String DGV_UNIDADES = "4";
+    private String COLUMN_PROVEEDOR_ID = "0";
+    private String COLUMN_PROVEEDOR_NOMBRE = "1";
+    private String COLUMN_REFERENCIA_PROVEEDOR = "2";
+    private String COLUMN_NUM_LOTE = "3";
+    private String COLUMN_UNIDADES = "4";
 
     #endregion
 
@@ -77,6 +77,9 @@ namespace ControlCalidad
         this.dtp_fecha_creacion.Value = _expediente.FechaCreacion;
         this.dtp_fecha_expedicion.Value = _expediente.FechaExpedicion;
         this.dtp_fecha_modificacion.Value = _expediente.FechaModificacion;
+        this.txt_notas.Text = _expediente.Notas;
+
+        this.FillGrid(_expediente.Lineas);
       }
     }
 
@@ -84,22 +87,23 @@ namespace ControlCalidad
     {
       ObjExpediente _expediente = new ObjExpediente();
       DalExpediente _dExpediente = new DalExpediente(this.m_connection);
+      ObjExpedienteLinea _linea;
+
       Int64 _value;
+      Int32 _unidades;
 
       Int64.TryParse(this.txt_num_registro.Text, out _value);
       _expediente.Id = _value;
       _expediente.FechaExpedicion = this.dtp_fecha_expedicion.Value;
 
-      Int64.TryParse(this.txt_cod_articulo.Text, out _value);
-      _expediente.CodArticulo = _value;
+      _expediente.CodArticulo = this.txt_cod_articulo.Text;
       _expediente.ArticuloNombre = this.txt_nombre_articulo.Text;
 
       Int64.TryParse(this.txt_usuario_id.Text, out _value);
       _expediente.UsuarioId = _value;
       _expediente.UsuarioNombre = this.txt_usuario.Text;
 
-      Int64.TryParse(this.txt_cliente_id.Text, out _value);
-      _expediente.ClienteId = _value;
+      _expediente.ClienteId = this.txt_cliente_id.Text;
 
       _expediente.ClienteNombre = this.txt_cli_nombre.Text;
       _expediente.ClienteEmail = this.txt_cli_email.Text;
@@ -112,6 +116,23 @@ namespace ControlCalidad
       _expediente.CliSdc = this.ch_cli_SDC.Checked;
       _expediente.CliDc = this.ch_cli_DC.Checked;
       _expediente.MotivoDenegacion = this.txt_motivo_denegacion.Text;
+      _expediente.Notas = this.txt_notas.Text;
+
+      _expediente.Lineas = new List<ObjExpedienteLinea>();
+      foreach (DataGridViewRow _dr in this.dgv_verificacion.Rows)
+      {
+        _linea = new ObjExpedienteLinea();
+
+        _linea.IdProveedor = (String)_dr.Cells[COLUMN_PROVEEDOR_ID].Value;
+        _linea.ProveedorNombre = (String)_dr.Cells[COLUMN_PROVEEDOR_NOMBRE].Value;
+        _linea.ProveedorReferencia = (String)_dr.Cells[COLUMN_REFERENCIA_PROVEEDOR].Value;
+        _linea.NumLote = (String)_dr.Cells[COLUMN_NUM_LOTE].Value;
+
+        Int32.TryParse(_dr.Cells[COLUMN_UNIDADES].Value.ToString(), out _unidades);
+        _linea.Unidades = _unidades;
+
+        _expediente.Lineas.Add(_linea);
+      }
 
       if (this.m_new_value)
       {
@@ -126,20 +147,20 @@ namespace ControlCalidad
 
     private void CreareColumns()
     {
-      this.dgv_verificacion.Columns.Add(DGV_PROVEEDOR_ID, "Proveedor");
-      this.dgv_verificacion.Columns[DGV_PROVEEDOR_ID].Width = 100;
+      this.dgv_verificacion.Columns.Add(COLUMN_PROVEEDOR_ID, "Proveedor");
+      this.dgv_verificacion.Columns[COLUMN_PROVEEDOR_ID].Width = 100;
 
-      this.dgv_verificacion.Columns.Add(DGV_PROVEEDOR_NOMBRE, "Nombre");
-      this.dgv_verificacion.Columns[DGV_PROVEEDOR_NOMBRE].Width = 100;
+      this.dgv_verificacion.Columns.Add(COLUMN_PROVEEDOR_NOMBRE, "Nombre");
+      this.dgv_verificacion.Columns[COLUMN_PROVEEDOR_NOMBRE].Width = 100;
 
-      this.dgv_verificacion.Columns.Add(DGV_REFERENCIA_PROVEEDOR, "Referencia");
-      this.dgv_verificacion.Columns[DGV_REFERENCIA_PROVEEDOR].Width = 100;
+      this.dgv_verificacion.Columns.Add(COLUMN_REFERENCIA_PROVEEDOR, "Referencia");
+      this.dgv_verificacion.Columns[COLUMN_REFERENCIA_PROVEEDOR].Width = 100;
 
-      this.dgv_verificacion.Columns.Add(DGV_NUM_LOTE, "Lote");
-      this.dgv_verificacion.Columns[DGV_NUM_LOTE].Width = 100;
+      this.dgv_verificacion.Columns.Add(COLUMN_NUM_LOTE, "Lote");
+      this.dgv_verificacion.Columns[COLUMN_NUM_LOTE].Width = 100;
 
-      this.dgv_verificacion.Columns.Add(DGV_UNIDADES, "Unidades");
-      this.dgv_verificacion.Columns[DGV_UNIDADES].Width = 100;
+      this.dgv_verificacion.Columns.Add(COLUMN_UNIDADES, "Unidades");
+      this.dgv_verificacion.Columns[COLUMN_UNIDADES].Width = 100;
 
     }
 
@@ -147,6 +168,8 @@ namespace ControlCalidad
     {
       Boolean _error = false;
       Int32 _value = 0;
+
+      Error.Clear();
 
       if (String.IsNullOrEmpty(this.txt_proveedor_id.Text))
       {
@@ -159,7 +182,7 @@ namespace ControlCalidad
         Error.SetError(this.txt_num_lote, "El campo no puede estar en blanco");
       }
 
-      if (String.IsNullOrEmpty(this.txt_unidades.Text) || Int32.TryParse(this.txt_unidades.Text, out _value))
+      if (String.IsNullOrEmpty(this.txt_unidades.Text) || !Int32.TryParse(this.txt_unidades.Text, out _value))
       {
         _error = true;
         Error.SetError(this.txt_unidades, "El campo no puede estar en blanco");
@@ -168,23 +191,41 @@ namespace ControlCalidad
       if (!_error)
       {
         this.dgv_verificacion.Rows.Add(this.txt_proveedor_id.Text, this.txt_nombre_proveedor.Text, "", this.txt_num_lote.Text, this.txt_unidades.Text);
-        
+
         this.txt_proveedor_id.Text = "";
         this.txt_nombre_proveedor.Text = "";
         this.txt_num_lote.Text = "";
         this.txt_unidades.Text = "";
       }
-      
+
     }
 
     private void dgv_verificacion_SelectionChanged(object sender, EventArgs e)
     {
       if (this.dgv_verificacion.SelectedRows.Count > 0)
       {
-        this.txt_proveedor_id.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[DGV_PROVEEDOR_ID].Value;
-        this.txt_nombre_proveedor.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[DGV_PROVEEDOR_NOMBRE].Value;
-        this.txt_num_lote.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[DGV_NUM_LOTE].Value;
-        this.txt_unidades.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[DGV_UNIDADES].Value;
+        this.txt_proveedor_id.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_PROVEEDOR_ID].Value;
+        this.txt_nombre_proveedor.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_PROVEEDOR_NOMBRE].Value;
+        this.txt_num_lote.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_NUM_LOTE].Value;
+        this.txt_unidades.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_UNIDADES].Value;
+      }
+    }
+
+    private void FillGrid(List<ObjExpedienteLinea> ExpedienteLineas)
+    {
+      Int32 _index = 0;
+
+      foreach (ObjExpedienteLinea _linea in ExpedienteLineas)
+      {
+        this.dgv_verificacion.Rows.Add();
+
+        this.dgv_verificacion.Rows[_index].Cells[COLUMN_PROVEEDOR_ID].Value = _linea.IdProveedor;
+        this.dgv_verificacion.Rows[_index].Cells[COLUMN_PROVEEDOR_NOMBRE].Value = _linea.ProveedorNombre;
+        this.dgv_verificacion.Rows[_index].Cells[COLUMN_REFERENCIA_PROVEEDOR].Value = _linea.ProveedorReferencia;
+        this.dgv_verificacion.Rows[_index].Cells[COLUMN_NUM_LOTE].Value = _linea.NumLote;
+        this.dgv_verificacion.Rows[_index].Cells[COLUMN_UNIDADES].Value = _linea.Unidades;
+
+        _index++;
       }
     }
   }

@@ -38,8 +38,6 @@
       this.txt_cli_nombre = new System.Windows.Forms.TextBox();
       this.lbl_cli_referencia = new System.Windows.Forms.Label();
       this.txt_cli_referencia = new System.Windows.Forms.TextBox();
-      this.txt_observaciones = new System.Windows.Forms.TextBox();
-      this.lbl_observaciones = new System.Windows.Forms.Label();
       this.dtp_fecha_creacion = new System.Windows.Forms.DateTimePicker();
       this.lbl_fecha_creacion = new System.Windows.Forms.Label();
       this.lbl_usuario = new System.Windows.Forms.Label();
@@ -52,8 +50,6 @@
       this.txt_cli_email = new System.Windows.Forms.TextBox();
       this.ch_cli_DC = new System.Windows.Forms.CheckBox();
       this.lbl_cli_email = new System.Windows.Forms.Label();
-      this.lbl_motivo_denegacion = new System.Windows.Forms.Label();
-      this.txt_motivo_denegacion = new System.Windows.Forms.TextBox();
       this.gb_registro_lineas = new System.Windows.Forms.GroupBox();
       this.txt_nombre_proveedor = new System.Windows.Forms.TextBox();
       this.lbl_unidades = new System.Windows.Forms.Label();
@@ -71,20 +67,31 @@
       this.lbl_cod_articulo = new System.Windows.Forms.Label();
       this.txt_cod_articulo = new System.Windows.Forms.TextBox();
       this.txt_nombre_articulo = new System.Windows.Forms.TextBox();
+      this.tc_comentarios = new System.Windows.Forms.TabControl();
+      this.tp_observaciones = new System.Windows.Forms.TabPage();
+      this.txt_observaciones = new System.Windows.Forms.TextBox();
+      this.tp_motivo_denegacion = new System.Windows.Forms.TabPage();
+      this.txt_motivo_denegacion = new System.Windows.Forms.TextBox();
+      this.tp_notas = new System.Windows.Forms.TabPage();
+      this.txt_notas = new System.Windows.Forms.TextBox();
       this.pnl_contenedor.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
       this.gb_cliente.SuspendLayout();
       this.gb_registro_lineas.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dgv_verificacion)).BeginInit();
+      this.tc_comentarios.SuspendLayout();
+      this.tp_observaciones.SuspendLayout();
+      this.tp_motivo_denegacion.SuspendLayout();
+      this.tp_notas.SuspendLayout();
       this.SuspendLayout();
       // 
       // btn_salir
       // 
-      this.btn_salir.Location = new System.Drawing.Point(13, 427);
+      this.btn_salir.Location = new System.Drawing.Point(13, 531);
       // 
       // btn_guardar
       // 
-      this.btn_guardar.Location = new System.Drawing.Point(13, 376);
+      this.btn_guardar.Location = new System.Drawing.Point(13, 480);
       // 
       // pnl_contenedor
       // 
@@ -95,11 +102,13 @@
       this.pnl_contenedor.Controls.Add(this.dtp_fecha_modificacion);
       this.pnl_contenedor.Controls.Add(this.lbl_fecha_modificacion);
       this.pnl_contenedor.Controls.Add(this.txt_usuario_id);
-      this.pnl_contenedor.Size = new System.Drawing.Size(859, 607);
+      this.pnl_contenedor.Controls.Add(this.tc_comentarios);
+      this.pnl_contenedor.Size = new System.Drawing.Size(826, 587);
       // 
       // txt_num_registro
       // 
       this.txt_num_registro.Location = new System.Drawing.Point(84, 28);
+      this.txt_num_registro.MaxLength = 10;
       this.txt_num_registro.Name = "txt_num_registro";
       this.txt_num_registro.Size = new System.Drawing.Size(100, 20);
       this.txt_num_registro.TabIndex = 0;
@@ -158,8 +167,9 @@
       // txt_cli_nombre
       // 
       this.txt_cli_nombre.Location = new System.Drawing.Point(68, 55);
+      this.txt_cli_nombre.MaxLength = 30;
       this.txt_cli_nombre.Name = "txt_cli_nombre";
-      this.txt_cli_nombre.Size = new System.Drawing.Size(288, 20);
+      this.txt_cli_nombre.Size = new System.Drawing.Size(277, 20);
       this.txt_cli_nombre.TabIndex = 15;
       // 
       // lbl_cli_referencia
@@ -174,26 +184,10 @@
       // txt_cli_referencia
       // 
       this.txt_cli_referencia.Location = new System.Drawing.Point(68, 81);
+      this.txt_cli_referencia.MaxLength = 22;
       this.txt_cli_referencia.Name = "txt_cli_referencia";
       this.txt_cli_referencia.Size = new System.Drawing.Size(100, 20);
       this.txt_cli_referencia.TabIndex = 17;
-      // 
-      // txt_observaciones
-      // 
-      this.txt_observaciones.Location = new System.Drawing.Point(20, 453);
-      this.txt_observaciones.Multiline = true;
-      this.txt_observaciones.Name = "txt_observaciones";
-      this.txt_observaciones.Size = new System.Drawing.Size(362, 103);
-      this.txt_observaciones.TabIndex = 22;
-      // 
-      // lbl_observaciones
-      // 
-      this.lbl_observaciones.AutoSize = true;
-      this.lbl_observaciones.Location = new System.Drawing.Point(159, 432);
-      this.lbl_observaciones.Name = "lbl_observaciones";
-      this.lbl_observaciones.Size = new System.Drawing.Size(78, 13);
-      this.lbl_observaciones.TabIndex = 23;
-      this.lbl_observaciones.Text = "Observaciones";
       // 
       // dtp_fecha_creacion
       // 
@@ -224,6 +218,7 @@
       // txt_usuario
       // 
       this.txt_usuario.Location = new System.Drawing.Point(84, 51);
+      this.txt_usuario.MaxLength = 4;
       this.txt_usuario.Name = "txt_usuario";
       this.txt_usuario.Size = new System.Drawing.Size(100, 20);
       this.txt_usuario.TabIndex = 34;
@@ -260,6 +255,7 @@
       // txt_cliente_id
       // 
       this.txt_cliente_id.Location = new System.Drawing.Point(68, 29);
+      this.txt_cliente_id.MaxLength = 9;
       this.txt_cliente_id.Name = "txt_cliente_id";
       this.txt_cliente_id.Size = new System.Drawing.Size(100, 20);
       this.txt_cliente_id.TabIndex = 40;
@@ -286,8 +282,9 @@
       // txt_cli_email
       // 
       this.txt_cli_email.Location = new System.Drawing.Point(68, 107);
+      this.txt_cli_email.MaxLength = 40;
       this.txt_cli_email.Name = "txt_cli_email";
-      this.txt_cli_email.Size = new System.Drawing.Size(288, 20);
+      this.txt_cli_email.Size = new System.Drawing.Size(277, 20);
       this.txt_cli_email.TabIndex = 15;
       // 
       // ch_cli_DC
@@ -308,23 +305,6 @@
       this.lbl_cli_email.Size = new System.Drawing.Size(32, 13);
       this.lbl_cli_email.TabIndex = 16;
       this.lbl_cli_email.Text = "Email";
-      // 
-      // lbl_motivo_denegacion
-      // 
-      this.lbl_motivo_denegacion.AutoSize = true;
-      this.lbl_motivo_denegacion.Location = new System.Drawing.Point(580, 432);
-      this.lbl_motivo_denegacion.Name = "lbl_motivo_denegacion";
-      this.lbl_motivo_denegacion.Size = new System.Drawing.Size(98, 13);
-      this.lbl_motivo_denegacion.TabIndex = 39;
-      this.lbl_motivo_denegacion.Text = "Motivo denegación";
-      // 
-      // txt_motivo_denegacion
-      // 
-      this.txt_motivo_denegacion.Location = new System.Drawing.Point(441, 453);
-      this.txt_motivo_denegacion.Multiline = true;
-      this.txt_motivo_denegacion.Name = "txt_motivo_denegacion";
-      this.txt_motivo_denegacion.Size = new System.Drawing.Size(362, 103);
-      this.txt_motivo_denegacion.TabIndex = 38;
       // 
       // gb_registro_lineas
       // 
@@ -348,6 +328,7 @@
       // txt_nombre_proveedor
       // 
       this.txt_nombre_proveedor.Location = new System.Drawing.Point(158, 19);
+      this.txt_nombre_proveedor.MaxLength = 30;
       this.txt_nombre_proveedor.Name = "txt_nombre_proveedor";
       this.txt_nombre_proveedor.Size = new System.Drawing.Size(112, 20);
       this.txt_nombre_proveedor.TabIndex = 47;
@@ -364,6 +345,7 @@
       // txt_unidades
       // 
       this.txt_unidades.Location = new System.Drawing.Point(590, 19);
+      this.txt_unidades.MaxLength = 20;
       this.txt_unidades.Name = "txt_unidades";
       this.txt_unidades.Size = new System.Drawing.Size(75, 20);
       this.txt_unidades.TabIndex = 45;
@@ -380,6 +362,7 @@
       // txt_num_lote
       // 
       this.txt_num_lote.Location = new System.Drawing.Point(397, 19);
+      this.txt_num_lote.MaxLength = 22;
       this.txt_num_lote.Name = "txt_num_lote";
       this.txt_num_lote.Size = new System.Drawing.Size(75, 20);
       this.txt_num_lote.TabIndex = 43;
@@ -396,6 +379,7 @@
       // txt_proveedor_id
       // 
       this.txt_proveedor_id.Location = new System.Drawing.Point(77, 19);
+      this.txt_proveedor_id.MaxLength = 9;
       this.txt_proveedor_id.Name = "txt_proveedor_id";
       this.txt_proveedor_id.Size = new System.Drawing.Size(75, 20);
       this.txt_proveedor_id.TabIndex = 42;
@@ -409,6 +393,7 @@
       this.dgv_verificacion.AllowUserToResizeRows = false;
       this.dgv_verificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
       this.dgv_verificacion.Location = new System.Drawing.Point(16, 65);
+      this.dgv_verificacion.MultiSelect = false;
       this.dgv_verificacion.Name = "dgv_verificacion";
       this.dgv_verificacion.ReadOnly = true;
       this.dgv_verificacion.Size = new System.Drawing.Size(682, 155);
@@ -471,6 +456,7 @@
       // txt_cod_articulo
       // 
       this.txt_cod_articulo.Location = new System.Drawing.Point(84, 136);
+      this.txt_cod_articulo.MaxLength = 22;
       this.txt_cod_articulo.Name = "txt_cod_articulo";
       this.txt_cod_articulo.Size = new System.Drawing.Size(75, 20);
       this.txt_cod_articulo.TabIndex = 47;
@@ -478,21 +464,89 @@
       // txt_nombre_articulo
       // 
       this.txt_nombre_articulo.Location = new System.Drawing.Point(165, 136);
+      this.txt_nombre_articulo.MaxLength = 50;
       this.txt_nombre_articulo.Name = "txt_nombre_articulo";
       this.txt_nombre_articulo.Size = new System.Drawing.Size(141, 20);
       this.txt_nombre_articulo.TabIndex = 49;
+      // 
+      // tc_comentarios
+      // 
+      this.tc_comentarios.Controls.Add(this.tp_observaciones);
+      this.tc_comentarios.Controls.Add(this.tp_motivo_denegacion);
+      this.tc_comentarios.Controls.Add(this.tp_notas);
+      this.tc_comentarios.Location = new System.Drawing.Point(20, 432);
+      this.tc_comentarios.Name = "tc_comentarios";
+      this.tc_comentarios.SelectedIndex = 0;
+      this.tc_comentarios.Size = new System.Drawing.Size(789, 147);
+      this.tc_comentarios.TabIndex = 50;
+      // 
+      // tp_observaciones
+      // 
+      this.tp_observaciones.BackColor = System.Drawing.Color.RoyalBlue;
+      this.tp_observaciones.Controls.Add(this.txt_observaciones);
+      this.tp_observaciones.Location = new System.Drawing.Point(4, 22);
+      this.tp_observaciones.Name = "tp_observaciones";
+      this.tp_observaciones.Padding = new System.Windows.Forms.Padding(3);
+      this.tp_observaciones.Size = new System.Drawing.Size(781, 121);
+      this.tp_observaciones.TabIndex = 0;
+      this.tp_observaciones.Text = "Observaciones";
+      // 
+      // txt_observaciones
+      // 
+      this.txt_observaciones.Location = new System.Drawing.Point(6, 12);
+      this.txt_observaciones.MaxLength = 350;
+      this.txt_observaciones.Multiline = true;
+      this.txt_observaciones.Name = "txt_observaciones";
+      this.txt_observaciones.Size = new System.Drawing.Size(763, 103);
+      this.txt_observaciones.TabIndex = 24;
+      // 
+      // tp_motivo_denegacion
+      // 
+      this.tp_motivo_denegacion.BackColor = System.Drawing.Color.RoyalBlue;
+      this.tp_motivo_denegacion.Controls.Add(this.txt_motivo_denegacion);
+      this.tp_motivo_denegacion.Location = new System.Drawing.Point(4, 22);
+      this.tp_motivo_denegacion.Name = "tp_motivo_denegacion";
+      this.tp_motivo_denegacion.Padding = new System.Windows.Forms.Padding(3);
+      this.tp_motivo_denegacion.Size = new System.Drawing.Size(781, 121);
+      this.tp_motivo_denegacion.TabIndex = 1;
+      this.tp_motivo_denegacion.Text = "Motivo denegación";
+      // 
+      // txt_motivo_denegacion
+      // 
+      this.txt_motivo_denegacion.Location = new System.Drawing.Point(6, 12);
+      this.txt_motivo_denegacion.MaxLength = 350;
+      this.txt_motivo_denegacion.Multiline = true;
+      this.txt_motivo_denegacion.Name = "txt_motivo_denegacion";
+      this.txt_motivo_denegacion.Size = new System.Drawing.Size(763, 103);
+      this.txt_motivo_denegacion.TabIndex = 39;
+      // 
+      // tp_notas
+      // 
+      this.tp_notas.BackColor = System.Drawing.Color.RoyalBlue;
+      this.tp_notas.Controls.Add(this.txt_notas);
+      this.tp_notas.Location = new System.Drawing.Point(4, 22);
+      this.tp_notas.Name = "tp_notas";
+      this.tp_notas.Padding = new System.Windows.Forms.Padding(3);
+      this.tp_notas.Size = new System.Drawing.Size(781, 121);
+      this.tp_notas.TabIndex = 2;
+      this.tp_notas.Text = "Notas";
+      // 
+      // txt_notas
+      // 
+      this.txt_notas.Location = new System.Drawing.Point(6, 12);
+      this.txt_notas.MaxLength = 350;
+      this.txt_notas.Multiline = true;
+      this.txt_notas.Name = "txt_notas";
+      this.txt_notas.Size = new System.Drawing.Size(763, 103);
+      this.txt_notas.TabIndex = 40;
       // 
       // frm_expediente_edit
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.RoyalBlue;
-      this.ClientSize = new System.Drawing.Size(980, 607);
-      this.Controls.Add(this.lbl_motivo_denegacion);
-      this.Controls.Add(this.txt_motivo_denegacion);
+      this.ClientSize = new System.Drawing.Size(947, 587);
       this.Controls.Add(this.gb_cliente);
-      this.Controls.Add(this.lbl_observaciones);
-      this.Controls.Add(this.txt_observaciones);
       this.Controls.Add(this.lbl_usuario);
       this.Controls.Add(this.txt_usuario);
       this.Controls.Add(this.dtp_fecha_creacion);
@@ -516,11 +570,7 @@
       this.Controls.SetChildIndex(this.dtp_fecha_creacion, 0);
       this.Controls.SetChildIndex(this.txt_usuario, 0);
       this.Controls.SetChildIndex(this.lbl_usuario, 0);
-      this.Controls.SetChildIndex(this.txt_observaciones, 0);
-      this.Controls.SetChildIndex(this.lbl_observaciones, 0);
       this.Controls.SetChildIndex(this.gb_cliente, 0);
-      this.Controls.SetChildIndex(this.txt_motivo_denegacion, 0);
-      this.Controls.SetChildIndex(this.lbl_motivo_denegacion, 0);
       this.pnl_contenedor.ResumeLayout(false);
       this.pnl_contenedor.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.Error)).EndInit();
@@ -529,6 +579,13 @@
       this.gb_registro_lineas.ResumeLayout(false);
       this.gb_registro_lineas.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.dgv_verificacion)).EndInit();
+      this.tc_comentarios.ResumeLayout(false);
+      this.tp_observaciones.ResumeLayout(false);
+      this.tp_observaciones.PerformLayout();
+      this.tp_motivo_denegacion.ResumeLayout(false);
+      this.tp_motivo_denegacion.PerformLayout();
+      this.tp_notas.ResumeLayout(false);
+      this.tp_notas.PerformLayout();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -546,8 +603,6 @@
     private System.Windows.Forms.TextBox txt_cli_nombre;
     private System.Windows.Forms.Label lbl_cli_referencia;
     private System.Windows.Forms.TextBox txt_cli_referencia;
-    private System.Windows.Forms.TextBox txt_observaciones;
-    private System.Windows.Forms.Label lbl_observaciones;
     private System.Windows.Forms.DateTimePicker dtp_fecha_creacion;
     private System.Windows.Forms.Label lbl_fecha_creacion;
     private System.Windows.Forms.Label lbl_usuario;
@@ -558,8 +613,6 @@
     private System.Windows.Forms.Label lbl_cli_solicita;
     private System.Windows.Forms.CheckBox ch_cli_SDC;
     private System.Windows.Forms.CheckBox ch_cli_DC;
-    private System.Windows.Forms.Label lbl_motivo_denegacion;
-    private System.Windows.Forms.TextBox txt_motivo_denegacion;
     private System.Windows.Forms.GroupBox gb_registro_lineas;
     private System.Windows.Forms.DataGridView dgv_verificacion;
     private System.Windows.Forms.Button btn_eliminar_verificacion;
@@ -579,5 +632,12 @@
     private System.Windows.Forms.TextBox txt_cod_articulo;
     private System.Windows.Forms.TextBox txt_nombre_articulo;
     private System.Windows.Forms.TextBox txt_nombre_proveedor;
+    private System.Windows.Forms.TabControl tc_comentarios;
+    private System.Windows.Forms.TabPage tp_observaciones;
+    private System.Windows.Forms.TextBox txt_observaciones;
+    private System.Windows.Forms.TabPage tp_motivo_denegacion;
+    private System.Windows.Forms.TextBox txt_motivo_denegacion;
+    private System.Windows.Forms.TabPage tp_notas;
+    private System.Windows.Forms.TextBox txt_notas;
   }
 }
