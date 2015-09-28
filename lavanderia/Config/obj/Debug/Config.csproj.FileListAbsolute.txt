@@ -5,6 +5,5 @@ C:\Development\lavanderia\Config\obj\Debug\Config.pdb
 C:\Development\lavanderia\Config\obj\Debug\Config.csprojResolveAssemblyReference.cache
 C:\Development\Aida-Set\lavanderia\Config\bin\Debug\Config.dll
 C:\Development\Aida-Set\lavanderia\Config\bin\Debug\Config.pdb
-C:\Development\Aida-Set\lavanderia\Config\obj\Debug\Config.csprojResolveAssemblyReference.cache
 C:\Development\Aida-Set\lavanderia\Config\obj\Debug\Config.dll
 C:\Development\Aida-Set\lavanderia\Config\obj\Debug\Config.pdb

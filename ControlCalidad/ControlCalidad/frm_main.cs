@@ -81,5 +81,13 @@ namespace ControlCalidad
       _frm = new frm_permisos_list();
       _frm.ShowDialog();
     }
+
+    private void btn_articulo_sel_Click(object sender, EventArgs e)
+    {
+      frm_articulo_sel _frm;
+
+      _frm = new frm_articulo_sel();
+      _frm.ShowDialog();
+    }
   }
 }

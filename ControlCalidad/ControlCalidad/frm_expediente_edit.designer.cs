@@ -74,6 +74,8 @@
       this.txt_motivo_denegacion = new System.Windows.Forms.TextBox();
       this.tp_notas = new System.Windows.Forms.TabPage();
       this.txt_notas = new System.Windows.Forms.TextBox();
+      this.btn_seleccionar_articulo = new System.Windows.Forms.Button();
+      this.btn_seleccionar_cuenta = new System.Windows.Forms.Button();
       this.pnl_contenedor.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
       this.gb_cliente.SuspendLayout();
@@ -95,6 +97,7 @@
       // 
       // pnl_contenedor
       // 
+      this.pnl_contenedor.Controls.Add(this.btn_seleccionar_articulo);
       this.pnl_contenedor.Controls.Add(this.txt_nombre_articulo);
       this.pnl_contenedor.Controls.Add(this.lbl_cod_articulo);
       this.pnl_contenedor.Controls.Add(this.gb_registro_lineas);
@@ -225,6 +228,7 @@
       // 
       // gb_cliente
       // 
+      this.gb_cliente.Controls.Add(this.btn_seleccionar_cuenta);
       this.gb_cliente.Controls.Add(this.lbl_cod_cliente);
       this.gb_cliente.Controls.Add(this.txt_cliente_id);
       this.gb_cliente.Controls.Add(this.lbl_cli_solicita);
@@ -540,6 +544,26 @@
       this.txt_notas.Size = new System.Drawing.Size(763, 103);
       this.txt_notas.TabIndex = 40;
       // 
+      // btn_seleccionar_articulo
+      // 
+      this.btn_seleccionar_articulo.Location = new System.Drawing.Point(312, 134);
+      this.btn_seleccionar_articulo.Name = "btn_seleccionar_articulo";
+      this.btn_seleccionar_articulo.Size = new System.Drawing.Size(75, 23);
+      this.btn_seleccionar_articulo.TabIndex = 48;
+      this.btn_seleccionar_articulo.Text = "Seleccionar";
+      this.btn_seleccionar_articulo.UseVisualStyleBackColor = true;
+      this.btn_seleccionar_articulo.Click += new System.EventHandler(this.btn_seleccionar_articulo_Click);
+      // 
+      // btn_seleccionar_cuenta
+      // 
+      this.btn_seleccionar_cuenta.Location = new System.Drawing.Point(270, 132);
+      this.btn_seleccionar_cuenta.Name = "btn_seleccionar_cuenta";
+      this.btn_seleccionar_cuenta.Size = new System.Drawing.Size(75, 23);
+      this.btn_seleccionar_cuenta.TabIndex = 51;
+      this.btn_seleccionar_cuenta.Text = "Seleccionar";
+      this.btn_seleccionar_cuenta.UseVisualStyleBackColor = true;
+      this.btn_seleccionar_cuenta.Click += new System.EventHandler(this.btn_seleccionar_cuenta_Click);
+      // 
       // frm_expediente_edit
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -639,5 +663,7 @@
     private System.Windows.Forms.TextBox txt_motivo_denegacion;
     private System.Windows.Forms.TabPage tp_notas;
     private System.Windows.Forms.TextBox txt_notas;
+    private System.Windows.Forms.Button btn_seleccionar_articulo;
+    private System.Windows.Forms.Button btn_seleccionar_cuenta;
   }
 }

@@ -171,6 +171,6 @@
     public System.Windows.Forms.Panel pnl_datos;
     private System.Windows.Forms.Panel pnl_botones;
     private System.Windows.Forms.Button btn_salir;
-    private System.Windows.Forms.Button btn_new;
+    public System.Windows.Forms.Button btn_new;
   }
 }

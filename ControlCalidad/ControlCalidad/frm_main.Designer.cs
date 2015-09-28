@@ -37,6 +37,7 @@
       this.btn_evaluacion_muestras_garantia_stock_report = new System.Windows.Forms.Button();
       this.btn_configuracion = new System.Windows.Forms.Button();
       this.btn_permisos = new System.Windows.Forms.Button();
+      this.btn_articulo_sel = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // btn_registro_qc_entrada
@@ -119,6 +120,16 @@
       this.btn_permisos.UseVisualStyleBackColor = true;
       this.btn_permisos.Click += new System.EventHandler(this.btn_permisos_Click);
       // 
+      // btn_articulo_sel
+      // 
+      this.btn_articulo_sel.Location = new System.Drawing.Point(339, 229);
+      this.btn_articulo_sel.Name = "btn_articulo_sel";
+      this.btn_articulo_sel.Size = new System.Drawing.Size(75, 61);
+      this.btn_articulo_sel.TabIndex = 7;
+      this.btn_articulo_sel.Text = "Articulo selección";
+      this.btn_articulo_sel.UseVisualStyleBackColor = true;
+      this.btn_articulo_sel.Click += new System.EventHandler(this.btn_articulo_sel_Click);
+      // 
       // frm_main
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,6 +137,7 @@
       this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
       this.ClientSize = new System.Drawing.Size(447, 363);
+      this.Controls.Add(this.btn_articulo_sel);
       this.Controls.Add(this.btn_permisos);
       this.Controls.Add(this.btn_configuracion);
       this.Controls.Add(this.btn_evaluacion_muestras_garantia_stock_report);
@@ -151,6 +163,7 @@
         private System.Windows.Forms.Button btn_evaluacion_muestras_garantia_stock_report;
         private System.Windows.Forms.Button btn_configuracion;
         private System.Windows.Forms.Button btn_permisos;
+        private System.Windows.Forms.Button btn_articulo_sel;
     }
 }
 

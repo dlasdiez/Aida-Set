@@ -16,11 +16,13 @@ namespace ControlCalidad
   {
 
     #region Constantes
-    private String COLUMN_PROVEEDOR_ID = "0";
-    private String COLUMN_PROVEEDOR_NOMBRE = "1";
-    private String COLUMN_REFERENCIA_PROVEEDOR = "2";
-    private String COLUMN_NUM_LOTE = "3";
-    private String COLUMN_UNIDADES = "4";
+    private String COLUMN_ID = "0";
+    private String COLUMN_EXPEDIENTE_ID = "1";
+    private String COLUMN_PROVEEDOR_ID = "2";
+    private String COLUMN_PROVEEDOR_NOMBRE = "3";
+    private String COLUMN_REFERENCIA_PROVEEDOR = "4";
+    private String COLUMN_NUM_LOTE = "5";
+    private String COLUMN_UNIDADES = "6";
 
     #endregion
 
@@ -123,6 +125,12 @@ namespace ControlCalidad
       {
         _linea = new ObjExpedienteLinea();
 
+        if (!String.IsNullOrEmpty(_dr.Cells[COLUMN_ID].Value.ToString()))
+        {
+          _linea.Id = (long)_dr.Cells[COLUMN_ID].Value;
+          _linea.IdExpediente = (long)_dr.Cells[COLUMN_EXPEDIENTE_ID].Value;
+        }
+
         _linea.IdProveedor = (String)_dr.Cells[COLUMN_PROVEEDOR_ID].Value;
         _linea.ProveedorNombre = (String)_dr.Cells[COLUMN_PROVEEDOR_NOMBRE].Value;
         _linea.ProveedorReferencia = (String)_dr.Cells[COLUMN_REFERENCIA_PROVEEDOR].Value;
@@ -147,6 +155,12 @@ namespace ControlCalidad
 
     private void CreareColumns()
     {
+      this.dgv_verificacion.Columns.Add(COLUMN_ID, "Id");
+      this.dgv_verificacion.Columns[COLUMN_ID].Visible = false;
+
+      this.dgv_verificacion.Columns.Add(COLUMN_EXPEDIENTE_ID, "Expediente_id");
+      this.dgv_verificacion.Columns[COLUMN_EXPEDIENTE_ID].Visible = false;
+
       this.dgv_verificacion.Columns.Add(COLUMN_PROVEEDOR_ID, "Proveedor");
       this.dgv_verificacion.Columns[COLUMN_PROVEEDOR_ID].Width = 100;
 
@@ -207,7 +221,7 @@ namespace ControlCalidad
         this.txt_proveedor_id.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_PROVEEDOR_ID].Value;
         this.txt_nombre_proveedor.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_PROVEEDOR_NOMBRE].Value;
         this.txt_num_lote.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_NUM_LOTE].Value;
-        this.txt_unidades.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_UNIDADES].Value;
+        this.txt_unidades.Text = this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_UNIDADES].Value.ToString();
       }
     }
 
@@ -227,6 +241,24 @@ namespace ControlCalidad
 
         _index++;
       }
+    }
+
+    private void btn_seleccionar_articulo_Click(object sender, EventArgs e)
+    {
+      frm_articulo_sel _frm = new frm_articulo_sel();
+      _frm.ShowDialog();
+
+      this.txt_cod_articulo.Text = _frm.CodArticulo;
+      this.txt_nombre_articulo.Text = _frm.NombreArticulo;
+    }
+
+    private void btn_seleccionar_cuenta_Click(object sender, EventArgs e)
+    {
+      frm_cliente_sel _frm = new frm_cliente_sel();
+      _frm.ShowDialog();
+
+      this.txt_cliente_id.Text = _frm.Codigo;
+      this.txt_cli_nombre.Text = _frm.Nombre;
     }
   }
 }
