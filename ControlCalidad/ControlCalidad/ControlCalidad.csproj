@@ -50,17 +50,18 @@
   <ItemGroup>
     <Compile Include="Clases\cls_permisos.cs" />
     <Compile Include="Clases\Constantes.cs" />
+    <Compile Include="Enum.cs" />
     <Compile Include="frm_articulo_sel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_articulo_sel.Designer.cs">
       <DependentUpon>frm_articulo_sel.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_cliente_sel.cs">
+    <Compile Include="frm_cuenta_sel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_cliente_sel.Designer.cs">
-      <DependentUpon>frm_cliente_sel.cs</DependentUpon>
+    <Compile Include="frm_cuenta_sel.Designer.cs">
+      <DependentUpon>frm_cuenta_sel.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_configuracion.cs">
       <SubType>Form</SubType>

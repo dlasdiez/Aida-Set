@@ -43,6 +43,7 @@
       this.lbl_usuario = new System.Windows.Forms.Label();
       this.txt_usuario = new System.Windows.Forms.TextBox();
       this.gb_cliente = new System.Windows.Forms.GroupBox();
+      this.btn_seleccionar_cuenta = new System.Windows.Forms.Button();
       this.lbl_cod_cliente = new System.Windows.Forms.Label();
       this.txt_cliente_id = new System.Windows.Forms.TextBox();
       this.lbl_cli_solicita = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
       this.ch_cli_DC = new System.Windows.Forms.CheckBox();
       this.lbl_cli_email = new System.Windows.Forms.Label();
       this.gb_registro_lineas = new System.Windows.Forms.GroupBox();
+      this.btn_seleccionar_proveedor = new System.Windows.Forms.Button();
       this.txt_nombre_proveedor = new System.Windows.Forms.TextBox();
       this.lbl_unidades = new System.Windows.Forms.Label();
       this.txt_unidades = new System.Windows.Forms.TextBox();
@@ -75,7 +77,6 @@
       this.tp_notas = new System.Windows.Forms.TabPage();
       this.txt_notas = new System.Windows.Forms.TextBox();
       this.btn_seleccionar_articulo = new System.Windows.Forms.Button();
-      this.btn_seleccionar_cuenta = new System.Windows.Forms.Button();
       this.pnl_contenedor.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.Error)).BeginInit();
       this.gb_cliente.SuspendLayout();
@@ -247,6 +248,16 @@
       this.gb_cliente.TabStop = false;
       this.gb_cliente.Text = "Cliente";
       // 
+      // btn_seleccionar_cuenta
+      // 
+      this.btn_seleccionar_cuenta.Location = new System.Drawing.Point(270, 132);
+      this.btn_seleccionar_cuenta.Name = "btn_seleccionar_cuenta";
+      this.btn_seleccionar_cuenta.Size = new System.Drawing.Size(75, 23);
+      this.btn_seleccionar_cuenta.TabIndex = 51;
+      this.btn_seleccionar_cuenta.Text = "Seleccionar";
+      this.btn_seleccionar_cuenta.UseVisualStyleBackColor = true;
+      this.btn_seleccionar_cuenta.Click += new System.EventHandler(this.btn_seleccionar_cuenta_Click);
+      // 
       // lbl_cod_cliente
       // 
       this.lbl_cod_cliente.AutoSize = true;
@@ -312,6 +323,7 @@
       // 
       // gb_registro_lineas
       // 
+      this.gb_registro_lineas.Controls.Add(this.btn_seleccionar_proveedor);
       this.gb_registro_lineas.Controls.Add(this.txt_nombre_proveedor);
       this.gb_registro_lineas.Controls.Add(this.lbl_unidades);
       this.gb_registro_lineas.Controls.Add(this.txt_unidades);
@@ -329,12 +341,22 @@
       this.gb_registro_lineas.TabStop = false;
       this.gb_registro_lineas.Text = "Registro de Líneas";
       // 
+      // btn_seleccionar_proveedor
+      // 
+      this.btn_seleccionar_proveedor.Location = new System.Drawing.Point(175, 17);
+      this.btn_seleccionar_proveedor.Name = "btn_seleccionar_proveedor";
+      this.btn_seleccionar_proveedor.Size = new System.Drawing.Size(75, 23);
+      this.btn_seleccionar_proveedor.TabIndex = 49;
+      this.btn_seleccionar_proveedor.Text = "Seleccionar";
+      this.btn_seleccionar_proveedor.UseVisualStyleBackColor = true;
+      this.btn_seleccionar_proveedor.Click += new System.EventHandler(this.btn_seleccionar_proveedor_Click);
+      // 
       // txt_nombre_proveedor
       // 
-      this.txt_nombre_proveedor.Location = new System.Drawing.Point(158, 19);
+      this.txt_nombre_proveedor.Location = new System.Drawing.Point(77, 45);
       this.txt_nombre_proveedor.MaxLength = 30;
       this.txt_nombre_proveedor.Name = "txt_nombre_proveedor";
-      this.txt_nombre_proveedor.Size = new System.Drawing.Size(112, 20);
+      this.txt_nombre_proveedor.Size = new System.Drawing.Size(249, 20);
       this.txt_nombre_proveedor.TabIndex = 47;
       // 
       // lbl_unidades
@@ -357,7 +379,7 @@
       // lbl_num_lote
       // 
       this.lbl_num_lote.AutoSize = true;
-      this.lbl_num_lote.Location = new System.Drawing.Point(335, 22);
+      this.lbl_num_lote.Location = new System.Drawing.Point(360, 22);
       this.lbl_num_lote.Name = "lbl_num_lote";
       this.lbl_num_lote.Size = new System.Drawing.Size(56, 13);
       this.lbl_num_lote.TabIndex = 44;
@@ -365,7 +387,7 @@
       // 
       // txt_num_lote
       // 
-      this.txt_num_lote.Location = new System.Drawing.Point(397, 19);
+      this.txt_num_lote.Location = new System.Drawing.Point(422, 19);
       this.txt_num_lote.MaxLength = 22;
       this.txt_num_lote.Name = "txt_num_lote";
       this.txt_num_lote.Size = new System.Drawing.Size(75, 20);
@@ -385,7 +407,7 @@
       this.txt_proveedor_id.Location = new System.Drawing.Point(77, 19);
       this.txt_proveedor_id.MaxLength = 9;
       this.txt_proveedor_id.Name = "txt_proveedor_id";
-      this.txt_proveedor_id.Size = new System.Drawing.Size(75, 20);
+      this.txt_proveedor_id.Size = new System.Drawing.Size(87, 20);
       this.txt_proveedor_id.TabIndex = 42;
       // 
       // dgv_verificacion
@@ -396,11 +418,11 @@
       this.dgv_verificacion.AllowUserToResizeColumns = false;
       this.dgv_verificacion.AllowUserToResizeRows = false;
       this.dgv_verificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dgv_verificacion.Location = new System.Drawing.Point(16, 65);
+      this.dgv_verificacion.Location = new System.Drawing.Point(16, 71);
       this.dgv_verificacion.MultiSelect = false;
       this.dgv_verificacion.Name = "dgv_verificacion";
       this.dgv_verificacion.ReadOnly = true;
-      this.dgv_verificacion.Size = new System.Drawing.Size(682, 155);
+      this.dgv_verificacion.Size = new System.Drawing.Size(682, 149);
       this.dgv_verificacion.TabIndex = 21;
       this.dgv_verificacion.SelectionChanged += new System.EventHandler(this.dgv_verificacion_SelectionChanged);
       // 
@@ -554,16 +576,6 @@
       this.btn_seleccionar_articulo.UseVisualStyleBackColor = true;
       this.btn_seleccionar_articulo.Click += new System.EventHandler(this.btn_seleccionar_articulo_Click);
       // 
-      // btn_seleccionar_cuenta
-      // 
-      this.btn_seleccionar_cuenta.Location = new System.Drawing.Point(270, 132);
-      this.btn_seleccionar_cuenta.Name = "btn_seleccionar_cuenta";
-      this.btn_seleccionar_cuenta.Size = new System.Drawing.Size(75, 23);
-      this.btn_seleccionar_cuenta.TabIndex = 51;
-      this.btn_seleccionar_cuenta.Text = "Seleccionar";
-      this.btn_seleccionar_cuenta.UseVisualStyleBackColor = true;
-      this.btn_seleccionar_cuenta.Click += new System.EventHandler(this.btn_seleccionar_cuenta_Click);
-      // 
       // frm_expediente_edit
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,5 +677,6 @@
     private System.Windows.Forms.TextBox txt_notas;
     private System.Windows.Forms.Button btn_seleccionar_articulo;
     private System.Windows.Forms.Button btn_seleccionar_cuenta;
+    private System.Windows.Forms.Button btn_seleccionar_proveedor;
   }
 }

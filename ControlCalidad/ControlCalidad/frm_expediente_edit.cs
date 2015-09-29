@@ -246,19 +246,33 @@ namespace ControlCalidad
     private void btn_seleccionar_articulo_Click(object sender, EventArgs e)
     {
       frm_articulo_sel _frm = new frm_articulo_sel();
-      _frm.ShowDialog();
-
-      this.txt_cod_articulo.Text = _frm.CodArticulo;
-      this.txt_nombre_articulo.Text = _frm.NombreArticulo;
+      if (_frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+      {
+        this.txt_cod_articulo.Text = _frm.CodArticulo;
+        this.txt_nombre_articulo.Text = _frm.NombreArticulo;
+      }
     }
 
     private void btn_seleccionar_cuenta_Click(object sender, EventArgs e)
     {
-      frm_cliente_sel _frm = new frm_cliente_sel();
-      _frm.ShowDialog();
+      frm_cuenta_sel _frm = new frm_cuenta_sel(Enumerados.CUENTA.CLIENTE);
+      if (_frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+      {
+        this.txt_cliente_id.Text = _frm.Codigo;
+        this.txt_cli_nombre.Text = _frm.Nombre;
+        this.txt_cli_referencia.Text = _frm.Referencia;
+        this.txt_cli_email.Text = _frm.Email;
+      }
+    }
 
-      this.txt_cliente_id.Text = _frm.Codigo;
-      this.txt_cli_nombre.Text = _frm.Nombre;
+    private void btn_seleccionar_proveedor_Click(object sender, EventArgs e)
+    {
+      frm_cuenta_sel _frm = new frm_cuenta_sel(Enumerados.CUENTA.PROVEEDOR);
+      if (_frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+      {
+        this.txt_proveedor_id.Text = _frm.Codigo;
+        this.txt_nombre_proveedor.Text = _frm.Nombre;
+      }
     }
   }
 }

@@ -55,9 +55,9 @@ namespace CobolConverter
       return ConvertData(ExecuteCobol(Definitions.ARTICULO, Parametros));
     }
 
-    public static DataTable GetClientes(List<string> Parametros)
+    public static DataTable GetCuentas(List<string> Parametros)
     {
-      return ConvertData(ExecuteCobol(Definitions.CLIENTE, Parametros));
+      return ConvertData(ExecuteCobol(Definitions.CUENTA, Parametros));
     }
 
     //public static DataTable GetTerminals()
@@ -144,7 +144,7 @@ namespace CobolConverter
           }
 
           _dt_values.Rows.Add();
-          for (Int32 _idx = 0; _idx < _array_columns.Length; _idx++)
+          for (Int32 _idx = 0; _idx < _dt_values.Columns.Count; _idx++)
           {
             _dt_values.Rows[_dt_values.Rows.Count - 1][_idx] = _array_columns[_idx];
           }

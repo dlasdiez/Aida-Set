@@ -100,12 +100,15 @@ namespace ControlCalidad
     #region Eventos
     private void btn_salir_Click(object sender, EventArgs e)
     {
+      this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+
       this.Close();
     }
 
     private void dgv_list_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
     {
       this.CellDobleClick(sender, e);
+      this.DialogResult = System.Windows.Forms.DialogResult.OK;
     }
 
     private void btn_new_Click(object sender, EventArgs e)

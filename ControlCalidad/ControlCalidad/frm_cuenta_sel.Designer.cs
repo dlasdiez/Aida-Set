@@ -1,6 +1,6 @@
 ﻿namespace ControlCalidad
 {
-  partial class frm_cliente_sel
+  partial class frm_cuenta_sel
   {
     /// <summary>
     /// Required designer variable.
