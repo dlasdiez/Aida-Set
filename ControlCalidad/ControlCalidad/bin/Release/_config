@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuracion>
+  <ServidorBD>localhost</ServidorBD>
+  <BaseDatos>Metalcaucho</BaseDatos>
+  <Puerto>3305</Puerto>
+  <Usuario>root</Usuario>
+  <Password>28011984</Password>
+  <Usuario_Admin>root</Usuario_Admin>
+  <Password_Admin>28011984</Password_Admin>
+  <Color>#0080FF</Color>
+  <Runtime>C:\Metalcaucho\Acucbl620\AcuGT\bin\wrun32 -b -c C:\Metalcaucho\aidaroot\aida\lib\cgis\config.acu +e C:\Metalcaucho\aidaroot\aida\lib\cgis\error-cgis.log -f</Runtime>
+  <RutaDatos>C:\Metalcaucho\aidaroot\aida\fich0001</RutaDatos>
+  <Path_Webservice>C:\Metalcaucho\aidaroot\aida\lib\cgis</Path_Webservice>
+  <Path_Logo>C:\Development\Aida-Set\ControlCalidad\ControlCalidad\Resources\metalcaucho_ok.png</Path_Logo>
+  <Path_Images>C:\</Path_Images>
+</configuracion>

@@ -14,6 +14,8 @@ namespace ControlCalidad
 {
   public partial class frm_expediente_edit : frm_maestro_edit
   {
+    private Boolean m_selected_row = false;
+    private Int32 m_num_row = -1;
 
     #region Constantes
     private String COLUMN_ID = "0";
@@ -80,8 +82,10 @@ namespace ControlCalidad
         this.dtp_fecha_expedicion.Value = _expediente.FechaExpedicion;
         this.dtp_fecha_modificacion.Value = _expediente.FechaModificacion;
         this.txt_notas.Text = _expediente.Notas;
-
+        this.dgv_verificacion.SelectionChanged -= new System.EventHandler(this.dgv_verificacion_SelectionChanged);
         this.FillGrid(_expediente.Lineas);
+        this.dgv_verificacion.ClearSelection();
+        this.dgv_verificacion.SelectionChanged += new System.EventHandler(this.dgv_verificacion_SelectionChanged);
       }
     }
 
@@ -125,12 +129,7 @@ namespace ControlCalidad
       {
         _linea = new ObjExpedienteLinea();
 
-        if (!String.IsNullOrEmpty(_dr.Cells[COLUMN_ID].Value.ToString()))
-        {
-          _linea.Id = (long)_dr.Cells[COLUMN_ID].Value;
-          _linea.IdExpediente = (long)_dr.Cells[COLUMN_EXPEDIENTE_ID].Value;
-        }
-
+        _linea.Id = Convert.ToInt64(_dr.Cells[COLUMN_ID].Value);
         _linea.IdProveedor = (String)_dr.Cells[COLUMN_PROVEEDOR_ID].Value;
         _linea.ProveedorNombre = (String)_dr.Cells[COLUMN_PROVEEDOR_NOMBRE].Value;
         _linea.ProveedorReferencia = (String)_dr.Cells[COLUMN_REFERENCIA_PROVEEDOR].Value;
@@ -165,16 +164,16 @@ namespace ControlCalidad
       this.dgv_verificacion.Columns[COLUMN_PROVEEDOR_ID].Width = 100;
 
       this.dgv_verificacion.Columns.Add(COLUMN_PROVEEDOR_NOMBRE, "Nombre");
-      this.dgv_verificacion.Columns[COLUMN_PROVEEDOR_NOMBRE].Width = 100;
+      this.dgv_verificacion.Columns[COLUMN_PROVEEDOR_NOMBRE].Width = 200;
 
       this.dgv_verificacion.Columns.Add(COLUMN_REFERENCIA_PROVEEDOR, "Referencia");
-      this.dgv_verificacion.Columns[COLUMN_REFERENCIA_PROVEEDOR].Width = 100;
+      this.dgv_verificacion.Columns[COLUMN_REFERENCIA_PROVEEDOR].Width = 200;
 
       this.dgv_verificacion.Columns.Add(COLUMN_NUM_LOTE, "Lote");
-      this.dgv_verificacion.Columns[COLUMN_NUM_LOTE].Width = 100;
+      this.dgv_verificacion.Columns[COLUMN_NUM_LOTE].Width = 70;
 
       this.dgv_verificacion.Columns.Add(COLUMN_UNIDADES, "Unidades");
-      this.dgv_verificacion.Columns[COLUMN_UNIDADES].Width = 100;
+      this.dgv_verificacion.Columns[COLUMN_UNIDADES].Width = 70;
 
     }
 
@@ -204,22 +203,53 @@ namespace ControlCalidad
 
       if (!_error)
       {
-        this.dgv_verificacion.Rows.Add(this.txt_proveedor_id.Text, this.txt_nombre_proveedor.Text, "", this.txt_num_lote.Text, this.txt_unidades.Text);
+        this.dgv_verificacion.SelectionChanged -= new System.EventHandler(this.dgv_verificacion_SelectionChanged);
 
-        this.txt_proveedor_id.Text = "";
-        this.txt_nombre_proveedor.Text = "";
-        this.txt_num_lote.Text = "";
-        this.txt_unidades.Text = "";
+        if (this.m_selected_row)
+        {
+
+          this.dgv_verificacion.Rows[this.m_num_row].Cells[COLUMN_PROVEEDOR_ID].Value = this.txt_proveedor_id.Text;
+          this.dgv_verificacion.Rows[this.m_num_row].Cells[COLUMN_PROVEEDOR_NOMBRE].Value = this.txt_nombre_proveedor.Text;
+          this.dgv_verificacion.Rows[this.m_num_row].Cells[COLUMN_REFERENCIA_PROVEEDOR].Value = this.txt_proveedor_referencia.Text;
+          this.dgv_verificacion.Rows[this.m_num_row].Cells[COLUMN_NUM_LOTE].Value = this.txt_num_lote.Text;
+          this.dgv_verificacion.Rows[this.m_num_row].Cells[COLUMN_UNIDADES].Value = this.txt_unidades.Text;
+
+          this.m_selected_row = false;
+          this.btn_añadir_verificacion.Text = "Añadir";
+          this.m_num_row = -1;
+        }
+        else
+        {
+          this.dgv_verificacion.Rows.Add("-1", "", this.txt_proveedor_id.Text, this.txt_nombre_proveedor.Text, this.txt_proveedor_referencia.Text, this.txt_num_lote.Text, this.txt_unidades.Text);
+        }
+
+        this.dgv_verificacion.ClearSelection();
+        this.dgv_verificacion.SelectionChanged += new System.EventHandler(this.dgv_verificacion_SelectionChanged);
+        VaciarTexto();
       }
 
+    }
+
+    private void VaciarTexto()
+    {
+      this.txt_proveedor_id.Text = "";
+      this.txt_nombre_proveedor.Text = "";
+      this.txt_num_lote.Text = "";
+      this.txt_unidades.Text = "";
+      this.txt_proveedor_referencia.Text = "";
     }
 
     private void dgv_verificacion_SelectionChanged(object sender, EventArgs e)
     {
       if (this.dgv_verificacion.SelectedRows.Count > 0)
       {
+        this.m_selected_row = true;
+        this.m_num_row = this.dgv_verificacion.SelectedRows[0].Index;
+        this.btn_añadir_verificacion.Text = "Actualizar";
+
         this.txt_proveedor_id.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_PROVEEDOR_ID].Value;
         this.txt_nombre_proveedor.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_PROVEEDOR_NOMBRE].Value;
+        this.txt_proveedor_referencia.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_REFERENCIA_PROVEEDOR].Value;
         this.txt_num_lote.Text = (String)this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_NUM_LOTE].Value;
         this.txt_unidades.Text = this.dgv_verificacion.SelectedRows[0].Cells[COLUMN_UNIDADES].Value.ToString();
       }
@@ -233,6 +263,7 @@ namespace ControlCalidad
       {
         this.dgv_verificacion.Rows.Add();
 
+        this.dgv_verificacion.Rows[_index].Cells[COLUMN_ID].Value = _linea.Id;
         this.dgv_verificacion.Rows[_index].Cells[COLUMN_PROVEEDOR_ID].Value = _linea.IdProveedor;
         this.dgv_verificacion.Rows[_index].Cells[COLUMN_PROVEEDOR_NOMBRE].Value = _linea.ProveedorNombre;
         this.dgv_verificacion.Rows[_index].Cells[COLUMN_REFERENCIA_PROVEEDOR].Value = _linea.ProveedorReferencia;
@@ -272,7 +303,21 @@ namespace ControlCalidad
       {
         this.txt_proveedor_id.Text = _frm.Codigo;
         this.txt_nombre_proveedor.Text = _frm.Nombre;
+        this.txt_proveedor_referencia.Text = _frm.Referencia;
       }
+    }
+
+    private void btn_eliminar_verificacion_Click(object sender, EventArgs e)
+    {
+      this.dgv_verificacion.Rows.RemoveAt(this.m_num_row);
+      this.m_num_row = -1;
+      this.m_selected_row = false;
+
+      VaciarTexto();
+
+      this.dgv_verificacion.ClearSelection();
+
+      this.btn_añadir_verificacion.Text = "Añadir";
     }
   }
 }

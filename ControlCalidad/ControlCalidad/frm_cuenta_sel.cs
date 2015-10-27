@@ -47,27 +47,23 @@ namespace ControlCalidad
       switch (m_tipo_cuenta)
       {
         case Enumerados.CUENTA.CLIENTE:
-          this.dgv_list.Columns.Add("cod_cliente", "Cod. Cliente");
+          this.dgv_list.Columns.Add("cod_cuenta", "Cod. Cliente");
           this.dgv_list.Columns["cod_cliente"].Width = 150;
-
-          this.dgv_list.Columns.Add("nombre", "Nombre");
-          this.dgv_list.Columns["nombre"].Width = 200;
-
-          this.dgv_list.Columns.Add("referencia", "Referencia");
-          this.dgv_list.Columns["referencia"].Visible = false;
-
-          this.dgv_list.Columns.Add("email", "Email");
-          this.dgv_list.Columns["email"].Visible = false;
           break;
 
         case Enumerados.CUENTA.PROVEEDOR:
-          this.dgv_list.Columns.Add("cod_proveedor", "Cod. Proveedor");
-          this.dgv_list.Columns["cod_proveedor"].Width = 150;
-
-          this.dgv_list.Columns.Add("nombre", "Nombre");
-          this.dgv_list.Columns["nombre"].Width = 200;
+          this.dgv_list.Columns.Add("cod_cuenta", "Cod. Proveedor");
+          this.dgv_list.Columns["cod_cuenta"].Width = 150;
           break;
       }
+      this.dgv_list.Columns.Add("nombre", "Nombre");
+      this.dgv_list.Columns["nombre"].Width = 200;
+
+      this.dgv_list.Columns.Add("referencia", "Referencia");
+      this.dgv_list.Columns["referencia"].Visible = false;
+
+      this.dgv_list.Columns.Add("email", "Email");
+      this.dgv_list.Columns["email"].Visible = false;
     }
 
     public override void FillGrid()
@@ -105,20 +101,11 @@ namespace ControlCalidad
         return;
       }
 
-      switch (m_tipo_cuenta)
-      {
-        case Enumerados.CUENTA.CLIENTE:
-          this.Codigo = this.dgv_list.Rows[e.RowIndex].Cells["cod_cliente"].Value.ToString();
-          this.Nombre = this.dgv_list.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
-          this.Referencia = this.dgv_list.Rows[e.RowIndex].Cells["referencia"].Value.ToString();
-          this.Email = this.dgv_list.Rows[e.RowIndex].Cells["email"].Value.ToString();
-          break;
+      this.Codigo = this.dgv_list.Rows[e.RowIndex].Cells["cod_cuenta"].Value.ToString();
+      this.Nombre = this.dgv_list.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+      this.Referencia = this.dgv_list.Rows[e.RowIndex].Cells["referencia"].Value.ToString();
+      this.Email = this.dgv_list.Rows[e.RowIndex].Cells["email"].Value.ToString();
 
-        case Enumerados.CUENTA.PROVEEDOR:
-          this.Codigo = this.dgv_list.Rows[e.RowIndex].Cells["cod_proveedor"].Value.ToString();
-          this.Nombre = this.dgv_list.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
-          break;
-      }
 
       this.Close();
     }

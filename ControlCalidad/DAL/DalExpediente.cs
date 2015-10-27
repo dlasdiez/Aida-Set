@@ -288,7 +288,15 @@ namespace DAL
 
         foreach (ObjExpedienteLinea _lineas in ObjExpediente.Lineas)
         {
-          _dal_expediente_lineas.Insert(_lineas, this.m_connection);
+          _lineas.IdExpediente = ObjExpediente.Id;
+          if (_lineas.Id == -1)
+          {
+            _dal_expediente_lineas.Insert(_lineas, this.m_connection);
+          }
+          else
+          {
+            _dal_expediente_lineas.Update(_lineas, this.m_connection);
+          }
         }
 
         //cmd.EndExecuteNonQuery();
@@ -459,6 +467,7 @@ namespace DAL
       _sb.AppendLine("          , num_lote = @pNumLote   ");
       _sb.AppendLine("          , unidades = @pUnidades ");
       _sb.AppendLine("  WHERE     id = @pId ");
+      _sb.AppendLine("    AND     id_expediente = @pIdExpediente ");
       try
       {
         MySqlCommand cmd = new MySqlCommand();
@@ -466,8 +475,9 @@ namespace DAL
 
         cmd.CommandText = _sb.ToString();
         cmd.Parameters.Add("@pId", MySqlDbType.Int64).Value = ObjExpedienteLinea.Id;
+        cmd.Parameters.Add("@pIdExpediente", MySqlDbType.Int64).Value = ObjExpedienteLinea.IdExpediente;
         cmd.Parameters.Add("@pIdProveedor", MySqlDbType.VarChar).Value = ObjExpedienteLinea.IdProveedor;
-        cmd.Parameters.Add("@pProveedorNombre", MySqlDbType.Int64).Value = ObjExpedienteLinea.ProveedorNombre;
+        cmd.Parameters.Add("@pProveedorNombre", MySqlDbType.VarChar).Value = ObjExpedienteLinea.ProveedorNombre;
         cmd.Parameters.Add("@pReferenciaProveedor", MySqlDbType.VarChar).Value = ObjExpedienteLinea.ProveedorReferencia;
         cmd.Parameters.Add("@pNumLote", MySqlDbType.Int64).Value = ObjExpedienteLinea.NumLote;
         cmd.Parameters.Add("@pUnidades", MySqlDbType.VarChar).Value = ObjExpedienteLinea.Unidades;
