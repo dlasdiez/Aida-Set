@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace ControlCalidad
 {
-  public partial class frm_registro_qc_entrada : frm_maestro_edit
+  public partial class frm_registro_qc_entrada_edit : frm_maestro_edit
   {
-    public frm_registro_qc_entrada()
+    public frm_registro_qc_entrada_edit()
     {
       InitializeComponent();
     }
@@ -23,7 +23,7 @@ namespace ControlCalidad
 
       this.dtp_fecha_revision.Value = DateTime.Now;
       this.dtp_fecha_calidad.Value = DateTime.Now;
-
+			
     }
   }
 }
