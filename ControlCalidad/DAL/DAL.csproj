@@ -37,6 +37,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,11 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DalRegistroQCEntrada.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="DalExpediente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{3DF0512E-AE71-49B3-A6FE-AA07BD34B768}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OBJ\OBJ.csproj">
       <Project>{AA3050EF-53BA-4391-9EF3-CF7EB71AD8A3}</Project>
       <Name>OBJ</Name>

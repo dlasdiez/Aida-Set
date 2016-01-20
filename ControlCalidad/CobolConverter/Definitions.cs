@@ -12,7 +12,7 @@ namespace CobolConverter
             ARTICULO = 0,
         }
 
-        public const String ARTICULO = "gtbuarti.out";
-        public const String CUENTA = "wblicuen.out";
+				public const String ARTICULO = "Wbbuarti";
+        public const String CUENTA = "wblicuen";
     }
 }

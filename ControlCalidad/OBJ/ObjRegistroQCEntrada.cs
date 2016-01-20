@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-
 namespace OBJ
 {
-	class ObjRegistroQCEntrada
+	public class ObjRegistroQCEntrada
 	{
 		public long Id { get; set; }
 		public DateTime FechaCreacion { get; set; }
@@ -25,7 +24,7 @@ namespace OBJ
 		public Int32 UnidadesVerificadas { get; set; }
 		public long UsuarioVerificadoId { get; set; }
 		public String UsuarioVerificadoNombre { get; set; }
-		public Int32 almacen { get; set; }
+		public Int32 Almacen { get; set; }
 		public String Observaciones { get; set; }
 		public Boolean RevisarCalidad { get; set; }
 		public Boolean VisualizarPautasAutocontrol { get; set; }
@@ -40,3 +39,7 @@ namespace OBJ
 
 	}
 }
+//2.139.183.118:9000\webservices
+//metalcaucho
+
+//13612
